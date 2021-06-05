@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A6ED6B8E86132D6E70BA4E7 /* Pods_MacBryte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE9BE20B233C8D24537C87 /* Pods_MacBryte.framework */; };
 		E6247766266C350700554734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6247765266C350700554734 /* AppDelegate.swift */; };
 		E6247768266C350700554734 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6247767266C350700554734 /* ViewController.swift */; };
 		E624776A266C350800554734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6247769266C350800554734 /* Assets.xcassets */; };
 		E624776D266C350800554734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E624776B266C350800554734 /* Main.storyboard */; };
+		E6247776266C355800554734 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E6247775266C355800554734 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89CE9BE20B233C8D24537C87 /* Pods_MacBryte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacBryte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0FE1C517EF3EA39428044A4 /* Pods-MacBryte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacBryte.release.xcconfig"; path = "Target Support Files/Pods-MacBryte/Pods-MacBryte.release.xcconfig"; sourceTree = "<group>"; };
+		CCA5179E7853153B2D6945E6 /* Pods-MacBryte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacBryte.debug.xcconfig"; path = "Target Support Files/Pods-MacBryte/Pods-MacBryte.debug.xcconfig"; sourceTree = "<group>"; };
 		E6247762266C350700554734 /* MacBryte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacBryte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6247765266C350700554734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6247767266C350700554734 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -21,6 +26,7 @@
 		E624776C266C350800554734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E624776E266C350800554734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E624776F266C350800554734 /* MacBryte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacBryte.entitlements; sourceTree = "<group>"; };
+		E6247775266C355800554734 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +34,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A6ED6B8E86132D6E70BA4E7 /* Pods_MacBryte.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AC4B07CCA3F82DFAAA08D50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCA5179E7853153B2D6945E6 /* Pods-MacBryte.debug.xcconfig */,
+				B0FE1C517EF3EA39428044A4 /* Pods-MacBryte.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BF60C6DA988C64C99165FCCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89CE9BE20B233C8D24537C87 /* Pods_MacBryte.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E6247759266C350700554734 = {
 			isa = PBXGroup;
 			children = (
 				E6247764266C350700554734 /* MacBryte */,
 				E6247763266C350700554734 /* Products */,
+				4AC4B07CCA3F82DFAAA08D50 /* Pods */,
+				BF60C6DA988C64C99165FCCB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +85,7 @@
 				E6247769266C350800554734 /* Assets.xcassets */,
 				E624776B266C350800554734 /* Main.storyboard */,
 				E624776E266C350800554734 /* Info.plist */,
+				E6247775266C355800554734 /* logo.png */,
 				E624776F266C350800554734 /* MacBryte.entitlements */,
 			);
 			path = MacBryte;
@@ -70,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6247772266C350800554734 /* Build configuration list for PBXNativeTarget "MacBryte" */;
 			buildPhases = (
+				080733D8D542C5CC554D2290 /* [CP] Check Pods Manifest.lock */,
 				E624775E266C350700554734 /* Sources */,
 				E624775F266C350700554734 /* Frameworks */,
 				E6247760266C350700554734 /* Resources */,
+				7F16A7B98E28A4D4D70AE113 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,10 +152,53 @@
 			files = (
 				E624776A266C350800554734 /* Assets.xcassets in Resources */,
 				E624776D266C350800554734 /* Main.storyboard in Resources */,
+				E6247776266C355800554734 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		080733D8D542C5CC554D2290 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MacBryte-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F16A7B98E28A4D4D70AE113 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MacBryte/Pods-MacBryte-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MacBryte/Pods-MacBryte-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MacBryte/Pods-MacBryte-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E624775E266C350700554734 /* Sources */ = {
@@ -268,6 +341,7 @@
 		};
 		E6247773266C350800554734 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCA5179E7853153B2D6945E6 /* Pods-MacBryte.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -287,6 +361,7 @@
 		};
 		E6247774266C350800554734 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0FE1C517EF3EA39428044A4 /* Pods-MacBryte.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
