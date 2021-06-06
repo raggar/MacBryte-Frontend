@@ -678,36 +678,159 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="-269" y="-66"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="MacBryte" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="MacBryte" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="231"/>
+                        <rect key="frame" x="0.0" y="0.0" width="267" height="313"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vDX-7b-NCY">
-                                <rect key="frame" x="98" y="100" width="284" height="31"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Welcome to Macbryte" id="y8B-GJ-j1p">
-                                    <font key="font" textStyle="largeTitle" name=".SFNS-Regular"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="25" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paw-pm-APW">
+                                <rect key="frame" x="25" y="20" width="220" height="273"/>
+                                <subviews>
+                                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="PQ2-3I-o9x">
+                                        <rect key="frame" x="33" y="177" width="154" height="96"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageAlignment="topLeft" imageScaling="proportionallyDown" image="logo" id="KVq-f0-hJd"/>
+                                    </imageView>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OcW-oT-9sJ">
+                                        <rect key="frame" x="5" y="133" width="211" height="19"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qq5-2W-n2I">
+                                                <rect key="frame" x="-2" y="0.0" width="48" height="19"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Email:" id="lRU-xE-XWb">
+                                                    <font key="font" metaFont="system" size="16"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e6e-Qf-uFT">
+                                                <rect key="frame" x="52" y="0.0" width="159" height="19"/>
+                                                <buttonCell key="cell" type="bevel" title="rahul@macbryte.com" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="KgU-29-4dZ">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system" size="16"/>
+                                                </buttonCell>
+                                                <color key="contentTintColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <connections>
+                                                    <action selector="emailClicked:" target="XfG-lQ-9wD" id="bjP-AV-i5T"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xnh-S6-vm4">
+                                        <rect key="frame" x="35" y="89" width="150" height="19"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dDE-ub-DLg">
+                                                <rect key="frame" x="-2" y="0.0" width="55" height="19"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Phone:" id="ToM-wo-DOU">
+                                                    <font key="font" metaFont="system" size="16"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kor-ju-b5M">
+                                                <rect key="frame" x="57" y="0.0" width="95" height="19"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="613-111-1111" id="5wh-4b-nWM">
+                                                    <font key="font" metaFont="system" size="16"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                                <connections>
+                                                    <accessibilityConnection property="link" destination="5wh-4b-nWM" id="D3g-24-TT3"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g7m-R1-EAj">
+                                        <rect key="frame" x="0.0" y="45" width="220" height="19"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j1s-fY-adc">
+                                                <rect key="frame" x="-2" y="0.0" width="68" height="19"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Website:" id="hpd-xq-t7q">
+                                                    <font key="font" metaFont="system" size="16"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-di-P0q">
+                                                <rect key="frame" x="72" y="0.0" width="148" height="19"/>
+                                                <buttonCell key="cell" type="bevel" title="www.macbryte.com" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="KUz-cC-5nV">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system" size="16"/>
+                                                </buttonCell>
+                                                <color key="contentTintColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <connections>
+                                                    <action selector="macbryteLinkClicked:" target="XfG-lQ-9wD" id="R8z-Zc-tgd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <button horizontalHuggingPriority="299" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RoZ-R9-TWQ">
+                                        <rect key="frame" x="27" y="-7" width="166" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Contact MacBryte" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ewf-3B-wf9">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system" size="16"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="contactMacBryte:" target="XfG-lQ-9wD" id="aA5-aK-f0G"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="vDX-7b-NCY" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="100" id="965-DV-R1V"/>
-                            <constraint firstItem="vDX-7b-NCY" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="100" id="Knm-CM-1VG"/>
-                            <constraint firstAttribute="trailing" secondItem="vDX-7b-NCY" secondAttribute="trailing" constant="100" id="PqU-45-Gmt"/>
-                            <constraint firstAttribute="bottom" secondItem="vDX-7b-NCY" secondAttribute="bottom" constant="100" id="Ywb-Vd-GyT"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contactMacBryte" destination="RoZ-R9-TWQ" id="tTS-Z3-IFe"/>
+                        <outlet property="createEmail" destination="RoZ-R9-TWQ" id="rRK-hw-so1"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="ORD-dz-CSk"/>
             </objects>
-            <point key="canvasLocation" x="74" y="198"/>
+            <point key="canvasLocation" x="-346" y="180"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="153.60000610351562" height="96"/>
+    </resources>
 </document>

@@ -25,15 +25,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func showPopup() {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        
+
         guard let vc = storyboard.instantiateController(withIdentifier: "ViewController") as? ViewController else {
             fatalError("Unable to find ViewController in the storyboard.")
         }
-        
+
         guard let button = statusItem.button else {
             fatalError("Could not find status item button.")
         }
-        
+
         let popoverView = NSPopover()
         popoverView.contentViewController = vc
         popoverView.behavior = .transient // when user clicks away popup will close itself
