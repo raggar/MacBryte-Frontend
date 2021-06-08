@@ -11,7 +11,6 @@
 		E6247766266C350700554734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6247765266C350700554734 /* AppDelegate.swift */; };
 		E624776A266C350800554734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6247769266C350800554734 /* Assets.xcassets */; };
 		E6247776266C355800554734 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E6247775266C355800554734 /* logo.png */; };
-		FC58D3D6266D13CE002C4C1A /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58D3D5266D13CE002C4C1A /* NSAttributedStringExtension.swift */; };
 		FC58D3DA266D2483002C4C1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC58D3D9266D2483002C4C1A /* Main.storyboard */; };
 		FC58D3DE266D2EE7002C4C1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58D3DD266D2EE7002C4C1A /* ViewController.swift */; };
 /* End PBXBuildFile section */
@@ -26,7 +25,6 @@
 		E624776E266C350800554734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E624776F266C350800554734 /* MacBryte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacBryte.entitlements; sourceTree = "<group>"; };
 		E6247775266C355800554734 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		FC58D3D5266D13CE002C4C1A /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtension.swift; sourceTree = "<group>"; };
 		FC58D3D9266D2483002C4C1A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FC58D3DD266D2EE7002C4C1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,7 +85,6 @@
 				FC58D3D9266D2483002C4C1A /* Main.storyboard */,
 				E6247775266C355800554734 /* logo.png */,
 				E624776F266C350800554734 /* MacBryte.entitlements */,
-				FC58D3D5266D13CE002C4C1A /* NSAttributedStringExtension.swift */,
 				FC58D3DD266D2EE7002C4C1A /* ViewController.swift */,
 			);
 			path = MacBryte;
@@ -208,7 +205,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC58D3DE266D2EE7002C4C1A /* ViewController.swift in Sources */,
-				FC58D3D6266D13CE002C4C1A /* NSAttributedStringExtension.swift in Sources */,
 				E6247766266C350700554734 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

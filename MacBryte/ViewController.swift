@@ -43,11 +43,14 @@ class ViewController: NSViewController {
     }
     
     func openAndComposeEmail() {
-        let service = NSSharingService(named: NSSharingService.Name.composeEmail)
+        guard let service = NSSharingService(named: NSSharingService.Name.composeEmail) else {
+            print("Composing email failed")
+            return
+        }
         
-        service?.recipients = ["rahul@macbryte.com", "dhruv@macbryte.com"]
-        service?.subject = "MacBryte App: Help Request"
-        service?.perform(withItems: ["Please delete this placeholder and write your message here"])
+        service.recipients = ["rahul@macbryte.com", "dhruv@macbryte.com"]
+        service.subject = "MacBryte App: Help Request"
+        service.perform(withItems: ["Please delete this placeholder and write your message here"])
     }
 }
 
