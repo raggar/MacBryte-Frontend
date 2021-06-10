@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9A6ED6B8E86132D6E70BA4E7 /* Pods_MacBryte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE9BE20B233C8D24537C87 /* Pods_MacBryte.framework */; };
 		E6247766266C350700554734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6247765266C350700554734 /* AppDelegate.swift */; };
-		E6247768266C350700554734 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6247767266C350700554734 /* ViewController.swift */; };
 		E624776A266C350800554734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6247769266C350800554734 /* Assets.xcassets */; };
-		E624776D266C350800554734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E624776B266C350800554734 /* Main.storyboard */; };
 		E6247776266C355800554734 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E6247775266C355800554734 /* logo.png */; };
+		FC58D3DA266D2483002C4C1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC58D3D9266D2483002C4C1A /* Main.storyboard */; };
+		FC58D3DE266D2EE7002C4C1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58D3DD266D2EE7002C4C1A /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,12 +21,12 @@
 		CCA5179E7853153B2D6945E6 /* Pods-MacBryte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacBryte.debug.xcconfig"; path = "Target Support Files/Pods-MacBryte/Pods-MacBryte.debug.xcconfig"; sourceTree = "<group>"; };
 		E6247762266C350700554734 /* MacBryte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacBryte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6247765266C350700554734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E6247767266C350700554734 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E6247769266C350800554734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E624776C266C350800554734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E624776E266C350800554734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E624776F266C350800554734 /* MacBryte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacBryte.entitlements; sourceTree = "<group>"; };
 		E6247775266C355800554734 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		FC58D3D9266D2483002C4C1A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FC58D3DD266D2EE7002C4C1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +47,6 @@
 				CCA5179E7853153B2D6945E6 /* Pods-MacBryte.debug.xcconfig */,
 				B0FE1C517EF3EA39428044A4 /* Pods-MacBryte.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,12 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				E6247765266C350700554734 /* AppDelegate.swift */,
-				E6247767266C350700554734 /* ViewController.swift */,
 				E6247769266C350800554734 /* Assets.xcassets */,
-				E624776B266C350800554734 /* Main.storyboard */,
 				E624776E266C350800554734 /* Info.plist */,
+				FC58D3D9266D2483002C4C1A /* Main.storyboard */,
 				E6247775266C355800554734 /* logo.png */,
 				E624776F266C350800554734 /* MacBryte.entitlements */,
+				FC58D3DD266D2EE7002C4C1A /* ViewController.swift */,
 			);
 			path = MacBryte;
 			sourceTree = "<group>";
@@ -150,8 +149,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC58D3DA266D2483002C4C1A /* Main.storyboard in Resources */,
 				E624776A266C350800554734 /* Assets.xcassets in Resources */,
-				E624776D266C350800554734 /* Main.storyboard in Resources */,
 				E6247776266C355800554734 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,23 +204,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6247768266C350700554734 /* ViewController.swift in Sources */,
+				FC58D3DE266D2EE7002C4C1A /* ViewController.swift in Sources */,
 				E6247766266C350700554734 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E624776B266C350800554734 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E624776C266C350800554734 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E6247770266C350800554734 /* Debug */ = {
@@ -275,7 +263,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -330,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
