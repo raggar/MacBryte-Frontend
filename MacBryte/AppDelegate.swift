@@ -17,7 +17,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let itemImage = NSImage(named: "BarIcon")
         itemImage?.isTemplate = true
         statusItem.button?.image = itemImage
-//        statusItem.button?.title = "MacBryte"
         statusItem.button?.target = self
         statusItem.button?.action = #selector(showPopup)
     }
