@@ -12,12 +12,6 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if NetworkMonitor.shared.isConnected {
-            print("You're connected")
-        } else {
-            print(" You're not connected.")
-        }
     }
 
     override var representedObject: Any? {

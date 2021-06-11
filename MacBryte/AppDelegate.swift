@@ -10,7 +10,6 @@ import Network
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
-
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -19,8 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.button?.image = itemImage
         statusItem.button?.target = self
         statusItem.button?.action = #selector(showPopup)
-        
-        NetworkMonitor.shared.startMonitoring()
+        let _ = NetworkMonitor()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

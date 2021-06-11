@@ -25,10 +25,17 @@ final class NetworkMonitor {
         case unknown
     }
     
-    private init() {
+    init() {
         monitor = NWPathMonitor()
+        startMonitoring()
+        Timer.scheduledTimer(withTimeInterval: 7.0, repeats: true) { timer in
+            if (self.isConnected) {
+                print("Connected to", self.connectionType!)
+            } else {
+                print("Not connected to internet")
+            }
+        }
     }
-
     
     public func startMonitoring() {
         monitor.start(queue: queue)
