@@ -19,11 +19,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.button?.image = itemImage
         statusItem.button?.target = self
         statusItem.button?.action = #selector(showPopup)
+        
+        NetworkMonitor.shared.startMonitoring()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
+    
     
     @objc func showPopup() {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
