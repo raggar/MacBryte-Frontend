@@ -6,6 +6,7 @@
 //
 
 import Cocoa
+import Network
 
 class ViewController: NSViewController {
     
@@ -47,7 +48,7 @@ class ViewController: NSViewController {
             print("Composing email failed")
             return
         }
-        
+        print("Hello")
         service.recipients = ["rahul@macbryte.com", "dhruv@macbryte.com"]
         service.subject = "MacBryte App: Help Request"
         service.perform(withItems: ["Please delete this placeholder and write your message here"])
