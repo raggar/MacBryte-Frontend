@@ -6,6 +6,7 @@
 //
 
 import Cocoa
+import Network
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -13,10 +14,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        statusItem.button?.title = "MacBryte"
+        let itemImage = NSImage(named: "BarIcon")
+        itemImage?.isTemplate = true
+        statusItem.button?.image = itemImage
+//        statusItem.button?.title = "MacBryte"
         statusItem.button?.target = self
         statusItem.button?.action = #selector(showPopup)
-        // Insert code here to initialize your application
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
