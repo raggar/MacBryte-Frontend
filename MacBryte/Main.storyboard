@@ -696,10 +696,10 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageAlignment="topLeft" imageScaling="proportionallyDown" image="logo" id="KVq-f0-hJd"/>
                                     </imageView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OcW-oT-9sJ">
-                                        <rect key="frame" x="36" y="203" width="212" height="20"/>
+                                        <rect key="frame" x="41" y="203" width="202" height="20"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qq5-2W-n2I">
-                                                <rect key="frame" x="-2" y="0.0" width="48" height="19"/>
+                                                <rect key="frame" x="-2" y="1" width="48" height="19"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Email:" id="lRU-xE-XWb">
                                                     <font key="font" metaFont="system" size="16"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -707,7 +707,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e6e-Qf-uFT">
-                                                <rect key="frame" x="52" y="0.0" width="150" height="19"/>
+                                                <rect key="frame" x="52" y="0.0" width="150" height="20"/>
                                                 <buttonCell key="cell" type="bevel" title="info@macbryte.com" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="KgU-29-4dZ">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system" size="16"/>
@@ -728,7 +728,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xnh-S6-vm4">
-                                        <rect key="frame" x="67" y="153" width="150" height="19"/>
+                                        <rect key="frame" x="62" y="153" width="160" height="19"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dDE-ub-DLg">
                                                 <rect key="frame" x="-2" y="0.0" width="55" height="19"/>
@@ -763,7 +763,7 @@
                                         <rect key="frame" x="32" y="103" width="220" height="20"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j1s-fY-adc">
-                                                <rect key="frame" x="-2" y="0.0" width="68" height="19"/>
+                                                <rect key="frame" x="-2" y="1" width="68" height="19"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Website:" id="hpd-xq-t7q">
                                                     <font key="font" metaFont="system" size="16"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -771,7 +771,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-di-P0q">
-                                                <rect key="frame" x="72" y="0.0" width="148" height="19"/>
+                                                <rect key="frame" x="72" y="0.0" width="148" height="20"/>
                                                 <buttonCell key="cell" type="bevel" title="www.macbryte.com" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="KUz-cC-5nV">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system" size="16"/>
@@ -805,7 +805,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="284" height="21"/>
                                         <subviews>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EZF-xW-5vy">
-                                                <rect key="frame" x="0.0" y="0.0" width="222" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="224" height="21"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="1th-9q-2Ee">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -813,11 +813,14 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WO0-PX-NYv">
-                                                <rect key="frame" x="223" y="-6" width="68" height="32"/>
+                                                <rect key="frame" x="225" y="-6" width="66" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Copy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="44I-E0-atZ">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="copyToPasteboard:" target="XfG-lQ-9wD" id="HN6-de-WG4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <visibilityPriorities>
@@ -859,11 +862,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ZoomLink" destination="EZF-xW-5vy" id="rfN-Ek-PLV"/>
+                        <outlet property="ZoomLinkField" destination="EZF-xW-5vy" id="XM6-eT-KEe"/>
                         <outlet property="contactMacBryte" destination="RoZ-R9-TWQ" id="tTS-Z3-IFe"/>
                         <outlet property="contactMacbryteButton" destination="RoZ-R9-TWQ" id="WGG-PE-eDI"/>
                         <outlet property="createEmail" destination="RoZ-R9-TWQ" id="rRK-hw-so1"/>
                         <outlet property="macbryteEmailText" destination="e6e-Qf-uFT" id="yYG-Ic-sBZ"/>
                         <outlet property="macbryteWebsiteLink" destination="0qK-di-P0q" id="5Ac-xj-QMG"/>
+                        <outlet property="zoomLink" destination="EZF-xW-5vy" id="Ycl-lc-CUK"/>
+                        <outlet property="zoomLinkField" destination="EZF-xW-5vy" id="Y02-d2-JZe"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

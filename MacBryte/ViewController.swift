@@ -8,16 +8,16 @@
 import Cocoa
 import Network
 
-class ViewController : NSViewController {
+class ViewController : NSViewController, NSTextFieldDelegate {
     
     @IBOutlet weak var macbryteEmailText: NSButton!
     @IBOutlet weak var macbryteWebsiteLink: NSButton!
     @IBOutlet weak var contactMacbryteButton: NSButton!
-    
+    @IBOutlet weak var zoomLink: NSTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
@@ -38,6 +38,10 @@ class ViewController : NSViewController {
         LinkerService.link(to: Constants.macbryteWebsite)
     }
     
+    @IBAction func copyToPasteboard(_ sender: NSButton) {
+        NSPasteboard.general.clearContents();
+        NSPasteboard.general.setString(zoomLink.stringValue, forType: .string)
+    }
     /*
      When the "Contact MacBryte" button is pressed open the mail app to compose an email
      */
