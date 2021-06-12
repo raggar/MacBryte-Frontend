@@ -12,10 +12,10 @@ import Network
  Handles email sending
  */
 class EmailService : NSObject {
-    static let service : NSSharingService = NSSharingService(named: NSSharingService.Name.composeEmail)!
-    static let recipient : [String] = [Constants.macbryteInfoEmail]
-    static let subject : String = Constants.defaultHelpEmailSubject
-    static let placeholderText : [String] = [Constants.defaultEmailContent]
+    static private let service : NSSharingService = NSSharingService(named: NSSharingService.Name.composeEmail)!
+    static private let recipient : [String] = [Constants.macbryteInfoEmail]
+    static private let subject : String = Constants.defaultHelpEmailSubject
+    static private let placeholderText : [String] = [Constants.defaultEmailContent]
     
     static func sendEmail() {
         service.recipients = recipient

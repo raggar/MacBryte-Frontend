@@ -7,8 +7,21 @@
 
 import Foundation
 import Network
+import Cocoa
 
 final class NetworkMonitor {
+    enum ConnectionType {
+        case wifi
+        case cellular
+        case ethernet
+        case unknown
+    }
+    
+    enum ConnectionStatus {
+        case connected
+        case disconnected
+    }
+    
     static let shared = NetworkMonitor()
     
     private let queue = DispatchQueue.global() // concurrently handles system thread actions
@@ -17,22 +30,30 @@ final class NetworkMonitor {
     // private set means that public can access but can't set 
     public private(set) var isConnected: Bool = false
     public private(set) var connectionType: ConnectionType?
+    public private(set) var connectionStatus: ConnectionStatus?
     
-    enum ConnectionType {
-        case wifi
-        case cellular
-        case ethernet
-        case unknown
-    }
+    
     
     init() {
         monitor = NWPathMonitor()
         startMonitoring()
+        
+        // Executes code every 7 seconds
         Timer.scheduledTimer(withTimeInterval: 7.0, repeats: true) { timer in
             if (self.isConnected) {
+                if .connected != self.connectionStatus {
+                    self.updateMenuBarImage(to: Constants.menuBarIcon)
+                    self.connectionStatus = .connected
+                }
+                
                 print("Connected to", self.connectionType!)
             } else {
-                print("Not connected to internet")
+                if .disconnected != self.connectionStatus {
+                    self.updateMenuBarImage(to: Constants.menuBarIconReversed)
+                    self.connectionStatus = .disconnected
+                }
+                
+                print(Constants.notConnectedToInternet)
             }
         }
     }
@@ -60,5 +81,12 @@ final class NetworkMonitor {
         } else {
             connectionType = .unknown
         }
+    }
+    
+    private func updateMenuBarImage(to image: String) {
+        DispatchQueue.main.async(execute: {
+            let appDelegate = NSApplication.shared.delegate as! AppDelegate
+            appDelegate.setStatusItemImage(to: image)
+        })
     }
 }
