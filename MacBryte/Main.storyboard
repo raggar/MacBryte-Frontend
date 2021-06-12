@@ -699,7 +699,7 @@
                                         <rect key="frame" x="36" y="203" width="212" height="20"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qq5-2W-n2I">
-                                                <rect key="frame" x="-2" y="1" width="48" height="19"/>
+                                                <rect key="frame" x="-2" y="0.0" width="48" height="19"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Email:" id="lRU-xE-XWb">
                                                     <font key="font" metaFont="system" size="16"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -707,8 +707,8 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e6e-Qf-uFT">
-                                                <rect key="frame" x="52" y="0.0" width="160" height="20"/>
-                                                <buttonCell key="cell" type="bevel" title="rahul@macbryte.com" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="KgU-29-4dZ">
+                                                <rect key="frame" x="52" y="0.0" width="150" height="19"/>
+                                                <buttonCell key="cell" type="bevel" title="info@macbryte.com" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="KgU-29-4dZ">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system" size="16"/>
                                                 </buttonCell>
@@ -739,8 +739,8 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kor-ju-b5M">
-                                                <rect key="frame" x="57" y="0.0" width="95" height="19"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="613-111-1111" id="5wh-4b-nWM">
+                                                <rect key="frame" x="57" y="0.0" width="105" height="19"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="613 702-7712" id="5wh-4b-nWM">
                                                     <font key="font" metaFont="system" size="16"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -763,7 +763,7 @@
                                         <rect key="frame" x="32" y="103" width="220" height="20"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j1s-fY-adc">
-                                                <rect key="frame" x="-2" y="1" width="68" height="19"/>
+                                                <rect key="frame" x="-2" y="0.0" width="68" height="19"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Website:" id="hpd-xq-t7q">
                                                     <font key="font" metaFont="system" size="16"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -771,7 +771,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-di-P0q">
-                                                <rect key="frame" x="72" y="0.0" width="148" height="20"/>
+                                                <rect key="frame" x="72" y="0.0" width="148" height="19"/>
                                                 <buttonCell key="cell" type="bevel" title="www.macbryte.com" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="KUz-cC-5nV">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system" size="16"/>
@@ -860,7 +860,10 @@
                     </view>
                     <connections>
                         <outlet property="contactMacBryte" destination="RoZ-R9-TWQ" id="tTS-Z3-IFe"/>
+                        <outlet property="contactMacbryteButton" destination="RoZ-R9-TWQ" id="WGG-PE-eDI"/>
                         <outlet property="createEmail" destination="RoZ-R9-TWQ" id="rRK-hw-so1"/>
+                        <outlet property="macbryteEmailText" destination="e6e-Qf-uFT" id="yYG-Ic-sBZ"/>
+                        <outlet property="macbryteWebsiteLink" destination="0qK-di-P0q" id="5Ac-xj-QMG"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

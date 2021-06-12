@@ -8,7 +8,11 @@
 import Cocoa
 import Network
 
-class ViewController: NSViewController {
+class ViewController : NSViewController {
+    
+    @IBOutlet weak var macbryteEmailText: NSButton!
+    @IBOutlet weak var macbryteWebsiteLink: NSButton!
+    @IBOutlet weak var contactMacbryteButton: NSButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,34 +28,21 @@ class ViewController: NSViewController {
      When the email on the app window is clicked
      */
     @IBAction func emailClicked(_ sender: Any) {
-        openAndComposeEmail()
+        EmailService.sendEmail()
     }
     
     /*
      When website link is pressed, redirects us to the macbryte website
      */
     @IBAction func macbryteLinkClicked(_ sender: Any) {
-        if let url = URL(string: "https://www.macbryte.com") {
-            NSWorkspace.shared.open(url)
-        }
+        LinkerService.link(to: Constants.macbryteWebsite)
     }
     
     /*
      When the "Contact MacBryte" button is pressed open the mail app to compose an email
      */
     @IBAction func contactMacBryte(_ sender: Any) {
-        openAndComposeEmail()
-    }
-    
-    func openAndComposeEmail() {
-        guard let service = NSSharingService(named: NSSharingService.Name.composeEmail) else {
-            print("Composing email failed")
-            return
-        }
-        print("Hello")
-        service.recipients = ["rahul@macbryte.com", "dhruv@macbryte.com"]
-        service.subject = "MacBryte App: Help Request"
-        service.perform(withItems: ["Please delete this placeholder and write your message here"])
+        EmailService.sendEmail()
     }
 }
 
