@@ -10,21 +10,21 @@ import Network
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
-
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let itemImage = NSImage(named: "BarIcon")
         itemImage?.isTemplate = true
         statusItem.button?.image = itemImage
-//        statusItem.button?.title = "MacBryte"
         statusItem.button?.target = self
         statusItem.button?.action = #selector(showPopup)
+        let _ = NetworkMonitor()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
+    
     
     @objc func showPopup() {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
