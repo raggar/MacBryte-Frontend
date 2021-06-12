@@ -13,11 +13,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let itemImage = NSImage(named: "BarIcon")
-        itemImage?.isTemplate = true
-        statusItem.button?.image = itemImage
+        setStatusItemImage(to: Constants.menuBarIcon)
+        
         statusItem.button?.target = self
         statusItem.button?.action = #selector(showPopup)
+        
         let _ = NetworkMonitor()
     }
 
@@ -30,11 +30,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
 
         guard let vc = storyboard.instantiateController(withIdentifier: "ViewController") as? ViewController else {
-            fatalError("Unable to find ViewController in the storyboard.")
+            fatalError(Constants.viewControllerFindFailed)
         }
 
         guard let button = statusItem.button else {
-            fatalError("Could not find status item button.")
+            fatalError(Constants.statusItemFindFailed)
         }
 
         let popoverView = NSPopover()
@@ -42,6 +42,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popoverView.behavior = .transient // when user clicks away popup will close itself
         popoverView.show(relativeTo: button.bounds, of: button, preferredEdge: .maxY) // show popup "relative" to menu item icon
     }
-
+    
+    func setStatusItemImage(to image: String) {
+        let itemImage = NSImage(named: image)
+        statusItem.button?.image = itemImage
+    }
 }
 

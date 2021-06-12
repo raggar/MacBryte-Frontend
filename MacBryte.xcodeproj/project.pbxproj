@@ -12,12 +12,13 @@
 		E624776A266C350800554734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6247769266C350800554734 /* Assets.xcassets */; };
 		E6247776266C355800554734 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E6247775266C355800554734 /* logo.png */; };
 		E6E4315E2671AE77009D46BD /* status-bar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E4315D2671AE77009D46BD /* status-bar-icon.png */; };
+		E6FF5352267304FE00D9AC61 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF5351267304FE00D9AC61 /* NetworkMonitor.swift */; };
 		FC074926267311B3006D269D /* EmailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC074925267311B3006D269D /* EmailService.swift */; };
 		FC07492826731851006D269D /* LinkerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07492726731851006D269D /* LinkerService.swift */; };
 		FC07492A2673189E006D269D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0749292673189E006D269D /* Constants.swift */; };
-		E6FF5352267304FE00D9AC61 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF5351267304FE00D9AC61 /* NetworkMonitor.swift */; };
 		FC58D3DA266D2483002C4C1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC58D3D9266D2483002C4C1A /* Main.storyboard */; };
 		FC58D3DE266D2EE7002C4C1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58D3DD266D2EE7002C4C1A /* ViewController.swift */; };
+		FCA368E22674F92B00A2EF35 /* status-bar-icon-reversed.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA368E12674F92B00A2EF35 /* status-bar-icon-reversed.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,12 +32,13 @@
 		E624776F266C350800554734 /* MacBryte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacBryte.entitlements; sourceTree = "<group>"; };
 		E6247775266C355800554734 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		E6E4315D2671AE77009D46BD /* status-bar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon.png"; sourceTree = "<group>"; };
+		E6FF5351267304FE00D9AC61 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		FC074925267311B3006D269D /* EmailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailService.swift; sourceTree = "<group>"; };
 		FC07492726731851006D269D /* LinkerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerService.swift; sourceTree = "<group>"; };
 		FC0749292673189E006D269D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E6FF5351267304FE00D9AC61 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		FC58D3D9266D2483002C4C1A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FC58D3DD266D2EE7002C4C1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCA368E12674F92B00A2EF35 /* status-bar-icon-reversed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "status-bar-icon-reversed.png"; path = "../../Desktop/status-bar-icon-reversed.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		E6247764266C350700554734 /* MacBryte */ = {
 			isa = PBXGroup;
 			children = (
+				FCA368E12674F92B00A2EF35 /* status-bar-icon-reversed.png */,
 				E6247765266C350700554734 /* AppDelegate.swift */,
 				E6247769266C350800554734 /* Assets.xcassets */,
 				E624776E266C350800554734 /* Info.plist */,
@@ -168,6 +171,7 @@
 				E624776A266C350800554734 /* Assets.xcassets in Resources */,
 				E6E4315E2671AE77009D46BD /* status-bar-icon.png in Resources */,
 				E6247776266C355800554734 /* logo.png in Resources */,
+				FCA368E22674F92B00A2EF35 /* status-bar-icon-reversed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 
 import Foundation
 import Network
+import Cocoa
 
 final class NetworkMonitor {
     static let shared = NetworkMonitor()
@@ -28,11 +29,15 @@ final class NetworkMonitor {
     init() {
         monitor = NWPathMonitor()
         startMonitoring()
+        
+        // Executes code every 7 seconds
         Timer.scheduledTimer(withTimeInterval: 7.0, repeats: true) { timer in
             if (self.isConnected) {
+                self.updateMenuBarImage(to: Constants.menuBarIcon)
                 print("Connected to", self.connectionType!)
             } else {
-                print("Not connected to internet")
+                self.updateMenuBarImage(to: Constants.menuBarIconReversed)
+                print(Constants.notConnectedToInternet)
             }
         }
     }
@@ -60,5 +65,12 @@ final class NetworkMonitor {
         } else {
             connectionType = .unknown
         }
+    }
+    
+    private func updateMenuBarImage(to image: String) {
+        DispatchQueue.main.async(execute: {
+            let appDelegate = NSApplication.shared.delegate as! AppDelegate
+            appDelegate.setStatusItemImage(to: image)
+        })
     }
 }
