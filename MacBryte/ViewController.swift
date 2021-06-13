@@ -13,15 +13,21 @@ class ViewController : NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var macbryteEmailText: NSButton!
     @IBOutlet weak var macbryteWebsiteLink: NSButton!
     @IBOutlet weak var contactMacbryteButton: NSButton!
-    @IBOutlet weak var zoomLink: NSTextField!
+    @IBOutlet weak var zoomLinkTextField: NSTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let zoomLinkValue = UserDefaults.standard.string(forKey: "ZoomLinkKey") {
+            zoomLinkTextField.stringValue = zoomLinkValue
+        }
     }
     
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
         }
+    }
+    
+    override func viewWillDisappear() {
+        UserDefaults.standard.set(zoomLinkTextField.stringValue, forKey: "ZoomLinkKey")
     }
     
     /*
@@ -40,13 +46,12 @@ class ViewController : NSViewController, NSTextFieldDelegate {
     
     @IBAction func copyToPasteboard(_ sender: NSButton) {
         NSPasteboard.general.clearContents();
-        NSPasteboard.general.setString(zoomLink.stringValue, forType: .string)
+        NSPasteboard.general.setString(zoomLinkTextField.stringValue, forType: .string)
     }
     /*
      When the "Contact MacBryte" button is pressed open the mail app to compose an email
      */
-    @IBAction func contactMacBryte(_ sender: Any) {
+    @IBAction func createEmail(_ sender: NSButton) {
         EmailService.sendEmail()
     }
 }
-

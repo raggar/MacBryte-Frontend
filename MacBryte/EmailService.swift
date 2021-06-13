@@ -8,11 +8,12 @@
 import Cocoa
 import Network
 
+
 /*
  Handles email sending
  */
 class EmailService : NSObject {
-    static private let service : NSSharingService = NSSharingService(named: NSSharingService.Name.composeEmail)!
+    static private let service : NSSharingService = NSSharingService.init(named: NSSharingService.Name.composeEmail)!
     static private let recipient : [String] = [Constants.macbryteInfoEmail]
     static private let subject : String = Constants.defaultHelpEmailSubject
     static private let placeholderText : [String] = [Constants.defaultEmailContent]
@@ -21,6 +22,7 @@ class EmailService : NSObject {
         service.recipients = recipient
         service.subject = subject
         service.perform(withItems: placeholderText)
+        print("hello")
     }
     
     static func sendEmail(to emails: [String]) {

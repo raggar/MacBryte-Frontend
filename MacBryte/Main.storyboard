@@ -696,10 +696,10 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageAlignment="topLeft" imageScaling="proportionallyDown" image="logo" id="KVq-f0-hJd"/>
                                     </imageView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OcW-oT-9sJ">
-                                        <rect key="frame" x="41" y="204" width="202" height="19"/>
+                                        <rect key="frame" x="41" y="203" width="202" height="20"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qq5-2W-n2I">
-                                                <rect key="frame" x="-2" y="0.0" width="48" height="19"/>
+                                                <rect key="frame" x="-2" y="1" width="48" height="19"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Email:" id="lRU-xE-XWb">
                                                     <font key="font" metaFont="system" size="16"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -707,7 +707,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e6e-Qf-uFT">
-                                                <rect key="frame" x="52" y="0.0" width="150" height="19"/>
+                                                <rect key="frame" x="52" y="0.0" width="150" height="20"/>
                                                 <buttonCell key="cell" type="bevel" title="info@macbryte.com" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="KgU-29-4dZ">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system" size="16"/>
@@ -728,7 +728,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xnh-S6-vm4">
-                                        <rect key="frame" x="62" y="154" width="160" height="19"/>
+                                        <rect key="frame" x="62" y="153" width="160" height="19"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dDE-ub-DLg">
                                                 <rect key="frame" x="-2" y="0.0" width="55" height="19"/>
@@ -760,10 +760,10 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g7m-R1-EAj">
-                                        <rect key="frame" x="32" y="103" width="220" height="19"/>
+                                        <rect key="frame" x="32" y="103" width="220" height="20"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j1s-fY-adc">
-                                                <rect key="frame" x="-2" y="0.0" width="68" height="19"/>
+                                                <rect key="frame" x="-2" y="1" width="68" height="19"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Website:" id="hpd-xq-t7q">
                                                     <font key="font" metaFont="system" size="16"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -771,7 +771,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-di-P0q">
-                                                <rect key="frame" x="72" y="0.0" width="148" height="19"/>
+                                                <rect key="frame" x="72" y="0.0" width="148" height="20"/>
                                                 <buttonCell key="cell" type="bevel" title="www.macbryte.com" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="KUz-cC-5nV">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system" size="16"/>
@@ -798,7 +798,7 @@
                                             <font key="font" metaFont="system" size="16"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="contactMacBryte:" target="XfG-lQ-9wD" id="aA5-aK-f0G"/>
+                                            <action selector="createEmail:" target="XfG-lQ-9wD" id="bHP-BO-kng"/>
                                         </connections>
                                     </button>
                                     <stackView distribution="fillProportionally" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j9m-xI-tYT">
@@ -862,15 +862,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ZoomLink" destination="EZF-xW-5vy" id="rfN-Ek-PLV"/>
-                        <outlet property="ZoomLinkField" destination="EZF-xW-5vy" id="XM6-eT-KEe"/>
-                        <outlet property="contactMacBryte" destination="RoZ-R9-TWQ" id="tTS-Z3-IFe"/>
-                        <outlet property="contactMacbryteButton" destination="RoZ-R9-TWQ" id="WGG-PE-eDI"/>
-                        <outlet property="createEmail" destination="RoZ-R9-TWQ" id="rRK-hw-so1"/>
+                        <outlet property="contactMacbryteButton" destination="RoZ-R9-TWQ" id="7BG-m6-Ace"/>
                         <outlet property="macbryteEmailText" destination="e6e-Qf-uFT" id="yYG-Ic-sBZ"/>
                         <outlet property="macbryteWebsiteLink" destination="0qK-di-P0q" id="5Ac-xj-QMG"/>
-                        <outlet property="zoomLink" destination="EZF-xW-5vy" id="Ycl-lc-CUK"/>
-                        <outlet property="zoomLinkField" destination="EZF-xW-5vy" id="Y02-d2-JZe"/>
+                        <outlet property="zoomLinkTextField" destination="EZF-xW-5vy" id="UML-X0-Z1O"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
