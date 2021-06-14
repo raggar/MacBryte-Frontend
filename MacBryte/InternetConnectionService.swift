@@ -31,11 +31,13 @@ class InternetConnectionService {
      */
     @objc func pingHost() {
         let task = URLSession.shared.dataTask(with: url!, completionHandler: { (data : Data?, response : URLResponse?, error : Error?) in
-            if let response = response {
+            if let _ = response {
+                InternetStatusHandler.shared.setInternetConnected(to: true)
                 print(Constants.connectedToInternet)
             }
             
-            if let error = error {
+            if let _ = error {
+                InternetStatusHandler.shared.setInternetConnected(to: false)
                 print(Constants.notConnectedToInternet)
             }
         })

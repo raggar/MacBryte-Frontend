@@ -13,13 +13,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        setStatusItemImage(to: Constants.menuBarIcon)
+        setStatusItemImage(to: Constants.menuBarIconInternetGood)
         
         statusItem.button?.target = self
         statusItem.button?.action = #selector(showPopup)
         
         RouterConnectionService.shared.startMeasuring()
         InternetConnectionService.shared.startMeasuring()
+        InternetStatusHandler.shared.displayConnectionResults()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

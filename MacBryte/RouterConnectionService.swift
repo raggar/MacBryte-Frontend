@@ -17,7 +17,7 @@ final class RouterConnectionService {
         case unknown
     }
     
-    enum ConnectionStatus {
+    enum RouterConnectionStatus {
         case connected
         case disconnected
     }
@@ -32,7 +32,7 @@ final class RouterConnectionService {
     // private set means that public can access but can't set 
     public private(set) var isConnected: Bool = false
     public private(set) var connectionType: ConnectionType?
-    public private(set) var connectionStatus: ConnectionStatus?
+    public private(set) var routerConnectionStatus: RouterConnectionStatus?
     
     private init() {}
     
@@ -44,16 +44,16 @@ final class RouterConnectionService {
             // Executes code every 7 seconds
             routerConnectionTimer = Timer.scheduledTimer(withTimeInterval: 7.0, repeats: true) { timer in
                 if (self.isConnected) {
-                    if .connected != self.connectionStatus {
-                        self.updateMenuBarImage(to: Constants.menuBarIcon)
-                        self.connectionStatus = .connected
+                    if .connected != self.routerConnectionStatus {
+                        InternetStatusHandler.shared.setRouterConnectionStatus(to: true)
+                        self.routerConnectionStatus = .connected
                     }
                     
                     print("Connected to", self.connectionType!)
                 } else {
-                    if .disconnected != self.connectionStatus {
-                        self.updateMenuBarImage(to: Constants.menuBarIconReversed)
-                        self.connectionStatus = .disconnected
+                    if .disconnected != self.routerConnectionStatus {
+                        InternetStatusHandler.shared.setRouterConnectionStatus(to: false)
+                        self.routerConnectionStatus = .disconnected
                     }
                     
                     print(Constants.notConnectedToRouter)
@@ -91,12 +91,5 @@ final class RouterConnectionService {
         } else {
             connectionType = .unknown
         }
-    }
-    
-    private func updateMenuBarImage(to image: String) {
-        DispatchQueue.main.async(execute: {
-            let appDelegate = NSApplication.shared.delegate as! AppDelegate
-            appDelegate.setStatusItemImage(to: image)
-        })
     }
 }

@@ -18,8 +18,9 @@ class Constants {
     static let defaultEmailContent : String = "Please delete this placeholder and write your message here"
     
     // Images
-    static let menuBarIcon : String = "BarIcon"
-    static let menuBarIconReversed : String = "BarIconReversed"
+    static let menuBarIconInternetGood : String = "BarIcon"
+    static let menuBarIconInternetDown : String = "BarIconReversed"
+    static let menuBarIconRouterNotConnected : String = "BarIconReversedYellow"
     
     // Internet check
     static let connectedToInternet : String = "Connected to internet"

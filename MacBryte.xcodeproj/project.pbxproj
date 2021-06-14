@@ -20,6 +20,8 @@
 		FC58D3DA266D2483002C4C1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC58D3D9266D2483002C4C1A /* Main.storyboard */; };
 		FC58D3DE266D2EE7002C4C1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58D3DD266D2EE7002C4C1A /* ViewController.swift */; };
 		FCB64F8D2677C88400501437 /* InternetConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB64F8C2677C88400501437 /* InternetConnectionService.swift */; };
+		FCB64F8F2677DC6200501437 /* InternetStatusHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB64F8E2677DC6200501437 /* InternetStatusHandler.swift */; };
+		FCB64F912677E0E600501437 /* status-bar-icon-reversed-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB64F902677E0E600501437 /* status-bar-icon-reversed-yellow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		FC58D3D9266D2483002C4C1A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FC58D3DD266D2EE7002C4C1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FCB64F8C2677C88400501437 /* InternetConnectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetConnectionService.swift; sourceTree = "<group>"; };
+		FCB64F8E2677DC6200501437 /* InternetStatusHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetStatusHandler.swift; sourceTree = "<group>"; };
+		FCB64F902677E0E600501437 /* status-bar-icon-reversed-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-reversed-yellow.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		E6247764266C350700554734 /* MacBryte */ = {
 			isa = PBXGroup;
 			children = (
+				FCB64F902677E0E600501437 /* status-bar-icon-reversed-yellow.png */,
 				FCB64F8C2677C88400501437 /* InternetConnectionService.swift */,
 				E664F2F0267576C4002099F7 /* status-bar-icon-reversed.png */,
 				E6247765266C350700554734 /* AppDelegate.swift */,
@@ -107,6 +112,7 @@
 				FC07492726731851006D269D /* LinkerService.swift */,
 				FC0749292673189E006D269D /* Constants.swift */,
 				E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */,
+				FCB64F8E2677DC6200501437 /* InternetStatusHandler.swift */,
 			);
 			path = MacBryte;
 			sourceTree = "<group>";
@@ -174,6 +180,7 @@
 				FC58D3DA266D2483002C4C1A /* Main.storyboard in Resources */,
 				E624776A266C350800554734 /* Assets.xcassets in Resources */,
 				E6E4315E2671AE77009D46BD /* status-bar-icon.png in Resources */,
+				FCB64F912677E0E600501437 /* status-bar-icon-reversed-yellow.png in Resources */,
 				E6247776266C355800554734 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC07492A2673189E006D269D /* Constants.swift in Sources */,
+				FCB64F8F2677DC6200501437 /* InternetStatusHandler.swift in Sources */,
 				FC07492826731851006D269D /* LinkerService.swift in Sources */,
 				FC074926267311B3006D269D /* EmailService.swift in Sources */,
 				FC58D3DE266D2EE7002C4C1A /* ViewController.swift in Sources */,
