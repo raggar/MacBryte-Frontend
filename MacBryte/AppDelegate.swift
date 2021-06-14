@@ -19,6 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.button?.action = #selector(showPopup)
         
         let _ = NetworkMonitor()
+        let _ = PingTest()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
