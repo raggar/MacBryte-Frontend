@@ -21,8 +21,12 @@ class Constants {
     static let menuBarIcon : String = "BarIcon"
     static let menuBarIconReversed : String = "BarIconReversed"
     
-    // Error Codes
+    // Internet check
+    static let connectedToInternet : String = "Connected to internet"
     static let notConnectedToInternet : String = "Not connected to internet"
+    static let notConnectedToRouter : String = "Not connected to router"
+    
+    // Error Codes
     static let viewControllerFindFailed = "Unable to find ViewController in the storyboard."
     static let statusItemFindFailed = "Could not find status item button."
 }

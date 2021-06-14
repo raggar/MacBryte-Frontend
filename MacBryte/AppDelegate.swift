@@ -18,8 +18,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.button?.target = self
         statusItem.button?.action = #selector(showPopup)
         
-        let _ = NetworkMonitor()
-        let _ = PingTest()
+        RouterConnectionService.shared.startMeasuring()
+        InternetConnectionService.shared.startMeasuring()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

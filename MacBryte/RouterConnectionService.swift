@@ -9,7 +9,7 @@ import Foundation
 import Network
 import Cocoa
 
-final class NetworkMonitor {
+final class RouterConnectionService {
     enum ConnectionType {
         case wifi
         case cellular
@@ -22,43 +22,47 @@ final class NetworkMonitor {
         case disconnected
     }
     
-    static let shared = NetworkMonitor()
+    static let shared = RouterConnectionService()
     
     private let queue = DispatchQueue.global() // concurrently handles system thread actions
-    private let monitor: NWPathMonitor // observer that monitors and reacts to network changes
+    private let monitor: NWPathMonitor = NWPathMonitor() // observer that monitors and reacts to network changes
+    private var timerStarted : Bool = false
+    private var routerConnectionTimer : Timer? = nil
 
     // private set means that public can access but can't set 
     public private(set) var isConnected: Bool = false
     public private(set) var connectionType: ConnectionType?
     public private(set) var connectionStatus: ConnectionStatus?
     
+    private init() {}
     
-    
-    init() {
-        monitor = NWPathMonitor()
-        startMonitoring()
-        
-        // Executes code every 7 seconds
-        Timer.scheduledTimer(withTimeInterval: 7.0, repeats: true) { timer in
-            if (self.isConnected) {
-                if .connected != self.connectionStatus {
-                    self.updateMenuBarImage(to: Constants.menuBarIcon)
-                    self.connectionStatus = .connected
+    public func startMeasuring() {
+        // Only start timer once
+        if !timerStarted {
+            startMonitoring()
+            
+            // Executes code every 7 seconds
+            routerConnectionTimer = Timer.scheduledTimer(withTimeInterval: 7.0, repeats: true) { timer in
+                if (self.isConnected) {
+                    if .connected != self.connectionStatus {
+                        self.updateMenuBarImage(to: Constants.menuBarIcon)
+                        self.connectionStatus = .connected
+                    }
+                    
+                    print("Connected to", self.connectionType!)
+                } else {
+                    if .disconnected != self.connectionStatus {
+                        self.updateMenuBarImage(to: Constants.menuBarIconReversed)
+                        self.connectionStatus = .disconnected
+                    }
+                    
+                    print(Constants.notConnectedToRouter)
                 }
-                
-                print("Connected to", self.connectionType!)
-            } else {
-                if .disconnected != self.connectionStatus {
-                    self.updateMenuBarImage(to: Constants.menuBarIconReversed)
-                    self.connectionStatus = .disconnected
-                }
-                
-                print(Constants.notConnectedToInternet)
             }
         }
     }
     
-    public func startMonitoring() {
+    private func startMonitoring() {
         monitor.start(queue: queue)
         // recieve networth path updates
         monitor.pathUpdateHandler = { [weak self] path in
@@ -67,7 +71,13 @@ final class NetworkMonitor {
         }
     }
     
-    public func stopMonitoring() {
+    private func stopMonitoring() {
+        timerStarted = false;
+        
+        // End timer
+        routerConnectionTimer!.invalidate()
+        routerConnectionTimer = nil
+        
         monitor.cancel()
     }
     
