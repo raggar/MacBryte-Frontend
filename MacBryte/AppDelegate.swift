@@ -20,7 +20,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         RouterConnectionService.shared.startMeasuring()
         InternetConnectionService.shared.startMeasuring()
-        InternetStatusHandler.shared.displayConnectionResults()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

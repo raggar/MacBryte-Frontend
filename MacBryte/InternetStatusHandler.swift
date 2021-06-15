@@ -20,25 +20,19 @@ class InternetStatusHandler {
     private var routerConnected : Bool = true
     private var internetConnected : Bool = true
     private var connectionStatus : ConnectionStatus?
-    private var timerStarted : Bool = false
     
     private init() {}
-    
-    public func displayConnectionResults() {
-        // Only start timer once
-        if !timerStarted {
-            Timer.scheduledTimer(withTimeInterval: 7.0, repeats: true) { timer in
-                self.determineConnectionResults()
-            }
-        }
-    }
 
     public func setRouterConnectionStatus(to status: Bool) {
         routerConnected = status
+        
+        determineConnectionResults() // Determine connection result when status is updated
     }
     
     public func setInternetConnected(to status: Bool) {
         internetConnected = status
+        
+        determineConnectionResults() // Determine connection result when status is updated
     }
     
     private func determineConnectionResults() {
