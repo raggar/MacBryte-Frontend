@@ -18,11 +18,16 @@ class Constants {
     static let defaultEmailContent : String = "Please delete this placeholder and write your message here"
     
     // Images
-    static let menuBarIcon : String = "BarIcon"
-    static let menuBarIconReversed : String = "BarIconReversed"
+    static let menuBarIconInternetGood : String = "BarIcon"
+    static let menuBarIconInternetDown : String = "BarIconReversed"
+    static let menuBarIconRouterNotConnected : String = "BarIconReversedYellow"
+    
+    // Internet check
+    static let connectedToInternet : String = "Connected to internet"
+    static let notConnectedToInternet : String = "Not connected to internet"
+    static let notConnectedToRouter : String = "Not connected to router"
     
     // Error Codes
-    static let notConnectedToInternet : String = "Not connected to internet"
     static let viewControllerFindFailed = "Unable to find ViewController in the storyboard."
     static let statusItemFindFailed = "Could not find status item button."
 }
