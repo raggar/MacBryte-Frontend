@@ -23,9 +23,9 @@ class Constants {
     static let menuBarIconRouterNotConnected : String = "BarIconReversedYellow"
     
     // Internet check
-    static let connectedToInternet : String = "Connected to internet"
-    static let notConnectedToInternet : String = "Not connected to internet"
-    static let notConnectedToRouter : String = "Not connected to router"
+    static let connectedToInternet : String = "You are connected to the internet"
+    static let notConnectedToInternet : String = "You are connected to your router, but not the internet"
+    static let notConnectedToRouter : String = "You are not connected to your router"
     
     // Error Codes
     static let viewControllerFindFailed = "Unable to find ViewController in the storyboard."

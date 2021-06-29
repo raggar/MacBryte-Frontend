@@ -43,20 +43,16 @@ final class RouterConnectionService {
             
             // Executes code every 7 seconds
             routerConnectionTimer = Timer.scheduledTimer(withTimeInterval: 7.0, repeats: true) { timer in
-                if (self.isConnected) {
+                if (self.isConnected) { // We are connected to the router
                     if .connected != self.routerConnectionStatus {
                         InternetStatusHandler.shared.setRouterConnectionStatus(to: true)
                         self.routerConnectionStatus = .connected
                     }
-                    
-                    print("Connected to", self.connectionType!)
-                } else {
+                } else {// We are not connected to the router
                     if .disconnected != self.routerConnectionStatus {
                         InternetStatusHandler.shared.setRouterConnectionStatus(to: false)
                         self.routerConnectionStatus = .disconnected
                     }
-                    
-                    print(Constants.notConnectedToRouter)
                 }
             }
         }
