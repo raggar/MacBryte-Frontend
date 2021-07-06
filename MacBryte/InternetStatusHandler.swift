@@ -20,7 +20,7 @@ class InternetStatusHandler {
         
     private var routerConnected : Bool = true
     private var internetConnected : Bool = true
-    private var connectionStatus : ConnectionStatus?
+    private var connectionStatus : ConnectionStatus = ConnectionStatus.Connected
     
     private init() {}
 
@@ -54,5 +54,15 @@ class InternetStatusHandler {
             let appDelegate = NSApplication.shared.delegate as! AppDelegate
             appDelegate.setStatusItemImage(to: image)
         })
+    }
+    
+    public func getConnectionStatus() -> String {
+        if ConnectionStatus.Connected == connectionStatus {
+            return Constants.connectedToInternet
+        } else if ConnectionStatus.InternetDisconnectedButRouterConnected == connectionStatus {
+            return Constants.notConnectedToInternet
+        } else {
+            return Constants.notConnectedToRouter
+        }
     }
 }
