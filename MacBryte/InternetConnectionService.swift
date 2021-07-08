@@ -25,20 +25,17 @@ class InternetConnectionService {
         }
     }
     
-    
     /*
      Pings the url synchronously
      */
     @objc func pingHost() {
         let task = URLSession.shared.dataTask(with: url!, completionHandler: { (data : Data?, response : URLResponse?, error : Error?) in
-            if let _ = response {
+            if let _ = response { // We are connected to the internet
                 InternetStatusHandler.shared.setInternetConnected(to: true)
-                print(Constants.connectedToInternet)
             }
             
-            if let _ = error {
+            if let _ = error { // We are not connected to the internet
                 InternetStatusHandler.shared.setInternetConnected(to: false)
-                print(Constants.notConnectedToInternet)
             }
         })
         

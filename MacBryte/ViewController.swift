@@ -7,19 +7,31 @@
 
 import Cocoa
 import Network
+import Combine
 
 class ViewController : NSViewController, NSTextFieldDelegate {
     
     @IBOutlet weak var macbryteEmailText: NSButton!
     @IBOutlet weak var macbryteWebsiteLink: NSButton!
-    @IBOutlet weak var contactMacbryteButton: NSButton!
     @IBOutlet weak var zoomLinkTextField: NSTextField!
+    @IBOutlet weak var internetStatusText: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if let zoomLinkValue = UserDefaults.standard.string(forKey: "ZoomLinkKey") {
             zoomLinkTextField.stringValue = zoomLinkValue
         }
+        
+//        if let internetStatus = UserDefaults.standard.string(forKey: "InternetStatusKey") {
+//            internetStatusText.stringValue = internetStatus
+//        } else {
+//            internetStatusText.stringValue = ""
+//        }
+        
+        internetStatusText.stringValue = InternetStatusHandler.shared.getConnectionStatus()
     }
+
     
     override var representedObject: Any? {
         didSet {
@@ -28,13 +40,15 @@ class ViewController : NSViewController, NSTextFieldDelegate {
     
     override func viewWillDisappear() {
         UserDefaults.standard.set(zoomLinkTextField.stringValue, forKey: "ZoomLinkKey")
+        UserDefaults.standard.set(internetStatusText.stringValue, forKey: "InternetStatusKey")
     }
     
     /*
      When the email on the app window is clicked
      */
     @IBAction func emailClicked(_ sender: Any) {
-        EmailService.sendEmail()
+        NSPasteboard.general.clearContents();
+        NSPasteboard.general.setString(macbryteEmailText.title, forType: .string)
     }
     
     /*
@@ -47,11 +61,5 @@ class ViewController : NSViewController, NSTextFieldDelegate {
     @IBAction func copyToPasteboard(_ sender: NSButton) {
         NSPasteboard.general.clearContents();
         NSPasteboard.general.setString(zoomLinkTextField.stringValue, forType: .string)
-    }
-    /*
-     When the "Contact MacBryte" button is pressed open the mail app to compose an email
-     */
-    @IBAction func createEmail(_ sender: NSButton) {
-        EmailService.sendEmail()
     }
 }

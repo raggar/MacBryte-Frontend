@@ -8,18 +8,19 @@
 import Foundation
 import Cocoa
 
+enum ConnectionStatus {
+    case Connected
+    case InternetDisconnectedButRouterConnected
+    case RouterDisconnected
+}
+
 class InternetStatusHandler {
-    enum ConnectionStatus {
-        case Connected
-        case InternetDisconnectedButRouterConnected
-        case RouterDisconnected
-    }
     
     static let shared = InternetStatusHandler()
-    
+        
     private var routerConnected : Bool = true
     private var internetConnected : Bool = true
-    private var connectionStatus : ConnectionStatus?
+    private var connectionStatus : ConnectionStatus = ConnectionStatus.Connected
     
     private init() {}
 
@@ -37,10 +38,13 @@ class InternetStatusHandler {
     
     private func determineConnectionResults() {
         if routerConnected && internetConnected {
+            connectionStatus = ConnectionStatus.Connected
             self.updateMenuBarImage(to: Constants.menuBarIconInternetGood)
         } else if routerConnected && !internetConnected {
+            connectionStatus = ConnectionStatus.InternetDisconnectedButRouterConnected
             self.updateMenuBarImage(to: Constants.menuBarIconInternetDown)
         } else if !routerConnected {
+            connectionStatus = ConnectionStatus.RouterDisconnected
             self.updateMenuBarImage(to: Constants.menuBarIconRouterNotConnected)
         }
     }
@@ -50,5 +54,15 @@ class InternetStatusHandler {
             let appDelegate = NSApplication.shared.delegate as! AppDelegate
             appDelegate.setStatusItemImage(to: image)
         })
+    }
+    
+    public func getConnectionStatus() -> String {
+        if ConnectionStatus.Connected == connectionStatus {
+            return Constants.connectedToInternet
+        } else if ConnectionStatus.InternetDisconnectedButRouterConnected == connectionStatus {
+            return Constants.notConnectedToInternet
+        } else {
+            return Constants.notConnectedToRouter
+        }
     }
 }

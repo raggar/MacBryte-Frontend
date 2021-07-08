@@ -8,7 +8,6 @@
 import Cocoa
 import Network
 
-
 /*
  Handles email sending
  */
@@ -22,7 +21,6 @@ class EmailService : NSObject {
         service.recipients = recipient
         service.subject = subject
         service.perform(withItems: placeholderText)
-        print("hello")
     }
     
     static func sendEmail(to emails: [String]) {
