@@ -23,12 +23,6 @@ class ViewController : NSViewController, NSTextFieldDelegate {
             zoomLinkTextField.stringValue = zoomLinkValue
         }
         
-//        if let internetStatus = UserDefaults.standard.string(forKey: "InternetStatusKey") {
-//            internetStatusText.stringValue = internetStatus
-//        } else {
-//            internetStatusText.stringValue = ""
-//        }
-        
         internetStatusText.stringValue = InternetStatusHandler.shared.getConnectionStatus()
     }
 

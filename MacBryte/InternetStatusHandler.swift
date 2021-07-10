@@ -10,17 +10,28 @@ import Cocoa
 
 enum ConnectionStatus {
     case Connected
-    case InternetDisconnectedButRouterConnected
-    case RouterDisconnected
+    case Disconnected
 }
 
 class InternetStatusHandler {
     
     static let shared = InternetStatusHandler()
+    
+    private var notificationHandler = NotificationHandler.shared
         
     private var routerConnected : Bool = true
     private var internetConnected : Bool = true
-    private var connectionStatus : ConnectionStatus = ConnectionStatus.Connected
+    private var connectionStatus : ConnectionStatus = ConnectionStatus.Connected { // Sends notification only if variable has been reinitialized
+        didSet {
+            if oldValue != connectionStatus { // Only trigger notification if internet status has changed
+                if ConnectionStatus.Connected == connectionStatus {
+                    notificationHandler.displayNotification(for: Constants.internetConnectedNotificationTitle, with: Constants.internetConnectedNotificationBody)
+                } else {
+                    notificationHandler.displayNotification(for: Constants.internetDisonnectedNotificationTitle, with: Constants.internetDisconnectedNotificationBody)
+                }
+            }
+        }
+    }
     
     private init() {}
 
@@ -40,12 +51,9 @@ class InternetStatusHandler {
         if routerConnected && internetConnected {
             connectionStatus = ConnectionStatus.Connected
             self.updateMenuBarImage(to: Constants.menuBarIconInternetGood)
-        } else if routerConnected && !internetConnected {
-            connectionStatus = ConnectionStatus.InternetDisconnectedButRouterConnected
-            self.updateMenuBarImage(to: Constants.menuBarIconInternetDown)
-        } else if !routerConnected {
-            connectionStatus = ConnectionStatus.RouterDisconnected
-            self.updateMenuBarImage(to: Constants.menuBarIconRouterNotConnected)
+        } else {
+            connectionStatus = ConnectionStatus.Disconnected
+            self.updateMenuBarImage(to: Constants.menuBarIconInternetDisconnected)
         }
     }
     
@@ -59,10 +67,8 @@ class InternetStatusHandler {
     public func getConnectionStatus() -> String {
         if ConnectionStatus.Connected == connectionStatus {
             return Constants.connectedToInternet
-        } else if ConnectionStatus.InternetDisconnectedButRouterConnected == connectionStatus {
-            return Constants.notConnectedToInternet
         } else {
-            return Constants.notConnectedToRouter
+            return Constants.disconnectedFromInternet
         }
     }
 }

@@ -7,6 +7,7 @@
 
 import Cocoa
 import Network
+import UserNotifications
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -17,6 +18,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         statusItem.button?.target = self
         statusItem.button?.action = #selector(showPopup)
+        
+        NotificationHandler.shared.getNotificationAuthorization() // Get authorization. This prevents bug where first notification does not send
+        
+        UNUserNotificationCenter.current().delegate = self
         
         RouterConnectionService.shared.startMeasuring()
         InternetConnectionService.shared.startMeasuring()
@@ -47,6 +52,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func setStatusItemImage(to image: String) {
         let itemImage = NSImage(named: image)
         statusItem.button?.image = itemImage
+    }
+}
+
+extension AppDelegate : UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        return completionHandler([.list, .sound])
     }
 }
 

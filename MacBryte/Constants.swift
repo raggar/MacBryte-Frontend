@@ -19,13 +19,18 @@ class Constants {
     
     // Images
     static let menuBarIconInternetGood : String = "BarIcon"
-    static let menuBarIconInternetDown : String = "BarIconReversed"
-    static let menuBarIconRouterNotConnected : String = "BarIconReversedYellow"
+    static let menuBarIconInternetDisconnected : String = "BarIconReversed"
     
     // Internet check
+    static let pingHost : String = "https://www.google.com/"
     static let connectedToInternet : String = "You are connected to the internet"
-    static let notConnectedToInternet : String = "You are connected to your router, but not the internet"
-    static let notConnectedToRouter : String = "You are not connected to your router"
+    static let disconnectedFromInternet : String = "You are not connected to the internet"
+    
+    // Notifications
+    static let internetConnectedNotificationTitle = "Internet is Connected"
+    static let internetConnectedNotificationBody = "You may now use your computer as normal"
+    static let internetDisonnectedNotificationTitle = "Internet is Not Connected"
+    static let internetDisconnectedNotificationBody = "Some features on your computer may be unavailable now. Please call MacBryte if this problem persists"
     
     // Error Codes
     static let viewControllerFindFailed = "Unable to find ViewController in the storyboard."

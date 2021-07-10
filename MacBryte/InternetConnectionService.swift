@@ -12,7 +12,7 @@ class InternetConnectionService {
     
     static let shared = InternetConnectionService()
     
-    private let url : URL? = URL(string: Constants.macbryteWebsite) // URL we will ping. Replace with IP address(es)
+    private let url : URL? = URL(string: Constants.pingHost) // URL we will ping. Replace with IP address(es)
     private var timerStarted : Bool = false
     
     private init() {}
@@ -21,7 +21,7 @@ class InternetConnectionService {
         // Only start timer once
         if !timerStarted {
             // Timer executes pingHost() synchronously
-            Timer.scheduledTimer(timeInterval: 7, target: self, selector: #selector(InternetConnectionService.pingHost), userInfo: nil, repeats: true)
+            Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(InternetConnectionService.pingHost), userInfo: nil, repeats: true)
         }
     }
     
