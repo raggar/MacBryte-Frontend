@@ -24,6 +24,8 @@ class InternetStatusHandler {
     private var connectionStatus : ConnectionStatus = ConnectionStatus.Connected { // Sends notification only if variable has been reinitialized
         didSet {
             if oldValue != connectionStatus { // Only trigger notification if internet status has changed
+                NotificationHandler.shared.getNotificationAuthorization() // Get authorization. This prevents bug where first notification does not send
+                
                 if ConnectionStatus.Connected == connectionStatus {
                     notificationHandler.displayNotification(for: Constants.internetConnectedNotificationTitle, with: Constants.internetConnectedNotificationBody)
                 } else {
