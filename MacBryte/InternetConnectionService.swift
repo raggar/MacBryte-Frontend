@@ -21,7 +21,7 @@ class InternetConnectionService {
         // Only start timer once
         if !timerStarted {
             // Timer executes pingHost() synchronously
-            Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(InternetConnectionService.pingHost), userInfo: nil, repeats: true)
+            Timer.scheduledTimer(timeInterval: Constants.internetCheckTimeInterval, target: self, selector: #selector(InternetConnectionService.pingHost), userInfo: nil, repeats: true)
         }
     }
     

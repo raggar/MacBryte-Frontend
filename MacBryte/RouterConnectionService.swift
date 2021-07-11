@@ -42,7 +42,7 @@ final class RouterConnectionService {
             startMonitoring()
             
             // Executes code every 7 seconds
-            routerConnectionTimer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { timer in
+            routerConnectionTimer = Timer.scheduledTimer(withTimeInterval: Constants.internetCheckTimeInterval, repeats: true) { timer in
                 if (self.isConnected) { // We are connected to the router
                     if .connected != self.routerConnectionStatus {
                         InternetStatusHandler.shared.setRouterConnectionStatus(to: true)

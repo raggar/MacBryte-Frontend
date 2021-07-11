@@ -19,7 +19,7 @@ class ViewController : NSViewController, NSTextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let zoomLinkValue = UserDefaults.standard.string(forKey: "ZoomLinkKey") {
+        if let zoomLinkValue = UserDefaults.standard.string(forKey: Constants.zoomLinkStorageKey) {
             zoomLinkTextField.stringValue = zoomLinkValue
         }
         
@@ -33,8 +33,7 @@ class ViewController : NSViewController, NSTextFieldDelegate {
     }
     
     override func viewWillDisappear() {
-        UserDefaults.standard.set(zoomLinkTextField.stringValue, forKey: "ZoomLinkKey")
-        UserDefaults.standard.set(internetStatusText.stringValue, forKey: "InternetStatusKey")
+        UserDefaults.standard.set(zoomLinkTextField.stringValue, forKey: Constants.zoomLinkStorageKey)
     }
     
     /*
