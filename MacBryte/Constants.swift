@@ -27,10 +27,12 @@ class Constants {
     static let disconnectedFromInternet : String = "You are not connected to the internet"
     
     // Notifications
+    static let internetConnectedNotificationId = "InternetConnectedNotification"
     static let internetConnectedNotificationTitle = "Internet is Connected"
     static let internetConnectedNotificationBody = "You may now use your computer as normal"
-    static let internetDisonnectedNotificationTitle = "Internet is Not Connected"
-    static let internetDisconnectedNotificationBody = "Some features on your computer may be unavailable now. Please call MacBryte if this problem persists"
+    static let internetDisconnectedNotificationId = "InternetDisconnectedNotification"
+    static let internetDisconnectedNotificationTitle = "Internet is Not Connected"
+    static let internetDisconnectedNotificationBody = "Some features on your computer may be unavailable. Please call MacBryte if this problem persists"
     
     // Error Codes
     static let viewControllerFindFailed = "Unable to find ViewController in the storyboard."

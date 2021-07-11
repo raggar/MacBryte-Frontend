@@ -45,7 +45,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         let popoverView = NSPopover()
         popoverView.contentViewController = vc
-        popoverView.behavior = .transient // when user clicks away popup will close itself
+        
+        // when user clicks away popup will close itself
+        popoverView.behavior = .transient
+        NSApplication.shared.activate(ignoringOtherApps: true)
+        
         popoverView.show(relativeTo: button.bounds, of: button, preferredEdge: .maxY) // show popup "relative" to menu item icon
     }
     

@@ -28,9 +28,10 @@ class InternetStatusHandler {
                 NotificationHandler.shared.removePendingNotifications()
                 
                 if ConnectionStatus.Connected == connectionStatus {
-                    notificationHandler.displayNotification(for: Constants.internetConnectedNotificationTitle, with: Constants.internetConnectedNotificationBody)
+                    notificationHandler.displayNotification(for: Constants.internetConnectedNotificationId,
+                    about: Constants.internetConnectedNotificationTitle, with: Constants.internetConnectedNotificationBody)
                 } else {
-                    notificationHandler.displayNotification(for: Constants.internetDisonnectedNotificationTitle, with: Constants.internetDisconnectedNotificationBody)
+                    notificationHandler.displayNotification(for: Constants.internetDisconnectedNotificationId, about: Constants.internetDisconnectedNotificationTitle, with: Constants.internetDisconnectedNotificationBody)
                 }
             }
         }

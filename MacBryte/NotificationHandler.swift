@@ -36,10 +36,10 @@ class NotificationHandler {
         self.userNotificationCenter.removeAllPendingNotificationRequests() // Make sure no notification requests remain
     }
     
-    public func displayNotification(for title: String, with body: String) -> Void {
+    public func displayNotification(for id: String, about title: String, with body: String) -> Void {
         userNotificationCenter.getNotificationSettings { settings in
             if .authorized == settings.authorizationStatus {
-                let id = "InternetStatusNotification"
+                let id = id
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
                 
                 let content = UNMutableNotificationContent()
