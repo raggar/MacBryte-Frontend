@@ -684,20 +684,20 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="MacBryte" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="344" height="306"/>
+                    <view key="view" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="349" height="308"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="equalSpacing" orientation="vertical" alignment="centerX" spacing="19" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paw-pm-APW">
-                                <rect key="frame" x="25" y="21" width="299" height="263"/>
+                                <rect key="frame" x="25" y="23" width="299" height="263"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mr8-Pt-KgJ">
                                         <rect key="frame" x="81" y="192" width="137" height="71"/>
-                                        <imageCell key="cell" selectable="YES" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="logo-dark" id="6f6-YR-TIm"/>
+                                        <imageCell key="cell" selectable="YES" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="logo" id="6f6-YR-TIm"/>
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PTz-pi-hBm">
                                         <rect key="frame" x="128" y="154" width="44" height="19"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="T6v-VC-Fhh">
+                                        <textFieldCell key="cell" lineBreakMode="clipping" refusesFirstResponder="YES" title="Label" id="T6v-VC-Fhh">
                                             <font key="font" metaFont="system" size="16"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -804,7 +804,7 @@
                                         <subviews>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JVR-jM-0uN">
                                                 <rect key="frame" x="0.0" y="0.0" width="231" height="21"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="CRh-rU-nJB">
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="CRh-rU-nJB">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -840,7 +840,7 @@
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
-                                    <real value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
                                     <real value="3.4028234663852886e+38"/>
@@ -869,10 +869,10 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="ORD-dz-CSk"/>
             </objects>
-            <point key="canvasLocation" x="-518" y="205"/>
+            <point key="canvasLocation" x="-270" y="205"/>
         </scene>
     </scenes>
     <resources>
-        <image name="logo-dark" width="136.08000183105469" height="70.319999694824219"/>
+        <image name="logo" width="137" height="71"/>
     </resources>
 </document>
