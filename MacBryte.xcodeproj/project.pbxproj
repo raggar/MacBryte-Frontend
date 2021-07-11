@@ -32,7 +32,7 @@
 		CCA5179E7853153B2D6945E6 /* Pods-MacBryte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacBryte.debug.xcconfig"; path = "Target Support Files/Pods-MacBryte/Pods-MacBryte.debug.xcconfig"; sourceTree = "<group>"; };
 		E6247762266C350700554734 /* MacBryte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacBryte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6247765266C350700554734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E6247769266C350800554734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6247769266C350800554734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MacBryte/Assets/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		E624776E266C350800554734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E624776F266C350800554734 /* MacBryte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacBryte.entitlements; sourceTree = "<group>"; };
 		E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterConnectionService.swift; sourceTree = "<group>"; };
@@ -101,26 +101,50 @@
 		E6247764266C350700554734 /* MacBryte */ = {
 			isa = PBXGroup;
 			children = (
+				FC3BD892269B68B20001705B /* Services */,
+				FC3BD891269B68A20001705B /* Controllers */,
+				FC3BD890269B689C0001705B /* Assets */,
+				E6247765266C350700554734 /* AppDelegate.swift */,
+				FC0749292673189E006D269D /* Constants.swift */,
+				E624776E266C350800554734 /* Info.plist */,
+				FC58D3D9266D2483002C4C1A /* Main.storyboard */,
+				E624776F266C350800554734 /* MacBryte.entitlements */,
+			);
+			path = MacBryte;
+			sourceTree = "<group>";
+		};
+		FC3BD890269B689C0001705B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E6247769266C350800554734 /* Assets.xcassets */,
 				FC4800B0269A1FD600C4382C /* logo-dark.png */,
 				FC4800B1269A1FD600C4382C /* logo-light.png */,
 				FC4800B2269A1FD600C4382C /* status-bar-icon-dark.png */,
 				FC4800AF269A1FD600C4382C /* status-bar-icon-light.png */,
 				FC4800B3269A1FD600C4382C /* status-bar-icon-reversed-dark.png */,
 				FC4800AE269A1FD600C4382C /* status-bar-icon-reversed-light.png */,
-				FCB64F8C2677C88400501437 /* InternetConnectionService.swift */,
-				E6247765266C350700554734 /* AppDelegate.swift */,
-				E6247769266C350800554734 /* Assets.xcassets */,
-				E624776E266C350800554734 /* Info.plist */,
-				FC58D3D9266D2483002C4C1A /* Main.storyboard */,
-				E624776F266C350800554734 /* MacBryte.entitlements */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		FC3BD891269B68A20001705B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				FC58D3DD266D2EE7002C4C1A /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FC3BD892269B68B20001705B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FCB64F8C2677C88400501437 /* InternetConnectionService.swift */,
 				FC07492726731851006D269D /* LinkerService.swift */,
-				FC0749292673189E006D269D /* Constants.swift */,
 				E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */,
 				FCB64F8E2677DC6200501437 /* InternetStatusHandler.swift */,
 				FC4800A0269A0C7100C4382C /* NotificationHandler.swift */,
 			);
-			path = MacBryte;
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,8 +402,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MacBryte/MacBryte.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BAMVK6LBVP;
 				INFOPLIST_FILE = MacBryte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -398,8 +424,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MacBryte/MacBryte.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BAMVK6LBVP;
 				INFOPLIST_FILE = MacBryte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
