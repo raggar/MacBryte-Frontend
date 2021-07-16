@@ -10,18 +10,20 @@
 		9A6ED6B8E86132D6E70BA4E7 /* Pods_MacBryte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE9BE20B233C8D24537C87 /* Pods_MacBryte.framework */; };
 		E6247766266C350700554734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6247765266C350700554734 /* AppDelegate.swift */; };
 		E624776A266C350800554734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6247769266C350800554734 /* Assets.xcassets */; };
-		E6247776266C355800554734 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E6247775266C355800554734 /* logo.png */; };
-		E664F2F1267576C4002099F7 /* status-bar-icon-reversed.png in Resources */ = {isa = PBXBuildFile; fileRef = E664F2F0267576C4002099F7 /* status-bar-icon-reversed.png */; };
-		E6E4315E2671AE77009D46BD /* status-bar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E4315D2671AE77009D46BD /* status-bar-icon.png */; };
 		E6FF5352267304FE00D9AC61 /* RouterConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */; };
-		FC074926267311B3006D269D /* EmailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC074925267311B3006D269D /* EmailService.swift */; };
 		FC07492826731851006D269D /* LinkerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07492726731851006D269D /* LinkerService.swift */; };
 		FC07492A2673189E006D269D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0749292673189E006D269D /* Constants.swift */; };
+		FC4800A1269A0C7100C4382C /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4800A0269A0C7100C4382C /* NotificationHandler.swift */; };
+		FC4800B4269A1FD600C4382C /* status-bar-icon-reversed-light.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4800AE269A1FD600C4382C /* status-bar-icon-reversed-light.png */; };
+		FC4800B5269A1FD600C4382C /* status-bar-icon-light.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4800AF269A1FD600C4382C /* status-bar-icon-light.png */; };
+		FC4800B6269A1FD600C4382C /* logo-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4800B0269A1FD600C4382C /* logo-dark.png */; };
+		FC4800B7269A1FD600C4382C /* logo-light.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4800B1269A1FD600C4382C /* logo-light.png */; };
+		FC4800B8269A1FD600C4382C /* status-bar-icon-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4800B2269A1FD600C4382C /* status-bar-icon-dark.png */; };
+		FC4800B9269A1FD600C4382C /* status-bar-icon-reversed-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4800B3269A1FD600C4382C /* status-bar-icon-reversed-dark.png */; };
 		FC58D3DA266D2483002C4C1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC58D3D9266D2483002C4C1A /* Main.storyboard */; };
 		FC58D3DE266D2EE7002C4C1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58D3DD266D2EE7002C4C1A /* ViewController.swift */; };
 		FCB64F8D2677C88400501437 /* InternetConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB64F8C2677C88400501437 /* InternetConnectionService.swift */; };
 		FCB64F8F2677DC6200501437 /* InternetStatusHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB64F8E2677DC6200501437 /* InternetStatusHandler.swift */; };
-		FCB64F912677E0E600501437 /* status-bar-icon-reversed-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB64F902677E0E600501437 /* status-bar-icon-reversed-yellow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,21 +32,23 @@
 		CCA5179E7853153B2D6945E6 /* Pods-MacBryte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacBryte.debug.xcconfig"; path = "Target Support Files/Pods-MacBryte/Pods-MacBryte.debug.xcconfig"; sourceTree = "<group>"; };
 		E6247762266C350700554734 /* MacBryte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacBryte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6247765266C350700554734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E6247769266C350800554734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6247769266C350800554734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MacBryte/Assets/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		E624776E266C350800554734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E624776F266C350800554734 /* MacBryte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacBryte.entitlements; sourceTree = "<group>"; };
-		E6247775266C355800554734 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		E664F2F0267576C4002099F7 /* status-bar-icon-reversed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-reversed.png"; sourceTree = "<group>"; };
-		E6E4315D2671AE77009D46BD /* status-bar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon.png"; sourceTree = "<group>"; };
 		E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterConnectionService.swift; sourceTree = "<group>"; };
-		FC074925267311B3006D269D /* EmailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailService.swift; sourceTree = "<group>"; };
 		FC07492726731851006D269D /* LinkerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerService.swift; sourceTree = "<group>"; };
 		FC0749292673189E006D269D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FC4800A0269A0C7100C4382C /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		FC4800AE269A1FD600C4382C /* status-bar-icon-reversed-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-reversed-light.png"; sourceTree = "<group>"; };
+		FC4800AF269A1FD600C4382C /* status-bar-icon-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-light.png"; sourceTree = "<group>"; };
+		FC4800B0269A1FD600C4382C /* logo-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-dark.png"; sourceTree = "<group>"; };
+		FC4800B1269A1FD600C4382C /* logo-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-light.png"; sourceTree = "<group>"; };
+		FC4800B2269A1FD600C4382C /* status-bar-icon-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-dark.png"; sourceTree = "<group>"; };
+		FC4800B3269A1FD600C4382C /* status-bar-icon-reversed-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-reversed-dark.png"; sourceTree = "<group>"; };
 		FC58D3D9266D2483002C4C1A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FC58D3DD266D2EE7002C4C1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FCB64F8C2677C88400501437 /* InternetConnectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetConnectionService.swift; sourceTree = "<group>"; };
 		FCB64F8E2677DC6200501437 /* InternetStatusHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetStatusHandler.swift; sourceTree = "<group>"; };
-		FCB64F902677E0E600501437 /* status-bar-icon-reversed-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-reversed-yellow.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,24 +101,50 @@
 		E6247764266C350700554734 /* MacBryte */ = {
 			isa = PBXGroup;
 			children = (
-				FCB64F902677E0E600501437 /* status-bar-icon-reversed-yellow.png */,
-				FCB64F8C2677C88400501437 /* InternetConnectionService.swift */,
-				E664F2F0267576C4002099F7 /* status-bar-icon-reversed.png */,
+				FC3BD892269B68B20001705B /* Services */,
+				FC3BD891269B68A20001705B /* Controllers */,
+				FC3BD890269B689C0001705B /* Assets */,
 				E6247765266C350700554734 /* AppDelegate.swift */,
-				E6247769266C350800554734 /* Assets.xcassets */,
-				E624776E266C350800554734 /* Info.plist */,
-				E6E4315D2671AE77009D46BD /* status-bar-icon.png */,
-				FC58D3D9266D2483002C4C1A /* Main.storyboard */,
-				E6247775266C355800554734 /* logo.png */,
-				E624776F266C350800554734 /* MacBryte.entitlements */,
-				FC58D3DD266D2EE7002C4C1A /* ViewController.swift */,
-				FC074925267311B3006D269D /* EmailService.swift */,
-				FC07492726731851006D269D /* LinkerService.swift */,
 				FC0749292673189E006D269D /* Constants.swift */,
-				E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */,
-				FCB64F8E2677DC6200501437 /* InternetStatusHandler.swift */,
+				E624776E266C350800554734 /* Info.plist */,
+				FC58D3D9266D2483002C4C1A /* Main.storyboard */,
+				E624776F266C350800554734 /* MacBryte.entitlements */,
 			);
 			path = MacBryte;
+			sourceTree = "<group>";
+		};
+		FC3BD890269B689C0001705B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E6247769266C350800554734 /* Assets.xcassets */,
+				FC4800B0269A1FD600C4382C /* logo-dark.png */,
+				FC4800B1269A1FD600C4382C /* logo-light.png */,
+				FC4800B2269A1FD600C4382C /* status-bar-icon-dark.png */,
+				FC4800AF269A1FD600C4382C /* status-bar-icon-light.png */,
+				FC4800B3269A1FD600C4382C /* status-bar-icon-reversed-dark.png */,
+				FC4800AE269A1FD600C4382C /* status-bar-icon-reversed-light.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		FC3BD891269B68A20001705B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC58D3DD266D2EE7002C4C1A /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FC3BD892269B68B20001705B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FCB64F8C2677C88400501437 /* InternetConnectionService.swift */,
+				FC07492726731851006D269D /* LinkerService.swift */,
+				E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */,
+				FCB64F8E2677DC6200501437 /* InternetStatusHandler.swift */,
+				FC4800A0269A0C7100C4382C /* NotificationHandler.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,12 +206,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E664F2F1267576C4002099F7 /* status-bar-icon-reversed.png in Resources */,
 				FC58D3DA266D2483002C4C1A /* Main.storyboard in Resources */,
+				FC4800B6269A1FD600C4382C /* logo-dark.png in Resources */,
+				FC4800B5269A1FD600C4382C /* status-bar-icon-light.png in Resources */,
+				FC4800B7269A1FD600C4382C /* logo-light.png in Resources */,
+				FC4800B9269A1FD600C4382C /* status-bar-icon-reversed-dark.png in Resources */,
+				FC4800B4269A1FD600C4382C /* status-bar-icon-reversed-light.png in Resources */,
 				E624776A266C350800554734 /* Assets.xcassets in Resources */,
-				E6E4315E2671AE77009D46BD /* status-bar-icon.png in Resources */,
-				FCB64F912677E0E600501437 /* status-bar-icon-reversed-yellow.png in Resources */,
-				E6247776266C355800554734 /* logo.png in Resources */,
+				FC4800B8269A1FD600C4382C /* status-bar-icon-dark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,9 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC07492A2673189E006D269D /* Constants.swift in Sources */,
+				FC4800A1269A0C7100C4382C /* NotificationHandler.swift in Sources */,
 				FCB64F8F2677DC6200501437 /* InternetStatusHandler.swift in Sources */,
 				FC07492826731851006D269D /* LinkerService.swift in Sources */,
-				FC074926267311B3006D269D /* EmailService.swift in Sources */,
 				FC58D3DE266D2EE7002C4C1A /* ViewController.swift in Sources */,
 				E6FF5352267304FE00D9AC61 /* RouterConnectionService.swift in Sources */,
 				FCB64F8D2677C88400501437 /* InternetConnectionService.swift in Sources */,
@@ -370,8 +402,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MacBryte/MacBryte.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BAMVK6LBVP;
 				INFOPLIST_FILE = MacBryte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -390,8 +424,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MacBryte/MacBryte.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BAMVK6LBVP;
 				INFOPLIST_FILE = MacBryte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

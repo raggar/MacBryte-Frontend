@@ -19,16 +19,27 @@ class Constants {
     
     // Images
     static let menuBarIconInternetGood : String = "BarIcon"
-    static let menuBarIconInternetDown : String = "BarIconReversed"
-    static let menuBarIconRouterNotConnected : String = "BarIconReversedYellow"
+    static let menuBarIconInternetDisconnected : String = "BarIconReversed"
     
     // Internet check
+    static let pingHost : String = "https://www.google.com/"
     static let connectedToInternet : String = "You are connected to the internet"
-    static let notConnectedToInternet : String = "You are connected to your router, but not the internet"
-    static let notConnectedToRouter : String = "You are not connected to your router"
+    static let disconnectedFromInternet : String = "You are not connected to the internet"
+    static let internetCheckTimeInterval : Double = 2.0
+    
+    // Notifications
+    static let internetConnectedNotificationId : String = "InternetConnectedNotification"
+    static let internetConnectedNotificationTitle : String = "Internet is Connected"
+    static let internetConnectedNotificationBody : String = "You may now use your computer as normal"
+    static let internetDisconnectedNotificationId : String = "InternetDisconnectedNotification"
+    static let internetDisconnectedNotificationTitle : String = "Internet is Not Connected"
+    static let internetDisconnectedNotificationBody : String = "Some features on your computer may be unavailable. Please call MacBryte if this problem persists"
+    
+    // Storage Keys
+    static let zoomLinkStorageKey : String = "ZoomLinkKey"
     
     // Error Codes
-    static let viewControllerFindFailed = "Unable to find ViewController in the storyboard."
-    static let statusItemFindFailed = "Could not find status item button."
+    static let viewControllerFindFailed : String = "Unable to find ViewController in the storyboard."
+    static let statusItemFindFailed : String = "Could not find status item button."
 }
 
