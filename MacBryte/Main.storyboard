@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="eaS-Hx-Tx4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -680,23 +680,122 @@
             </objects>
             <point key="canvasLocation" x="-269" y="-66"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="qNb-u0-cma">
+            <objects>
+                <windowController id="eaS-Hx-Tx4" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="qtq-gv-hJ9">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="425" y="473" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1440"/>
+                        <view key="contentView" id="3Oc-Lo-Pjf">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="eaS-Hx-Tx4" id="nAF-Ia-tyc"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="yl9-s7-YbO" kind="relationship" relationship="window.shadowedContentViewController" id="5fw-fZ-01r"/>
+                    </connections>
+                </windowController>
+                <customObject id="TRf-yD-Pd9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-867" y="623"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="phA-zQ-Qfx">
+            <objects>
+                <viewController id="yl9-s7-YbO" customClass="LoginViewController" customModule="MacBryte" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="3nu-VV-zSJ">
+                        <rect key="frame" x="0.0" y="0.0" width="423" height="299"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWU-gc-w6x">
+                                <rect key="frame" x="139" y="149" width="145" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="wJI-nw-Qh4"/>
+                            </imageView>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RiG-Jg-Ypl">
+                                <rect key="frame" x="83" y="143" width="257" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="cpU-if-X14">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2cx-KR-q7P">
+                                <rect key="frame" x="83" y="112" width="257" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="GvL-8S-wdU">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Kc-zl-Ucf">
+                                <rect key="frame" x="217" y="46" width="114" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Signup" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="R2d-rt-6Wg">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="signupPressed:" target="yl9-s7-YbO" id="uE0-Fo-PTL"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfl-8O-vbJ">
+                                <rect key="frame" x="115" y="88" width="177" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" id="2p4-b2-26C">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0uG-Ft-Lcu">
+                                <rect key="frame" x="94" y="46" width="114" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Login" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GKC-w0-gsK">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="loginPressed:" target="yl9-s7-YbO" id="VYd-i0-2ii"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="emailInput" destination="RiG-Jg-Ypl" id="Ynz-EN-ZTc"/>
+                        <outlet property="label" destination="hfl-8O-vbJ" id="37t-YL-psL"/>
+                        <outlet property="passwordInput" destination="2cx-KR-q7P" id="MBy-Fr-HG7"/>
+                    </connections>
+                </viewController>
+                <customObject id="xyA-Hn-4qt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-361.5" y="619.5"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="MacBryte" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="349" height="308"/>
+                        <rect key="frame" x="0.0" y="0.0" width="349" height="310"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="equalSpacing" orientation="vertical" alignment="centerX" spacing="19" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paw-pm-APW">
-                                <rect key="frame" x="25" y="23" width="299" height="263"/>
+                            <stackView distribution="equalSpacing" orientation="vertical" alignment="centerX" spacing="19" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paw-pm-APW">
+                                <rect key="frame" x="25" y="25" width="299" height="265"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mr8-Pt-KgJ">
-                                        <rect key="frame" x="81" y="192" width="137" height="71"/>
+                                        <rect key="frame" x="81" y="194" width="137" height="71"/>
                                         <imageCell key="cell" selectable="YES" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="logo" id="6f6-YR-TIm"/>
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PTz-pi-hBm">
-                                        <rect key="frame" x="128" y="154" width="44" height="19"/>
+                                        <rect key="frame" x="128" y="156" width="44" height="19"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" refusesFirstResponder="YES" title="Label" id="T6v-VC-Fhh">
                                             <font key="font" metaFont="system" size="16"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -704,10 +803,10 @@
                                         </textFieldCell>
                                     </textField>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OcW-oT-9sJ">
-                                        <rect key="frame" x="49" y="116" width="202" height="19"/>
+                                        <rect key="frame" x="49" y="117" width="202" height="20"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qq5-2W-n2I">
-                                                <rect key="frame" x="-2" y="0.0" width="48" height="19"/>
+                                                <rect key="frame" x="-2" y="1" width="48" height="19"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Email:" id="lRU-xE-XWb">
                                                     <font key="font" metaFont="system" size="16"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -715,7 +814,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e6e-Qf-uFT">
-                                                <rect key="frame" x="52" y="0.0" width="150" height="19"/>
+                                                <rect key="frame" x="52" y="0.0" width="150" height="20"/>
                                                 <buttonCell key="cell" type="bevel" title="info@macbryte.com" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="KgU-29-4dZ">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system" size="16"/>
@@ -736,7 +835,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xnh-S6-vm4">
-                                        <rect key="frame" x="70" y="78" width="160" height="19"/>
+                                        <rect key="frame" x="70" y="79" width="160" height="19"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dDE-ub-DLg">
                                                 <rect key="frame" x="-2" y="0.0" width="55" height="19"/>
@@ -768,10 +867,10 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g7m-R1-EAj">
-                                        <rect key="frame" x="40" y="40" width="220" height="19"/>
+                                        <rect key="frame" x="40" y="40" width="220" height="20"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j1s-fY-adc">
-                                                <rect key="frame" x="-2" y="0.0" width="68" height="19"/>
+                                                <rect key="frame" x="-2" y="1" width="68" height="19"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Website:" id="hpd-xq-t7q">
                                                     <font key="font" metaFont="system" size="16"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -779,7 +878,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-di-P0q">
-                                                <rect key="frame" x="72" y="0.0" width="148" height="19"/>
+                                                <rect key="frame" x="72" y="0.0" width="148" height="20"/>
                                                 <buttonCell key="cell" type="bevel" title="www.macbryte.com" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="KUz-cC-5nV">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system" size="16"/>

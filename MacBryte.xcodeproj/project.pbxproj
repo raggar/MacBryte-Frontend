@@ -10,6 +10,8 @@
 		9A6ED6B8E86132D6E70BA4E7 /* Pods_MacBryte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE9BE20B233C8D24537C87 /* Pods_MacBryte.framework */; };
 		E6247766266C350700554734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6247765266C350700554734 /* AppDelegate.swift */; };
 		E624776A266C350800554734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6247769266C350800554734 /* Assets.xcassets */; };
+		E65B024826A391C8000D2B3E /* Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B024726A391C8000D2B3E /* Serialization.swift */; };
+		E6D1F5E726A3775C000F38AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D1F5E626A3775C000F38AA /* LoginViewController.swift */; };
 		E6FF5352267304FE00D9AC61 /* RouterConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */; };
 		FC07492826731851006D269D /* LinkerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07492726731851006D269D /* LinkerService.swift */; };
 		FC07492A2673189E006D269D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0749292673189E006D269D /* Constants.swift */; };
@@ -35,6 +37,8 @@
 		E6247769266C350800554734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MacBryte/Assets/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		E624776E266C350800554734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E624776F266C350800554734 /* MacBryte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacBryte.entitlements; sourceTree = "<group>"; };
+		E65B024726A391C8000D2B3E /* Serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serialization.swift; sourceTree = "<group>"; };
+		E6D1F5E626A3775C000F38AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterConnectionService.swift; sourceTree = "<group>"; };
 		FC07492726731851006D269D /* LinkerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerService.swift; sourceTree = "<group>"; };
 		FC0749292673189E006D269D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 		E6247764266C350700554734 /* MacBryte */ = {
 			isa = PBXGroup;
 			children = (
+				E65B024626A391B3000D2B3E /* Utils */,
 				FC3BD892269B68B20001705B /* Services */,
 				FC3BD891269B68A20001705B /* Controllers */,
 				FC3BD890269B689C0001705B /* Assets */,
@@ -111,6 +116,14 @@
 				E624776F266C350800554734 /* MacBryte.entitlements */,
 			);
 			path = MacBryte;
+			sourceTree = "<group>";
+		};
+		E65B024626A391B3000D2B3E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E65B024726A391C8000D2B3E /* Serialization.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		FC3BD890269B689C0001705B /* Assets */ = {
@@ -131,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				FC58D3DD266D2EE7002C4C1A /* ViewController.swift */,
+				E6D1F5E626A3775C000F38AA /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -266,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6D1F5E726A3775C000F38AA /* LoginViewController.swift in Sources */,
 				FC07492A2673189E006D269D /* Constants.swift in Sources */,
 				FC4800A1269A0C7100C4382C /* NotificationHandler.swift in Sources */,
 				FCB64F8F2677DC6200501437 /* InternetStatusHandler.swift in Sources */,
@@ -273,6 +288,7 @@
 				FC58D3DE266D2EE7002C4C1A /* ViewController.swift in Sources */,
 				E6FF5352267304FE00D9AC61 /* RouterConnectionService.swift in Sources */,
 				FCB64F8D2677C88400501437 /* InternetConnectionService.swift in Sources */,
+				E65B024826A391C8000D2B3E /* Serialization.swift in Sources */,
 				E6247766266C350700554734 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

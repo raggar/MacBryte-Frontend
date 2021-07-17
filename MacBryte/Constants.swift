@@ -41,5 +41,9 @@ class Constants {
     // Error Codes
     static let viewControllerFindFailed : String = "Unable to find ViewController in the storyboard."
     static let statusItemFindFailed : String = "Could not find status item button."
+    
+    // Request Urls
+    static let signUpURL : String = "http://localhost:8000/apiV1/signup"
+    static let loginURL : String = "http://localhost:8000/apiV1/login"
 }
 
