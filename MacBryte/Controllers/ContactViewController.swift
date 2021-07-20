@@ -9,7 +9,7 @@ import Cocoa
 import Network
 import Combine
 
-class ViewController : NSViewController, NSTextFieldDelegate {
+class ContactViewController : NSViewController, NSTextFieldDelegate {
     
     @IBOutlet weak var macbryteEmailText: NSButton!
     @IBOutlet weak var macbryteWebsiteLink: NSButton!
@@ -22,7 +22,6 @@ class ViewController : NSViewController, NSTextFieldDelegate {
         if let zoomLinkValue = UserDefaults.standard.string(forKey: Constants.zoomLinkStorageKey) {
             zoomLinkTextField.stringValue = zoomLinkValue
         }
-        
         internetStatusText.stringValue = InternetStatusHandler.shared.getConnectionStatus()
     }
 

@@ -678,7 +678,7 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-269" y="-66"/>
+            <point key="canvasLocation" x="-378" y="386"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="qNb-u0-cma">
@@ -698,26 +698,21 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="yl9-s7-YbO" kind="relationship" relationship="window.shadowedContentViewController" id="5fw-fZ-01r"/>
+                        <segue destination="yl9-s7-YbO" kind="relationship" relationship="window.shadowedContentViewController" id="fVB-1M-EsZ"/>
                     </connections>
                 </windowController>
                 <customObject id="TRf-yD-Pd9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-867" y="623"/>
+            <point key="canvasLocation" x="-679" y="656"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="phA-zQ-Qfx">
             <objects>
-                <viewController id="yl9-s7-YbO" customClass="LoginViewController" customModule="MacBryte" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" id="yl9-s7-YbO" customClass="LoginViewController" customModule="MacBryte" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="3nu-VV-zSJ">
                         <rect key="frame" x="0.0" y="0.0" width="423" height="299"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWU-gc-w6x">
-                                <rect key="frame" x="139" y="149" width="145" height="142"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="wJI-nw-Qh4"/>
-                            </imageView>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RiG-Jg-Ypl">
                                 <rect key="frame" x="83" y="143" width="257" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -750,9 +745,9 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfl-8O-vbJ">
                                 <rect key="frame" x="115" y="88" width="177" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" id="2p4-b2-26C">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="2p4-b2-26C">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -767,22 +762,52 @@
                                     <action selector="loginPressed:" target="yl9-s7-YbO" id="VYd-i0-2ii"/>
                                 </connections>
                             </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWU-gc-w6x">
+                                <rect key="frame" x="139" y="149" width="145" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="wJI-nw-Qh4"/>
+                            </imageView>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="emailInput" destination="RiG-Jg-Ypl" id="Ynz-EN-ZTc"/>
                         <outlet property="label" destination="hfl-8O-vbJ" id="37t-YL-psL"/>
                         <outlet property="passwordInput" destination="2cx-KR-q7P" id="MBy-Fr-HG7"/>
+                        <segue destination="IIL-94-bhv" kind="show" identifier="goToTabController" id="dV1-lh-RlO"/>
                     </connections>
                 </viewController>
                 <customObject id="xyA-Hn-4qt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-361.5" y="619.5"/>
+            <point key="canvasLocation" x="-124" y="649"/>
         </scene>
-        <!--View Controller-->
+        <!--Tab View Controller-->
+        <scene sceneID="5wY-BM-Fft">
+            <objects>
+                <tabViewController storyboardIdentifier="tabViewController" selectedTabViewItemIndex="0" id="IIL-94-bhv" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem id="731-TQ-sMJ"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="rwx-2B-lr2">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <connections>
+                            <outlet property="delegate" destination="IIL-94-bhv" id="0PR-51-gaj"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="rwx-2B-lr2" id="Xoa-We-G6q"/>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="tabItems" id="D2W-7L-UtH"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="f3B-UD-d6f" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-125" y="1066"/>
+        </scene>
+        <!--Contact-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="MacBryte" sceneMemberID="viewController">
+                <viewController title="Contact" storyboardIdentifier="contactViewController" id="XfG-lQ-9wD" customClass="ContactViewController" customModule="MacBryte" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="349" height="310"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -968,7 +993,7 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="ORD-dz-CSk"/>
             </objects>
-            <point key="canvasLocation" x="-270" y="205"/>
+            <point key="canvasLocation" x="-377" y="1567"/>
         </scene>
     </scenes>
     <resources>

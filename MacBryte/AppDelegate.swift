@@ -16,8 +16,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         setStatusItemImage(to: Constants.menuBarIconInternetGood)
         
-        statusItem.button?.target = self
-        statusItem.button?.action = #selector(showPopup)
+        if (UserDefaults.standard.bool(forKey: "isAuthenticated")) {
+            statusItem.button?.target = self
+            statusItem.button?.action = #selector(showPopup)
+        }
         
         NotificationHandler.shared.getNotificationAuthorization() // Get authorization. This prevents bug where first notification does not send
         
@@ -35,7 +37,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func showPopup() {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
 
-        guard let vc = storyboard.instantiateController(withIdentifier: "ViewController") as? ViewController else {
+        guard let vc = storyboard.instantiateController(withIdentifier: "contactViewController") as? NSViewController else {
             fatalError(Constants.viewControllerFindFailed)
         }
 

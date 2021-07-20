@@ -8,7 +8,8 @@
 import Foundation
 
 /*
- Stores all constants in the application for easy maintenance 
+ Stores all constants in the application for easy maintenance
+ If repo becomes public DON'T COMMIT this file
  */
 class Constants {
     // Emails
@@ -45,5 +46,8 @@ class Constants {
     // Request Urls
     static let signUpURL : String = "http://localhost:8000/apiV1/signup"
     static let loginURL : String = "http://localhost:8000/apiV1/login"
+    
+    // Enviornment
+    static let enviornment : String = "production"
 }
 
