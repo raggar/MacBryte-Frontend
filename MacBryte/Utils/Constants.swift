@@ -49,6 +49,6 @@ class Constants {
     static let getUserUrl : String = "http://localhost:8000/apiV1/userInfo"
     
     // Enviornment
-    static let enviornment : String = "production"
+    static let enviornment : String = "develop"
 }
 

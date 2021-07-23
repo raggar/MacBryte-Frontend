@@ -54,13 +54,14 @@ class SignupViewController: NSViewController, NSTextFieldDelegate {
         if inputsEmpty() {
             setErrorMessage(message: "One or more fields are empty")
         } else {
-            let data: Dictionary<String, Any> = fetchData(url: Constants.signUpURL, parameters: signupParams)
-            if (data["error"] as! Bool) {
-                setErrorMessage(message: data["requestMessage"] as! String)
-            } else {
-                UserDefaults.standard.setValue(data["isAdmin"], forKey: "isAdmin")
-                UserDefaults.standard.setValue(data["userId"], forKey: "userId")
-                transitionControllers(window: self.view.window?.windowController, segueIdentifier: "signupToDataController")
+            fetchData(url: Constants.signUpURL, parameters: signupParams) { (result) in
+                if (result["error"] as! Bool) {
+                    self.setErrorMessage(message: result["requestMessage"] as! String)
+                } else {
+                    UserDefaults.standard.setValue(result["isAdmin"], forKey: "isAdmin")
+                    UserDefaults.standard.setValue(result["userId"], forKey: "userId")
+                    self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "signupToDataController")
+                }
             }
         }
     }

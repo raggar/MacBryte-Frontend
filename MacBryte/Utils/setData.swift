@@ -9,18 +9,15 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-
-
-func fetchData(url: String, parameters: [String: String]) {
+func fetchData(url: String, parameters: [String: String], completionHandler: @escaping ((Dictionary<String, Any>) -> Void)) {
     Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
-        let resultDic: Dictionary<String, Any>;
+        let result: Dictionary<String, Any>
         if (response.result.isSuccess) {
-            let responseJSON: JSON = JSON(response.result.value!)
-            resultDic = serializeToDict(data: JSON(responseJSON))
-            
+            result = serializeToDict(data: JSON(response.result.value!))
+            completionHandler(result)
         } else {
-            resultDic["error"] = true
-            resultDic["message"] = "Unable to complete request"
+            result = ["error": true, "requestMessage": "Unable to complete request"]
         }
+        completionHandler(result)
     }
 }

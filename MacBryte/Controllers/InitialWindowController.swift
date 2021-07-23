@@ -14,7 +14,7 @@ class InitialWindowController: NSWindowController {
     
         var contentController: NSTabViewController
         var size: NSSize
-        if (UserDefaults.standard.string(forKey: "userId") == nil && UserDefaults.standard.bool(forKey: "isAdmin")) {
+        if (UserDefaults.standard.string(forKey: "userId") != nil && UserDefaults.standard.bool(forKey: "isAdmin")) {
             // edit for admin portal
             contentController = storyboard.instantiateController(withIdentifier: "authenticationTabViewController") as! NSTabViewController
             size = NSSize(width: 400, height: 400)

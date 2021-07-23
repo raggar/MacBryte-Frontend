@@ -1012,11 +1012,11 @@
             <objects>
                 <viewController title="Signup" storyboardIdentifier="signupViewController" id="Yxk-lS-ZGO" customClass="SignupViewController" customModule="MacBryte" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ndv-3T-MGy">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="351"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tz9-UV-35n">
-                                <rect key="frame" x="72" y="188" width="257" height="21"/>
+                                <rect key="frame" x="72" y="237" width="257" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="YuA-AM-mCh">
                                     <font key="font" metaFont="system"/>
@@ -1025,7 +1025,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4TC-99-njr">
-                                <rect key="frame" x="72" y="157" width="257" height="21"/>
+                                <rect key="frame" x="72" y="206" width="257" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="sZg-eq-UDz">
                                     <font key="font" metaFont="system"/>
@@ -1034,12 +1034,12 @@
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cyZ-Go-N3o">
-                                <rect key="frame" x="129" y="201" width="145" height="142"/>
+                                <rect key="frame" x="129" y="250" width="145" height="142"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="1Se-JP-2LD"/>
                             </imageView>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PCZ-Dk-TlN">
-                                <rect key="frame" x="73" y="126" width="257" height="21"/>
+                                <rect key="frame" x="73" y="175" width="257" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="jip-mR-RcZ">
                                     <font key="font" metaFont="system"/>
@@ -1048,7 +1048,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aDx-cu-G3R">
-                                <rect key="frame" x="72" y="95" width="257" height="21"/>
+                                <rect key="frame" x="72" y="144" width="257" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="rTd-d0-gXP">
                                     <font key="font" metaFont="system"/>
@@ -1057,7 +1057,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zy8-l0-Mmj">
-                                <rect key="frame" x="71" y="62" width="260" height="16"/>
+                                <rect key="frame" x="71" y="111" width="260" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="U2c-KK-fjC">
                                     <font key="font" metaFont="system"/>
@@ -1066,7 +1066,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CqA-4b-L9F">
-                                <rect key="frame" x="143" y="27" width="114" height="32"/>
+                                <rect key="frame" x="143" y="61" width="114" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Signup" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8ei-yS-f2D">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1089,7 +1089,7 @@
                 </viewController>
                 <customObject id="GOS-QQ-QQD" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2245" y="1636.5"/>
+            <point key="canvasLocation" x="-2245" y="1661"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

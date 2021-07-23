@@ -35,8 +35,6 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
     }
     
     func inputsEmpty() -> Bool {
-        print(emailInput.stringValue)
-        print("INPUTS EMPTY",emailInput.stringValue.boolValueFromString, passwordInput.stringValue.boolValueFromString)
         return !(emailInput.stringValue.boolValueFromString && passwordInput.stringValue.boolValueFromString)
     }
     
@@ -45,16 +43,15 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
         if inputsEmpty() {
             setErrorMessage(message: "One or more fields are empty")
         } else {
-            var data: Dictionary<String, Any> = fetchData(url: Constants.loginURL, parameters: loginParams)
-            print(data)
-//            print(data["error"] as! Bool)
-//            if (data["error"] as! Bool) {
-//                setErrorMessage(message: data["requestMessage"] as! String)
-//            } else {
-//                UserDefaults.standard.setValue(data["isAdmin"], forKey: "isAdmin")
-//                UserDefaults.standard.setValue(data["userId"], forKey: "userId")
-//                transitionControllers(window: self.view.window?.windowController, segueIdentifier: "loginToDataController")
-//            }
+            fetchData(url: Constants.loginURL, parameters: loginParams) { (result) in
+                if (result["error"] as! Bool) {
+                    self.setErrorMessage(message: result["requestMessage"] as! String)
+                } else {
+                    UserDefaults.standard.setValue(result["isAdmin"], forKey: "isAdmin")
+                    UserDefaults.standard.setValue(result["userId"], forKey: "userId")
+                    self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "loginToDataController")
+                }
+            }
         }
     }
 

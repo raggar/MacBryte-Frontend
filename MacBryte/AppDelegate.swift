@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             removeUserDefaults()
         }
         
-        if (UserDefaults.standard.bool(forKey: "userId")) {
+        if (UserDefaults.standard.string(forKey: "userId") != nil) {
             statusItem.button?.target = self
             statusItem.button?.action = #selector(showPopup)
         }

@@ -11,10 +11,12 @@ class DataTabViewController: NSTabViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        guard let userId = UserDefaults.standard.string(forKey: "userId") else {
-//            fatalError("User id is null")
-//        }
-//        let data = fetchData(url: Constants.getUserUrl, parameters: ["userId": userId])
+        guard let userId = UserDefaults.standard.string(forKey: "userId") else {
+            fatalError("User id is null")
+        }
+        fetchData(url: Constants.getUserUrl, parameters: ["userId": userId]) { result in
+            print("RESULT", result)
+        }
     }
     
 }

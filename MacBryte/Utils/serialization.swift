@@ -14,7 +14,6 @@ let arrayKeys: [String] = ["previousSessionSummary"]
 
 func serializeToDict(data: JSON) -> Dictionary<String, Any> {
     var serializedDic = [String: Any]()
-    
     for (key, _) in data {
         if integerKeys.contains(key) {
             serializedDic[key] = (data[key]).rawValue as! Int
