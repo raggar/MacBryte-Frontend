@@ -24,12 +24,16 @@ class InitialWindowController: NSWindowController {
         }
         else {
             contentController = storyboard.instantiateController(withIdentifier: "authenticationTabViewController") as! NSTabViewController
-            size = NSSize(width: 400, height: 450)
+            size = NSSize(width: 500, height: 500)
         }
 
         self.window?.contentViewController = contentController
         self.window?.setContentSize(size)
         self.window?.styleMask.remove(.resizable)
         self.window?.center()
+    }
+    
+    func setWindowSize(to size: NSSize) {
+        self.window?.setContentSize(size)
     }
 }

@@ -54,6 +54,7 @@ class Constants {
     static let fieldIsEmpty : String = "One or more fields are empty"
     static let windowControllerDoesNotExist = "Window controller does not exist"
     static let userIdNull = "User id is null"
+    static let backendMessageNotCompleted = "Unable to complete request"
     
     // Request Urls
     static let signUpURL : String = "http://localhost:8000/apiV1/signup"

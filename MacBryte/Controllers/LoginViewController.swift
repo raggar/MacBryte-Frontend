@@ -12,16 +12,18 @@ import Alamofire
 import SwiftyJSON
 
 class LoginViewController: NSViewController, NSTextFieldDelegate {
+ 
+    @IBOutlet weak var emailInput: NSTextField!
+    @IBOutlet weak var passwordInput: NSTextField!
+    @IBOutlet weak var label: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         emailInput.placeholderString = "Email"
         passwordInput.placeholderString = "Password"
+        
+//        InitialWindowController.setWindowSize(to: NSSize(width: 199, height: 40))
     }
- 
-    @IBOutlet weak var emailInput: NSTextField!
-    @IBOutlet weak var passwordInput: NSTextField!
-    @IBOutlet weak var label: NSTextField!
     
     @IBAction func loginPressed(_ sender: NSButton) {
         DispatchQueue.main.async {
@@ -48,8 +50,25 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
                     self.setErrorMessage(message: result["requestMessage"] as! String)
                 } else {
                     print(result)
+                    
                     UserDefaults.standard.setValue(result["isAdmin"], forKey: Constants.userIsAdminStorageKey)
                     UserDefaults.standard.setValue(result["userId"], forKey: Constants.userIdStorageKey)
+
+                    self.getUserInformation()
+                }
+            }
+        }
+    }
+    
+    func getUserInformation() -> Void {
+        
+        if let userId = UserDefaults.standard.string(forKey: Constants.userIdStorageKey) {
+            let getParams: Dictionary<String, String> = ["_id": userId]
+                        
+            getData(url: Constants.getUserUrl, parameters: getParams) { (result) in
+                if result["error"] as! Bool {
+                    self.setErrorMessage(message: result["requestMessage"] as! String)
+                } else {
                     UserDefaults.standard.setValue(result["firstname"], forKey: Constants.userFirstNameStorageKey)
                     UserDefaults.standard.setValue(result["lastname"], forKey: Constants.userLastNameStorageKey)
                     UserDefaults.standard.setValue(result["email"], forKey: Constants.userEmailStorageKey)
@@ -61,6 +80,8 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
                     self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "loginToDataController")
                 }
             }
+        } else {
+            print("Could not find id")
         }
     }
 

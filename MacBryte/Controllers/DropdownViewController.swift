@@ -13,14 +13,16 @@ class DropdownViewController : NSViewController, NSTextFieldDelegate {
     
     @IBOutlet weak var macbryteEmailText: NSButton!
     @IBOutlet weak var macbryteWebsiteLink: NSButton!
-    @IBOutlet weak var zoomLinkTextField: NSTextField!
     @IBOutlet weak var internetStatusText: NSTextField!
+    @IBOutlet weak var zoomLinkField: NSButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let zoomLinkValue = UserDefaults.standard.string(forKey: Constants.zoomLinkStorageKey) {
-            zoomLinkTextField.stringValue = zoomLinkValue
+        if let zoomLinkValue = UserDefaults.standard.string(forKey: Constants.userZoomLinkStorageKey), let userId = UserDefaults.standard.string(forKey: Constants.userIdStorageKey) {
+            zoomLinkField.title = zoomLinkValue
+        } else {
+            zoomLinkField.title = "Log in to view your Zoom Link"
         }
         
         internetStatusText.stringValue = InternetStatusHandler.shared.getConnectionStatus()
@@ -30,10 +32,6 @@ class DropdownViewController : NSViewController, NSTextFieldDelegate {
     override var representedObject: Any? {
         didSet {
         }
-    }
-    
-    override func viewWillDisappear() {
-        UserDefaults.standard.set(zoomLinkTextField.stringValue, forKey: Constants.zoomLinkStorageKey)
     }
     
     /*
@@ -51,8 +49,7 @@ class DropdownViewController : NSViewController, NSTextFieldDelegate {
         LinkerService.link(to: Constants.macbryteWebsite)
     }
     
-    @IBAction func copyToPasteboard(_ sender: NSButton) {
-        NSPasteboard.general.clearContents();
-        NSPasteboard.general.setString(zoomLinkTextField.stringValue, forType: .string)
+    @IBAction func zoomLinkClicked(_ sender: Any) {
+        LinkerService.link(to: zoomLinkField.title)
     }
 }

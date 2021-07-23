@@ -14,7 +14,7 @@
 		E65B024826A391C8000D2B3E /* serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B024726A391C8000D2B3E /* serialization.swift */; };
 		E6CE19AE26A79DD0002AB5A0 /* AuthenticationTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19AD26A79DD0002AB5A0 /* AuthenticationTabController.swift */; };
 		E6CE19B026A7A42B002AB5A0 /* removeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19AF26A7A42B002AB5A0 /* removeUserDefaults.swift */; };
-		E6CE19B226A7A44E002AB5A0 /* setData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19B126A7A44E002AB5A0 /* setData.swift */; };
+		E6CE19B226A7A44E002AB5A0 /* UserBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19B126A7A44E002AB5A0 /* UserBackend.swift */; };
 		E6CE19B526A7AC26002AB5A0 /* stringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19B426A7AC26002AB5A0 /* stringExtensions.swift */; };
 		E6CE19B926A7B461002AB5A0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19B826A7B461002AB5A0 /* SignupViewController.swift */; };
 		E6D1F5E726A3775C000F38AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D1F5E626A3775C000F38AA /* LoginViewController.swift */; };
@@ -50,7 +50,7 @@
 		E65B024726A391C8000D2B3E /* serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serialization.swift; sourceTree = "<group>"; };
 		E6CE19AD26A79DD0002AB5A0 /* AuthenticationTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTabController.swift; sourceTree = "<group>"; };
 		E6CE19AF26A7A42B002AB5A0 /* removeUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = removeUserDefaults.swift; sourceTree = "<group>"; };
-		E6CE19B126A7A44E002AB5A0 /* setData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setData.swift; sourceTree = "<group>"; };
+		E6CE19B126A7A44E002AB5A0 /* UserBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBackend.swift; sourceTree = "<group>"; };
 		E6CE19B426A7AC26002AB5A0 /* stringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stringExtensions.swift; sourceTree = "<group>"; };
 		E6CE19B826A7B461002AB5A0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		E6D1F5E626A3775C000F38AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 				FC0749292673189E006D269D /* Constants.swift */,
 				E65B024726A391C8000D2B3E /* serialization.swift */,
 				E6CE19AF26A7A42B002AB5A0 /* removeUserDefaults.swift */,
-				E6CE19B126A7A44E002AB5A0 /* setData.swift */,
+				E6CE19B126A7A44E002AB5A0 /* UserBackend.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -319,7 +319,7 @@
 				FC07492A2673189E006D269D /* Constants.swift in Sources */,
 				E6CE19B526A7AC26002AB5A0 /* stringExtensions.swift in Sources */,
 				E6CE19AE26A79DD0002AB5A0 /* AuthenticationTabController.swift in Sources */,
-				E6CE19B226A7A44E002AB5A0 /* setData.swift in Sources */,
+				E6CE19B226A7A44E002AB5A0 /* UserBackend.swift in Sources */,
 				FCB3B5F926AA89EA0049F0AA /* ContactViewController.swift in Sources */,
 				FC4800A1269A0C7100C4382C /* NotificationHandler.swift in Sources */,
 				FCB64F8F2677DC6200501437 /* InternetStatusHandler.swift in Sources */,
