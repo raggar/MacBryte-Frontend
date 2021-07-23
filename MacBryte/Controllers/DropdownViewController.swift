@@ -19,8 +19,12 @@ class DropdownViewController : NSViewController, NSTextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let zoomLinkValue = UserDefaults.standard.string(forKey: Constants.userZoomLinkStorageKey), let userId = UserDefaults.standard.string(forKey: Constants.userIdStorageKey) {
-            zoomLinkField.title = zoomLinkValue
+        if let zoomLinkValue = UserDefaults.standard.string(forKey: Constants.userZoomLinkStorageKey) {
+            if "" != zoomLinkValue {
+                zoomLinkField.title = zoomLinkValue
+            } else {
+                zoomLinkField.title = " "
+            }
         } else {
             zoomLinkField.title = "Log in to view your Zoom Link"
         }

@@ -32,6 +32,8 @@ class AccountViewController : NSViewController, NSTextFieldDelegate {
         
         if let zoomLinkValue = UserDefaults.standard.string(forKey: Constants.userZoomLinkStorageKey) {
             zoomLinkField.title = zoomLinkValue
+        } else {
+            zoomLinkField.title = "You don't have a Zoom link yet"
         }
         
         if let packagePurchasedValue = UserDefaults.standard.string(forKey: Constants.userPackagePurchasedStorageKey) {
@@ -45,7 +47,6 @@ class AccountViewController : NSViewController, NSTextFieldDelegate {
         if let grandTotalHoursValue = UserDefaults.standard.string(forKey: Constants.userGrandTotalHoursStorageKey) {
             grandTotalHoursField.stringValue = grandTotalHoursValue
         }
-
     }
     
     override var representedObject: Any? {
@@ -61,6 +62,17 @@ class AccountViewController : NSViewController, NSTextFieldDelegate {
     }
     
     @IBAction func signOutUser(_ sender: Any) {
+        removeUserDefaults()
+        
+        self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "accountViewController")
+    }
+    
+    func transitionControllers(window: NSWindowController?, segueIdentifier: String) {
+        guard window != nil else {
+            fatalError(Constants.windowControllerDoesNotExist)
+        }
+        window!.close()
+        performSegue(withIdentifier: segueIdentifier, sender: self)
     }
 }
 

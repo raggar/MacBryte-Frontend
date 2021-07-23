@@ -1273,7 +1273,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="29" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJO-AS-q4L">
-                                <rect key="frame" x="30" y="30" width="450" height="365"/>
+                                <rect key="frame" x="30" y="37" width="450" height="365"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bn3-4G-c3s">
                                         <rect key="frame" x="100" y="337" width="251" height="28"/>
@@ -1518,8 +1518,8 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="GJO-AS-q4L" firstAttribute="leading" secondItem="j7H-ms-SId" secondAttribute="leading" constant="30" id="3Vl-Xw-LTE"/>
-                            <constraint firstAttribute="bottom" secondItem="GJO-AS-q4L" secondAttribute="bottom" constant="30" id="KPt-fO-R74"/>
                             <constraint firstAttribute="trailing" secondItem="GJO-AS-q4L" secondAttribute="trailing" constant="30" id="alx-Xa-HC4"/>
+                            <constraint firstItem="GJO-AS-q4L" firstAttribute="top" secondItem="j7H-ms-SId" secondAttribute="top" constant="30" id="saq-N5-ueZ"/>
                         </constraints>
                     </view>
                     <connections>

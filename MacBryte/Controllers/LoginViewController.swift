@@ -21,8 +21,6 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
         super.viewDidLoad()
         emailInput.placeholderString = "Email"
         passwordInput.placeholderString = "Password"
-        
-//        InitialWindowController.setWindowSize(to: NSSize(width: 199, height: 40))
     }
     
     @IBAction func loginPressed(_ sender: NSButton) {
@@ -48,9 +46,7 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
             fetchData(url: Constants.loginURL, parameters: loginParams) { (result) in
                 if (result["error"] as! Bool) {
                     self.setErrorMessage(message: result["requestMessage"] as! String)
-                } else {
-                    print(result)
-                    
+                } else {                    
                     UserDefaults.standard.setValue(result["isAdmin"], forKey: Constants.userIsAdminStorageKey)
                     UserDefaults.standard.setValue(result["userId"], forKey: Constants.userIdStorageKey)
 
