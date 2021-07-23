@@ -52,14 +52,14 @@ class SignupViewController: NSViewController, NSTextFieldDelegate {
     func signup(firstname: String, lastname: String, email: String, password: String) {
         let signupParams: Dictionary<String, String> = ["firstname": firstname, "lastname": lastname, "email": email, "password": password]
         if inputsEmpty() {
-            setErrorMessage(message: "One or more fields are empty")
+            setErrorMessage(message: Constants.fieldIsEmpty)
         } else {
             fetchData(url: Constants.signUpURL, parameters: signupParams) { (result) in
                 if (result["error"] as! Bool) {
                     self.setErrorMessage(message: result["requestMessage"] as! String)
                 } else {
-                    UserDefaults.standard.setValue(result["isAdmin"], forKey: "isAdmin")
-                    UserDefaults.standard.setValue(result["userId"], forKey: "userId")
+                    UserDefaults.standard.setValue(result["isAdmin"], forKey: Constants.userIsAdminStorageKey)
+                    UserDefaults.standard.setValue(result["userId"], forKey: Constants.userIdStorageKey)
                     self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "signupToDataController")
                 }
             }
@@ -68,7 +68,7 @@ class SignupViewController: NSViewController, NSTextFieldDelegate {
 
     func transitionControllers(window: NSWindowController?, segueIdentifier: String) {
         guard window != nil else {
-            fatalError("Window controller does not exist")
+            fatalError(Constants.windowControllerDoesNotExist)
         }
         window!.close()
         performSegue(withIdentifier: segueIdentifier, sender: self)

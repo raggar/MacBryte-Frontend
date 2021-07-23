@@ -38,10 +38,22 @@ class Constants {
     
     // Storage Keys
     static let zoomLinkStorageKey : String = "ZoomLinkKey"
+    static let userIsAdminStorageKey : String = "UserIsAdminKey"
+    static let userIdStorageKey : String = "UserIdKey"
+    static let userFirstNameStorageKey : String = "UserFirstNameKey"
+    static let userLastNameStorageKey : String = "UserLastNameKey"
+    static let userEmailStorageKey : String = "UserEmailKey"
+    static let userZoomLinkStorageKey : String = "UserZoomLinkKey"
+    static let userPackagePurchasedStorageKey : String = "UserPackagePurchasedKey"
+    static let userHoursRemainingStorageKey : String = "UserHoursRemainingKey"
+    static let userGrandTotalHoursStorageKey : String = "UserGrandTotalHoursKey"
     
     // Error Codes
     static let viewControllerFindFailed : String = "Unable to find ViewController in the storyboard."
     static let statusItemFindFailed : String = "Could not find status item button."
+    static let fieldIsEmpty : String = "One or more fields are empty"
+    static let windowControllerDoesNotExist = "Window controller does not exist"
+    static let userIdNull = "User id is null"
     
     // Request Urls
     static let signUpURL : String = "http://localhost:8000/apiV1/signup"

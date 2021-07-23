@@ -41,14 +41,23 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
     func login(email: String, password: String) {
         let loginParams: Dictionary<String, String> = ["email": emailInput.stringValue, "password": passwordInput.stringValue]
         if inputsEmpty() {
-            setErrorMessage(message: "One or more fields are empty")
+            setErrorMessage(message: Constants.fieldIsEmpty)
         } else {
             fetchData(url: Constants.loginURL, parameters: loginParams) { (result) in
                 if (result["error"] as! Bool) {
                     self.setErrorMessage(message: result["requestMessage"] as! String)
                 } else {
-                    UserDefaults.standard.setValue(result["isAdmin"], forKey: "isAdmin")
-                    UserDefaults.standard.setValue(result["userId"], forKey: "userId")
+                    print(result)
+                    UserDefaults.standard.setValue(result["isAdmin"], forKey: Constants.userIsAdminStorageKey)
+                    UserDefaults.standard.setValue(result["userId"], forKey: Constants.userIdStorageKey)
+                    UserDefaults.standard.setValue(result["firstname"], forKey: Constants.userFirstNameStorageKey)
+                    UserDefaults.standard.setValue(result["lastname"], forKey: Constants.userLastNameStorageKey)
+                    UserDefaults.standard.setValue(result["email"], forKey: Constants.userEmailStorageKey)
+                    UserDefaults.standard.setValue(result["zoomLink"], forKey: Constants.userZoomLinkStorageKey)
+                    UserDefaults.standard.setValue(result["packagePurchased"], forKey: Constants.userPackagePurchasedStorageKey)
+                    UserDefaults.standard.setValue(result["hoursRemaining"], forKey: Constants.userHoursRemainingStorageKey)
+                    UserDefaults.standard.setValue(result["grandTotalHours"], forKey: Constants.userGrandTotalHoursStorageKey)
+                    
                     self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "loginToDataController")
                 }
             }
@@ -57,7 +66,7 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
 
     func transitionControllers(window: NSWindowController?, segueIdentifier: String) {
         guard window != nil else {
-            fatalError("Window controller does not exist")
+            fatalError(Constants.windowControllerDoesNotExist)
         }
         window!.close()
         performSegue(withIdentifier: segueIdentifier, sender: self)

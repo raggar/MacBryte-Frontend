@@ -20,10 +20,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             removeUserDefaults()
         }
         
-        if (UserDefaults.standard.string(forKey: "userId") != nil) {
-            statusItem.button?.target = self
-            statusItem.button?.action = #selector(showPopup)
-        }
+        statusItem.button?.target = self
+        statusItem.button?.action = #selector(showPopup)
         
         NotificationHandler.shared.getNotificationAuthorization() // Get authorization. This prevents bug where first notification does not send
         
@@ -41,7 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func showPopup() {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
 
-        guard let vc = storyboard.instantiateController(withIdentifier: "contactViewController") as? NSViewController else {
+        guard let vc = storyboard.instantiateController(withIdentifier: "dropdownViewController") as? NSViewController else {
             fatalError(Constants.viewControllerFindFailed)
         }
 
