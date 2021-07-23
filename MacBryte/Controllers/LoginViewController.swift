@@ -12,71 +12,57 @@ import Alamofire
 import SwiftyJSON
 
 class LoginViewController: NSViewController, NSTextFieldDelegate {
- 
-    @IBOutlet weak var emailInput: NSTextField!
-    @IBOutlet weak var passwordInput: NSTextField!
-    
-    @IBOutlet weak var label: NSTextField!
-    @IBAction func loginPressed(_ sender: NSButton) {
-        login(email: emailInput.stringValue, password: passwordInput.stringValue)
-    }
-    
-    @IBAction func signupPressed(_ sender: NSButton) {
-        signUp(email: emailInput.stringValue, password: passwordInput.stringValue)
-    }
-    
-    func signUp(email: String, password: String) {
-        let signUpParams: [String: String] = ["email": emailInput.stringValue, "password": passwordInput.stringValue]
-        setData(url: Constants.signUpURL, parameters: signUpParams)
-        transitionControllers()
-    }
-    
-    func login(email: String, password: String) {
-        let loginParams: [String: String] = ["email": emailInput.stringValue, "password": passwordInput.stringValue]
-        setData(url: Constants.loginURL, parameters: loginParams)
-        transitionControllers()
-    }
-    
-    func transitionControllers() {
-        guard let windowController = self.view.window?.windowController else {
-            fatalError("Window controller does not exist")
-        }
-        windowController.close()
-        
-        performSegue(withIdentifier: "goToTabController", sender: self)
-    }
-    
-    func setData(url: String, parameters: [String: String]) {
-        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
-            if (response.result.isSuccess) {
-                let responseJSON: JSON = JSON(response.result.value!)
-                if (responseJSON["requestStatus"]["error"].rawValue as! Bool) {
-                    self.label.stringValue = (responseJSON["requestStatus"]["message"]).rawValue as! String
-                    self.label.textColor = .red
-                } else {
-                    let dataDict: Dictionary<String, Any> = serializeToDict(data: JSON(responseJSON["data"]))
-                    if (Constants.enviornment == "production") {
-                        UserDefaults.standard.set(true, forKey: "isAuthenticated")
-                        UserDefaults.standard.set(dataDict, forKey: "userData")
-                    } else {
-                        removeUserDefaults()
-                    }
-                }
-            } else {
-                print("Error \(String(describing: response.result.error))")
-                self.label.stringValue = "Connection issues.."
-                self.label.textColor = .red
-            }
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailInput.placeholderString = "Email"
+        passwordInput.placeholderString = "Password"
+    }
+ 
+    @IBOutlet weak var emailInput: NSTextField!
+    @IBOutlet weak var passwordInput: NSTextField!
+    @IBOutlet weak var label: NSTextField!
+    
+    @IBAction func loginPressed(_ sender: NSButton) {
+        DispatchQueue.main.async {
+            self.login(email: self.emailInput.stringValue, password: self.passwordInput.stringValue)
+        }
     }
     
-    override func viewDidAppear() {
-        if (UserDefaults.standard.bool(forKey: "isAuthenticated")) {
-            transitionControllers()
+    func setErrorMessage(message: String) {
+        label.stringValue = message
+        label.textColor = .red
+    }
+    
+    func inputsEmpty() -> Bool {
+        print(emailInput.stringValue)
+        print("INPUTS EMPTY",emailInput.stringValue.boolValueFromString, passwordInput.stringValue.boolValueFromString)
+        return !(emailInput.stringValue.boolValueFromString && passwordInput.stringValue.boolValueFromString)
+    }
+    
+    func login(email: String, password: String) {
+        let loginParams: Dictionary<String, String> = ["email": emailInput.stringValue, "password": passwordInput.stringValue]
+        if inputsEmpty() {
+            setErrorMessage(message: "One or more fields are empty")
+        } else {
+            var data: Dictionary<String, Any> = fetchData(url: Constants.loginURL, parameters: loginParams)
+            print(data)
+//            print(data["error"] as! Bool)
+//            if (data["error"] as! Bool) {
+//                setErrorMessage(message: data["requestMessage"] as! String)
+//            } else {
+//                UserDefaults.standard.setValue(data["isAdmin"], forKey: "isAdmin")
+//                UserDefaults.standard.setValue(data["userId"], forKey: "userId")
+//                transitionControllers(window: self.view.window?.windowController, segueIdentifier: "loginToDataController")
+//            }
         }
+    }
+
+    func transitionControllers(window: NSWindowController?, segueIdentifier: String) {
+        guard window != nil else {
+            fatalError("Window controller does not exist")
+        }
+        window!.close()
+        performSegue(withIdentifier: segueIdentifier, sender: self)
     }
 }

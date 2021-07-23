@@ -16,7 +16,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         setStatusItemImage(to: Constants.menuBarIconInternetGood)
         
-        if (UserDefaults.standard.bool(forKey: "isAuthenticated")) {
+        if (Constants.enviornment == "develop") {
+            removeUserDefaults()
+        }
+        
+        if (UserDefaults.standard.bool(forKey: "userId")) {
             statusItem.button?.target = self
             statusItem.button?.action = #selector(showPopup)
         }

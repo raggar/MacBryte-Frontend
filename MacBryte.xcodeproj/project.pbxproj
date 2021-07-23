@@ -8,10 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		9A6ED6B8E86132D6E70BA4E7 /* Pods_MacBryte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE9BE20B233C8D24537C87 /* Pods_MacBryte.framework */; };
+		E603D47126A8FF5B00CBA509 /* InitialWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E603D47026A8FF5B00CBA509 /* InitialWindowController.swift */; };
 		E6247766266C350700554734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6247765266C350700554734 /* AppDelegate.swift */; };
 		E624776A266C350800554734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6247769266C350800554734 /* Assets.xcassets */; };
-		E65B024826A391C8000D2B3E /* Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B024726A391C8000D2B3E /* Serialization.swift */; };
+		E65B024826A391C8000D2B3E /* serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B024726A391C8000D2B3E /* serialization.swift */; };
+		E6CE19AE26A79DD0002AB5A0 /* AuthenticationTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19AD26A79DD0002AB5A0 /* AuthenticationTabController.swift */; };
+		E6CE19B026A7A42B002AB5A0 /* removeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19AF26A7A42B002AB5A0 /* removeUserDefaults.swift */; };
+		E6CE19B226A7A44E002AB5A0 /* setData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19B126A7A44E002AB5A0 /* setData.swift */; };
+		E6CE19B526A7AC26002AB5A0 /* stringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19B426A7AC26002AB5A0 /* stringExtensions.swift */; };
+		E6CE19B926A7B461002AB5A0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19B826A7B461002AB5A0 /* SignupViewController.swift */; };
 		E6D1F5E726A3775C000F38AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D1F5E626A3775C000F38AA /* LoginViewController.swift */; };
+		E6FDB7F126A912130055EAF7 /* DataTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FDB7F026A912130055EAF7 /* DataTabViewController.swift */; };
 		E6FF5352267304FE00D9AC61 /* RouterConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */; };
 		FC07492826731851006D269D /* LinkerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07492726731851006D269D /* LinkerService.swift */; };
 		FC07492A2673189E006D269D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0749292673189E006D269D /* Constants.swift */; };
@@ -32,13 +39,20 @@
 		89CE9BE20B233C8D24537C87 /* Pods_MacBryte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacBryte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0FE1C517EF3EA39428044A4 /* Pods-MacBryte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacBryte.release.xcconfig"; path = "Target Support Files/Pods-MacBryte/Pods-MacBryte.release.xcconfig"; sourceTree = "<group>"; };
 		CCA5179E7853153B2D6945E6 /* Pods-MacBryte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacBryte.debug.xcconfig"; path = "Target Support Files/Pods-MacBryte/Pods-MacBryte.debug.xcconfig"; sourceTree = "<group>"; };
+		E603D47026A8FF5B00CBA509 /* InitialWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialWindowController.swift; sourceTree = "<group>"; };
 		E6247762266C350700554734 /* MacBryte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacBryte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6247765266C350700554734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6247769266C350800554734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MacBryte/Assets/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		E624776E266C350800554734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E624776F266C350800554734 /* MacBryte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacBryte.entitlements; sourceTree = "<group>"; };
-		E65B024726A391C8000D2B3E /* Serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serialization.swift; sourceTree = "<group>"; };
+		E65B024726A391C8000D2B3E /* serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serialization.swift; sourceTree = "<group>"; };
+		E6CE19AD26A79DD0002AB5A0 /* AuthenticationTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTabController.swift; sourceTree = "<group>"; };
+		E6CE19AF26A7A42B002AB5A0 /* removeUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = removeUserDefaults.swift; sourceTree = "<group>"; };
+		E6CE19B126A7A44E002AB5A0 /* setData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setData.swift; sourceTree = "<group>"; };
+		E6CE19B426A7AC26002AB5A0 /* stringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stringExtensions.swift; sourceTree = "<group>"; };
+		E6CE19B826A7B461002AB5A0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		E6D1F5E626A3775C000F38AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E6FDB7F026A912130055EAF7 /* DataTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTabViewController.swift; sourceTree = "<group>"; };
 		E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterConnectionService.swift; sourceTree = "<group>"; };
 		FC07492726731851006D269D /* LinkerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerService.swift; sourceTree = "<group>"; };
 		FC0749292673189E006D269D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -105,12 +119,12 @@
 		E6247764266C350700554734 /* MacBryte */ = {
 			isa = PBXGroup;
 			children = (
+				E6CE19B326A7ABD7002AB5A0 /* Extensions */,
 				E65B024626A391B3000D2B3E /* Utils */,
 				FC3BD892269B68B20001705B /* Services */,
 				FC3BD891269B68A20001705B /* Controllers */,
 				FC3BD890269B689C0001705B /* Assets */,
 				E6247765266C350700554734 /* AppDelegate.swift */,
-				FC0749292673189E006D269D /* Constants.swift */,
 				E624776E266C350800554734 /* Info.plist */,
 				FC58D3D9266D2483002C4C1A /* Main.storyboard */,
 				E624776F266C350800554734 /* MacBryte.entitlements */,
@@ -121,9 +135,20 @@
 		E65B024626A391B3000D2B3E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				E65B024726A391C8000D2B3E /* Serialization.swift */,
+				FC0749292673189E006D269D /* Constants.swift */,
+				E65B024726A391C8000D2B3E /* serialization.swift */,
+				E6CE19AF26A7A42B002AB5A0 /* removeUserDefaults.swift */,
+				E6CE19B126A7A44E002AB5A0 /* setData.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E6CE19B326A7ABD7002AB5A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E6CE19B426A7AC26002AB5A0 /* stringExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FC3BD890269B689C0001705B /* Assets */ = {
@@ -145,6 +170,10 @@
 			children = (
 				FC58D3DD266D2EE7002C4C1A /* ContactViewController.swift */,
 				E6D1F5E626A3775C000F38AA /* LoginViewController.swift */,
+				E6CE19AD26A79DD0002AB5A0 /* AuthenticationTabController.swift */,
+				E6CE19B826A7B461002AB5A0 /* SignupViewController.swift */,
+				E603D47026A8FF5B00CBA509 /* InitialWindowController.swift */,
+				E6FDB7F026A912130055EAF7 /* DataTabViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -282,13 +311,20 @@
 			files = (
 				E6D1F5E726A3775C000F38AA /* LoginViewController.swift in Sources */,
 				FC07492A2673189E006D269D /* Constants.swift in Sources */,
+				E6CE19B526A7AC26002AB5A0 /* stringExtensions.swift in Sources */,
+				E6CE19AE26A79DD0002AB5A0 /* AuthenticationTabController.swift in Sources */,
+				E6CE19B226A7A44E002AB5A0 /* setData.swift in Sources */,
 				FC4800A1269A0C7100C4382C /* NotificationHandler.swift in Sources */,
 				FCB64F8F2677DC6200501437 /* InternetStatusHandler.swift in Sources */,
 				FC07492826731851006D269D /* LinkerService.swift in Sources */,
+				E6FDB7F126A912130055EAF7 /* DataTabViewController.swift in Sources */,
 				FC58D3DE266D2EE7002C4C1A /* ContactViewController.swift in Sources */,
 				E6FF5352267304FE00D9AC61 /* RouterConnectionService.swift in Sources */,
+				E6CE19B026A7A42B002AB5A0 /* removeUserDefaults.swift in Sources */,
 				FCB64F8D2677C88400501437 /* InternetConnectionService.swift in Sources */,
-				E65B024826A391C8000D2B3E /* Serialization.swift in Sources */,
+				E6CE19B926A7B461002AB5A0 /* SignupViewController.swift in Sources */,
+				E65B024826A391C8000D2B3E /* serialization.swift in Sources */,
+				E603D47126A8FF5B00CBA509 /* InitialWindowController.swift in Sources */,
 				E6247766266C350700554734 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

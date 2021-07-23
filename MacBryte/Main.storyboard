@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="eaS-Hx-Tx4">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="dCx-t9-oKL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -678,43 +678,66 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-378" y="386"/>
+            <point key="canvasLocation" x="-1234" y="422"/>
         </scene>
         <!--Window Controller-->
-        <scene sceneID="qNb-u0-cma">
+        <scene sceneID="FKP-Yl-3q4">
             <objects>
-                <windowController id="eaS-Hx-Tx4" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="qtq-gv-hJ9">
+                <customObject id="MX1-E5-enO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <windowController storyboardIdentifier="initialWindowController" id="dCx-t9-oKL" customClass="InitialWindowController" customModule="MacBryte" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="9Jc-lY-uM5">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="425" y="473" width="480" height="270"/>
+                        <rect key="contentRect" x="425" y="473" width="481" height="306"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1440"/>
-                        <view key="contentView" id="3Oc-Lo-Pjf">
-                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <view key="contentView" id="GIr-PU-vg7">
+                            <rect key="frame" x="0.0" y="0.0" width="481" height="306"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </view>
                         <connections>
-                            <outlet property="delegate" destination="eaS-Hx-Tx4" id="nAF-Ia-tyc"/>
+                            <outlet property="delegate" destination="dCx-t9-oKL" id="Npr-2b-HXJ"/>
                         </connections>
                     </window>
-                    <connections>
-                        <segue destination="yl9-s7-YbO" kind="relationship" relationship="window.shadowedContentViewController" id="fVB-1M-EsZ"/>
-                    </connections>
                 </windowController>
-                <customObject id="TRf-yD-Pd9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-679" y="656"/>
+            <point key="canvasLocation" x="-1845" y="671"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Authentication Tab Controller-->
+        <scene sceneID="aUg-UY-dyW">
+            <objects>
+                <tabViewController storyboardIdentifier="authenticationTabViewController" selectedTabViewItemIndex="1" id="04n-MD-5n3" customClass="AuthenticationTabController" customModule="MacBryte" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem id="7uv-9L-NhA"/>
+                        <tabViewItem id="qgT-5h-gUA"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="gVg-rR-e16">
+                        <rect key="frame" x="-240" y="0.0" width="513" height="337"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <connections>
+                            <outlet property="delegate" destination="04n-MD-5n3" id="Uxi-Uq-Edk"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="gVg-rR-e16" id="ams-gK-oC4"/>
+                        <segue destination="yl9-s7-YbO" kind="relationship" relationship="tabItems" id="Ehi-Ge-QKP"/>
+                        <segue destination="Yxk-lS-ZGO" kind="relationship" relationship="tabItems" id="Jsx-R9-EZB"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="65i-AS-6Ts" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2188" y="1118"/>
+        </scene>
+        <!--Login-->
         <scene sceneID="phA-zQ-Qfx">
             <objects>
-                <viewController storyboardIdentifier="loginViewController" id="yl9-s7-YbO" customClass="LoginViewController" customModule="MacBryte" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" storyboardIdentifier="loginViewController" id="yl9-s7-YbO" customClass="LoginViewController" customModule="MacBryte" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="3nu-VV-zSJ">
-                        <rect key="frame" x="0.0" y="0.0" width="423" height="299"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RiG-Jg-Ypl">
-                                <rect key="frame" x="83" y="143" width="257" height="21"/>
+                                <rect key="frame" x="72" y="137" width="257" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="cpU-if-X14">
                                     <font key="font" metaFont="system"/>
@@ -723,7 +746,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2cx-KR-q7P">
-                                <rect key="frame" x="83" y="112" width="257" height="21"/>
+                                <rect key="frame" x="72" y="106" width="257" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="GvL-8S-wdU">
                                     <font key="font" metaFont="system"/>
@@ -731,19 +754,8 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Kc-zl-Ucf">
-                                <rect key="frame" x="217" y="46" width="114" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Signup" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="R2d-rt-6Wg">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="signupPressed:" target="yl9-s7-YbO" id="uE0-Fo-PTL"/>
-                                </connections>
-                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfl-8O-vbJ">
-                                <rect key="frame" x="115" y="88" width="177" height="16"/>
+                                <rect key="frame" x="70" y="75" width="261" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="2p4-b2-26C">
                                     <font key="font" metaFont="system"/>
@@ -751,8 +763,13 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWU-gc-w6x">
+                                <rect key="frame" x="129" y="150" width="145" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="wJI-nw-Qh4"/>
+                            </imageView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0uG-Ft-Lcu">
-                                <rect key="frame" x="94" y="46" width="114" height="32"/>
+                                <rect key="frame" x="143" y="28" width="114" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Login" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GKC-w0-gsK">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -762,47 +779,42 @@
                                     <action selector="loginPressed:" target="yl9-s7-YbO" id="VYd-i0-2ii"/>
                                 </connections>
                             </button>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWU-gc-w6x">
-                                <rect key="frame" x="139" y="149" width="145" height="142"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="wJI-nw-Qh4"/>
-                            </imageView>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="emailInput" destination="RiG-Jg-Ypl" id="Ynz-EN-ZTc"/>
                         <outlet property="label" destination="hfl-8O-vbJ" id="37t-YL-psL"/>
                         <outlet property="passwordInput" destination="2cx-KR-q7P" id="MBy-Fr-HG7"/>
-                        <segue destination="IIL-94-bhv" kind="show" identifier="goToTabController" id="dV1-lh-RlO"/>
+                        <segue destination="X7i-jy-OZv" kind="show" identifier="loginToDataController" id="d9a-TV-uHC"/>
                     </connections>
                 </viewController>
                 <customObject id="xyA-Hn-4qt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-124" y="649"/>
+            <point key="canvasLocation" x="-2719" y="1626"/>
         </scene>
-        <!--Tab View Controller-->
-        <scene sceneID="5wY-BM-Fft">
+        <!--Data Tab View Controller-->
+        <scene sceneID="dBx-gS-bN9">
             <objects>
-                <tabViewController storyboardIdentifier="tabViewController" selectedTabViewItemIndex="0" id="IIL-94-bhv" sceneMemberID="viewController">
+                <customObject id="rYO-ef-umh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <tabViewController storyboardIdentifier="dataTabViewController" selectedTabViewItemIndex="0" id="X7i-jy-OZv" customClass="DataTabViewController" customModule="MacBryte" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem id="731-TQ-sMJ"/>
+                        <tabViewItem id="Olm-Fy-db3"/>
                     </tabViewItems>
-                    <tabView key="tabView" type="noTabsNoBorder" id="rwx-2B-lr2">
+                    <tabView key="tabView" type="noTabsNoBorder" id="YqB-DW-yQs">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message"/>
                         <connections>
-                            <outlet property="delegate" destination="IIL-94-bhv" id="0PR-51-gaj"/>
+                            <outlet property="delegate" destination="X7i-jy-OZv" id="X3o-1T-EXx"/>
                         </connections>
                     </tabView>
                     <connections>
-                        <outlet property="tabView" destination="rwx-2B-lr2" id="Xoa-We-G6q"/>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="tabItems" id="D2W-7L-UtH"/>
+                        <outlet property="tabView" destination="YqB-DW-yQs" id="Zck-e4-k7r"/>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="tabItems" id="ufQ-tU-HWg"/>
                     </connections>
                 </tabViewController>
-                <customObject id="f3B-UD-d6f" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-125" y="1066"/>
+            <point key="canvasLocation" x="-1550" y="1077"/>
         </scene>
         <!--Contact-->
         <scene sceneID="hIz-AP-VOD">
@@ -993,9 +1005,96 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="ORD-dz-CSk"/>
             </objects>
-            <point key="canvasLocation" x="-377" y="1567"/>
+            <point key="canvasLocation" x="-1570" y="1631"/>
+        </scene>
+        <!--Signup-->
+        <scene sceneID="NHP-p1-QnA">
+            <objects>
+                <viewController title="Signup" storyboardIdentifier="signupViewController" id="Yxk-lS-ZGO" customClass="SignupViewController" customModule="MacBryte" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="ndv-3T-MGy">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="351"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tz9-UV-35n">
+                                <rect key="frame" x="72" y="188" width="257" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="YuA-AM-mCh">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4TC-99-njr">
+                                <rect key="frame" x="72" y="157" width="257" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="sZg-eq-UDz">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cyZ-Go-N3o">
+                                <rect key="frame" x="129" y="201" width="145" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="1Se-JP-2LD"/>
+                            </imageView>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PCZ-Dk-TlN">
+                                <rect key="frame" x="73" y="126" width="257" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="jip-mR-RcZ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aDx-cu-G3R">
+                                <rect key="frame" x="72" y="95" width="257" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="rTd-d0-gXP">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zy8-l0-Mmj">
+                                <rect key="frame" x="71" y="62" width="260" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="U2c-KK-fjC">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CqA-4b-L9F">
+                                <rect key="frame" x="143" y="27" width="114" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Signup" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8ei-yS-f2D">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="signupPressed:" target="Yxk-lS-ZGO" id="H14-eu-7P7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="emailInput" destination="PCZ-Dk-TlN" id="niW-06-EWU"/>
+                        <outlet property="firstnameInput" destination="Tz9-UV-35n" id="z34-GZ-CUm"/>
+                        <outlet property="label" destination="Zy8-l0-Mmj" id="sty-x1-ias"/>
+                        <outlet property="lastnameInput" destination="4TC-99-njr" id="E9H-ak-Nyh"/>
+                        <outlet property="passwordInput" destination="aDx-cu-G3R" id="uhM-xG-9Cs"/>
+                        <segue destination="X7i-jy-OZv" kind="show" identifier="signupToDataController" id="D0g-gK-KZ8"/>
+                    </connections>
+                </viewController>
+                <customObject id="GOS-QQ-QQD" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2245" y="1636.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="D0g-gK-KZ8"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="logo" width="137" height="71"/>
     </resources>
