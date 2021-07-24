@@ -42,6 +42,9 @@ class AccountViewController : NSViewController, NSTextFieldDelegate {
     }
     
     override func viewDidAppear() {
+        super.viewDidAppear()
+        self.view.window!.title = Constants.appWindowTitle
+        self.view.window!.setContentSize(Constants.accountViewControllerSize)
         self.view.window!.styleMask.remove(.resizable)
         self.view.window!.center()
     }

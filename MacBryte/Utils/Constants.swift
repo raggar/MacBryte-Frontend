@@ -56,5 +56,12 @@ class Constants {
     
     // Enviornment
     static let enviornment : String = "production"
+    
+    // Sizes
+    static let accountViewControllerSize : NSSize = NSSize(width: 500, height: 400)
+    static let adminViewControllerSize : NSSize =  NSSize(width: 400, height: 400)
+    static let authenticationTabControllerSize : NSSize = NSSize(width: 500, height: 500)
+    
+    static let appWindowTitle : String = "MacBryte"
 }
 

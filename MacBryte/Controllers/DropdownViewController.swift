@@ -22,6 +22,8 @@ class DropdownViewController : NSViewController, NSTextFieldDelegate {
     }
     
     override func viewWillAppear() {
+        super.viewWillAppear()
+        
         let zoomLink = UserDefaults.standard.string(forKey: Constants.userZoomLinkStorageKey)
         if zoomLink != nil {
             if (zoomLink == "") {
@@ -33,17 +35,13 @@ class DropdownViewController : NSViewController, NSTextFieldDelegate {
             zoomLinkField.title = "Log in to view your Zoom Link"
         }
     }
-    /*
-     When the email on the app window is clicked
-     */
+
     @IBAction func emailClicked(_ sender: Any) {
         NSPasteboard.general.clearContents();
         NSPasteboard.general.setString(macbryteEmailText.title, forType: .string)
     }
     
-    /*
-     When website link is pressed, redirects us to the macbryte website
-     */
+
     @IBAction func macbryteLinkClicked(_ sender: Any) {
         LinkerService.link(to: Constants.macbryteWebsite)
     }
