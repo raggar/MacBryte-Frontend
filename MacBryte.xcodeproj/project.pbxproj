@@ -12,13 +12,11 @@
 		E6247766266C350700554734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6247765266C350700554734 /* AppDelegate.swift */; };
 		E624776A266C350800554734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6247769266C350800554734 /* Assets.xcassets */; };
 		E65B024826A391C8000D2B3E /* serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B024726A391C8000D2B3E /* serialization.swift */; };
-		E6CE19AE26A79DD0002AB5A0 /* AuthenticationTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19AD26A79DD0002AB5A0 /* AuthenticationTabController.swift */; };
 		E6CE19B026A7A42B002AB5A0 /* removeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19AF26A7A42B002AB5A0 /* removeUserDefaults.swift */; };
 		E6CE19B226A7A44E002AB5A0 /* UserBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19B126A7A44E002AB5A0 /* UserBackend.swift */; };
 		E6CE19B526A7AC26002AB5A0 /* stringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19B426A7AC26002AB5A0 /* stringExtensions.swift */; };
 		E6CE19B926A7B461002AB5A0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19B826A7B461002AB5A0 /* SignupViewController.swift */; };
 		E6D1F5E726A3775C000F38AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D1F5E626A3775C000F38AA /* LoginViewController.swift */; };
-		E6FDB7F126A912130055EAF7 /* DataTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FDB7F026A912130055EAF7 /* DataTabViewController.swift */; };
 		E6FF5352267304FE00D9AC61 /* RouterConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */; };
 		FC07492826731851006D269D /* LinkerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07492726731851006D269D /* LinkerService.swift */; };
 		FC07492A2673189E006D269D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0749292673189E006D269D /* Constants.swift */; };
@@ -31,7 +29,6 @@
 		FC4800B9269A1FD600C4382C /* status-bar-icon-reversed-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4800B3269A1FD600C4382C /* status-bar-icon-reversed-dark.png */; };
 		FC58D3DA266D2483002C4C1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC58D3D9266D2483002C4C1A /* Main.storyboard */; };
 		FC58D3DE266D2EE7002C4C1A /* DropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58D3DD266D2EE7002C4C1A /* DropdownViewController.swift */; };
-		FCB3B5F926AA89EA0049F0AA /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3B5F826AA89EA0049F0AA /* ContactViewController.swift */; };
 		FCB3B5FB26AA8C520049F0AA /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3B5FA26AA8C520049F0AA /* AccountViewController.swift */; };
 		FCB64F8D2677C88400501437 /* InternetConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB64F8C2677C88400501437 /* InternetConnectionService.swift */; };
 		FCB64F8F2677DC6200501437 /* InternetStatusHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB64F8E2677DC6200501437 /* InternetStatusHandler.swift */; };
@@ -48,13 +45,11 @@
 		E624776E266C350800554734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E624776F266C350800554734 /* MacBryte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacBryte.entitlements; sourceTree = "<group>"; };
 		E65B024726A391C8000D2B3E /* serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serialization.swift; sourceTree = "<group>"; };
-		E6CE19AD26A79DD0002AB5A0 /* AuthenticationTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTabController.swift; sourceTree = "<group>"; };
 		E6CE19AF26A7A42B002AB5A0 /* removeUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = removeUserDefaults.swift; sourceTree = "<group>"; };
 		E6CE19B126A7A44E002AB5A0 /* UserBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBackend.swift; sourceTree = "<group>"; };
 		E6CE19B426A7AC26002AB5A0 /* stringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stringExtensions.swift; sourceTree = "<group>"; };
 		E6CE19B826A7B461002AB5A0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		E6D1F5E626A3775C000F38AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		E6FDB7F026A912130055EAF7 /* DataTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTabViewController.swift; sourceTree = "<group>"; };
 		E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterConnectionService.swift; sourceTree = "<group>"; };
 		FC07492726731851006D269D /* LinkerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerService.swift; sourceTree = "<group>"; };
 		FC0749292673189E006D269D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -67,7 +62,6 @@
 		FC4800B3269A1FD600C4382C /* status-bar-icon-reversed-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-reversed-dark.png"; sourceTree = "<group>"; };
 		FC58D3D9266D2483002C4C1A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FC58D3DD266D2EE7002C4C1A /* DropdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewController.swift; sourceTree = "<group>"; };
-		FCB3B5F826AA89EA0049F0AA /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		FCB3B5FA26AA8C520049F0AA /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		FCB64F8C2677C88400501437 /* InternetConnectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetConnectionService.swift; sourceTree = "<group>"; };
 		FCB64F8E2677DC6200501437 /* InternetStatusHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetStatusHandler.swift; sourceTree = "<group>"; };
@@ -174,11 +168,8 @@
 			children = (
 				FC58D3DD266D2EE7002C4C1A /* DropdownViewController.swift */,
 				E6D1F5E626A3775C000F38AA /* LoginViewController.swift */,
-				E6CE19AD26A79DD0002AB5A0 /* AuthenticationTabController.swift */,
 				E6CE19B826A7B461002AB5A0 /* SignupViewController.swift */,
 				E603D47026A8FF5B00CBA509 /* InitialWindowController.swift */,
-				E6FDB7F026A912130055EAF7 /* DataTabViewController.swift */,
-				FCB3B5F826AA89EA0049F0AA /* ContactViewController.swift */,
 				FCB3B5FA26AA8C520049F0AA /* AccountViewController.swift */,
 			);
 			path = Controllers;
@@ -318,13 +309,10 @@
 				E6D1F5E726A3775C000F38AA /* LoginViewController.swift in Sources */,
 				FC07492A2673189E006D269D /* Constants.swift in Sources */,
 				E6CE19B526A7AC26002AB5A0 /* stringExtensions.swift in Sources */,
-				E6CE19AE26A79DD0002AB5A0 /* AuthenticationTabController.swift in Sources */,
 				E6CE19B226A7A44E002AB5A0 /* UserBackend.swift in Sources */,
-				FCB3B5F926AA89EA0049F0AA /* ContactViewController.swift in Sources */,
 				FC4800A1269A0C7100C4382C /* NotificationHandler.swift in Sources */,
 				FCB64F8F2677DC6200501437 /* InternetStatusHandler.swift in Sources */,
 				FC07492826731851006D269D /* LinkerService.swift in Sources */,
-				E6FDB7F126A912130055EAF7 /* DataTabViewController.swift in Sources */,
 				FC58D3DE266D2EE7002C4C1A /* DropdownViewController.swift in Sources */,
 				E6FF5352267304FE00D9AC61 /* RouterConnectionService.swift in Sources */,
 				FCB3B5FB26AA8C520049F0AA /* AccountViewController.swift in Sources */,

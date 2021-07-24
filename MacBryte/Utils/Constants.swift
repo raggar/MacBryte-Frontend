@@ -37,16 +37,9 @@ class Constants {
     static let internetDisconnectedNotificationBody : String = "Some features on your computer may be unavailable. Please call MacBryte if this problem persists"
     
     // Storage Keys
-    static let zoomLinkStorageKey : String = "ZoomLinkKey"
     static let userIsAdminStorageKey : String = "UserIsAdminKey"
     static let userIdStorageKey : String = "UserIdKey"
-    static let userFirstNameStorageKey : String = "UserFirstNameKey"
-    static let userLastNameStorageKey : String = "UserLastNameKey"
-    static let userEmailStorageKey : String = "UserEmailKey"
     static let userZoomLinkStorageKey : String = "UserZoomLinkKey"
-    static let userPackagePurchasedStorageKey : String = "UserPackagePurchasedKey"
-    static let userHoursRemainingStorageKey : String = "UserHoursRemainingKey"
-    static let userGrandTotalHoursStorageKey : String = "UserGrandTotalHoursKey"
     
     // Error Codes
     static let viewControllerFindFailed : String = "Unable to find ViewController in the storyboard."
@@ -62,6 +55,6 @@ class Constants {
     static let getUserUrl : String = "http://localhost:8000/apiV1/userInfo"
     
     // Enviornment
-    static let enviornment : String = "develop"
+    static let enviornment : String = "production"
 }
 

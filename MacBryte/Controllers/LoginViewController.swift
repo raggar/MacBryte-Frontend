@@ -24,9 +24,7 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
     }
     
     @IBAction func loginPressed(_ sender: NSButton) {
-        DispatchQueue.main.async {
-            self.login(email: self.emailInput.stringValue, password: self.passwordInput.stringValue)
-        }
+        self.login(email: self.emailInput.stringValue, password: self.passwordInput.stringValue)
     }
     
     func setErrorMessage(message: String) {
@@ -43,41 +41,21 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
         if inputsEmpty() {
             setErrorMessage(message: Constants.fieldIsEmpty)
         } else {
-            fetchData(url: Constants.loginURL, parameters: loginParams) { (result) in
+            postData(url: Constants.loginURL, parameters: loginParams) { (result) in
                 if (result["error"] as! Bool) {
                     self.setErrorMessage(message: result["requestMessage"] as! String)
-                } else {                    
+                } else {
+                    print("RESULT", result)
                     UserDefaults.standard.setValue(result["isAdmin"], forKey: Constants.userIsAdminStorageKey)
                     UserDefaults.standard.setValue(result["userId"], forKey: Constants.userIdStorageKey)
-
-                    self.getUserInformation()
-                }
-            }
-        }
-    }
-    
-    func getUserInformation() -> Void {
-        
-        if let userId = UserDefaults.standard.string(forKey: Constants.userIdStorageKey) {
-            let getParams: Dictionary<String, String> = ["_id": userId]
-                        
-            getData(url: Constants.getUserUrl, parameters: getParams) { (result) in
-                if result["error"] as! Bool {
-                    self.setErrorMessage(message: result["requestMessage"] as! String)
-                } else {
-                    UserDefaults.standard.setValue(result["firstname"], forKey: Constants.userFirstNameStorageKey)
-                    UserDefaults.standard.setValue(result["lastname"], forKey: Constants.userLastNameStorageKey)
-                    UserDefaults.standard.setValue(result["email"], forKey: Constants.userEmailStorageKey)
                     UserDefaults.standard.setValue(result["zoomLink"], forKey: Constants.userZoomLinkStorageKey)
-                    UserDefaults.standard.setValue(result["packagePurchased"], forKey: Constants.userPackagePurchasedStorageKey)
-                    UserDefaults.standard.setValue(result["hoursRemaining"], forKey: Constants.userHoursRemainingStorageKey)
-                    UserDefaults.standard.setValue(result["grandTotalHours"], forKey: Constants.userGrandTotalHoursStorageKey)
-                    
-                    self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "loginToDataController")
+                    if (result["isAdmin"] as! Bool) {
+                        self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "loginToAdmin")
+                    } else {
+                        self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "loginToAccount")
+                    }
                 }
             }
-        } else {
-            print("Could not find id")
         }
     }
 

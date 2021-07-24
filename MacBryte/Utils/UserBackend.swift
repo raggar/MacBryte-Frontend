@@ -9,12 +9,11 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-func fetchData(url: String, parameters: [String: String], completionHandler: @escaping ((Dictionary<String, Any>) -> Void)) {
+func postData(url: String, parameters: [String: String], completionHandler: @escaping ((Dictionary<String, Any>) -> Void)) {
     Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
         let result: Dictionary<String, Any>
         if (response.result.isSuccess) {
             result = serializeToDict(data: JSON(response.result.value!))
-            completionHandler(result)
         } else {
             result = ["error": true, "requestMessage": Constants.backendMessageNotCompleted]
         }
@@ -23,17 +22,13 @@ func fetchData(url: String, parameters: [String: String], completionHandler: @es
 }
 
 func getData(url: String, parameters: [String: String], completionHandler: @escaping ((Dictionary<String, Any>) -> Void)) {
-    Alamofire.request(url, method: .get, parameters: parameters).responseJSON {
-        response in
-        
+    Alamofire.request(url, method: .get, parameters: parameters).responseJSON { response in
         let result: Dictionary<String, Any>
         if response.result.isSuccess {
-            result = serializeToDict(data: JSON(response.result.value))
-            completionHandler(result)
+            result = serializeToDict(data: JSON(response.result.value!))
         } else {
             result = ["error": true, "requestMessage": Constants.backendMessageNotCompleted]
         }
-        
         completionHandler(result)
     }
 }

@@ -10,8 +10,8 @@ import Network
 import Combine
 
 class AccountViewController : NSViewController, NSTextFieldDelegate {
-    
-    @IBOutlet weak var nameField: NSTextField!
+ 
+    @IBOutlet weak var controllerTitle: NSTextField!
     @IBOutlet weak var emailField: NSTextField!
     @IBOutlet weak var packagePurchasedField: NSTextField!
     @IBOutlet weak var hoursRemainingField: NSTextField!
@@ -21,58 +21,41 @@ class AccountViewController : NSViewController, NSTextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let firstNameValue = UserDefaults.standard.string(forKey: Constants.userFirstNameStorageKey), let lastNameValue = UserDefaults.standard.string(forKey: Constants.userLastNameStorageKey){
-            nameField.stringValue = firstNameValue + " " + lastNameValue
+        guard let userId = UserDefaults.standard.string(forKey: Constants.userIdStorageKey) else {
+            fatalError("Cannot find user id")
         }
-        
-        if let emailValue = UserDefaults.standard.string(forKey: Constants.userEmailStorageKey) {
-            emailField.stringValue = emailValue
-        }
-        
-        if let zoomLinkValue = UserDefaults.standard.string(forKey: Constants.userZoomLinkStorageKey) {
-            zoomLinkField.title = zoomLinkValue
-        } else {
-            zoomLinkField.title = "You don't have a Zoom link yet"
-        }
-        
-        if let packagePurchasedValue = UserDefaults.standard.string(forKey: Constants.userPackagePurchasedStorageKey) {
-            packagePurchasedField.stringValue = packagePurchasedValue
-        }
-        
-        if let hoursRemianingValue = UserDefaults.standard.string(forKey: Constants.userHoursRemainingStorageKey) {
-            hoursRemainingField.stringValue = hoursRemianingValue
-        }
-        
-        if let grandTotalHoursValue = UserDefaults.standard.string(forKey: Constants.userGrandTotalHoursStorageKey) {
-            grandTotalHoursField.stringValue = grandTotalHoursValue
+        getData(url: Constants.getUserUrl, parameters: ["userId": userId]) { result in
+            if (!(result["error"] as! Bool)) {
+                self.controllerTitle.stringValue = "\(result["firstname"]!) \(result["lastname"]!)'s Account"
+                self.emailField.stringValue = result["email"] as! String
+                self.hoursRemainingField.stringValue = String(result["hoursRemaining"] as! Int)
+                self.grandTotalHoursField.stringValue = String(result["grandTotalHours"] as! Int)
+                self.packagePurchasedField.stringValue = String(result["packagePurchased"] as! String)
+                let zoomLink = result["zoomLink"] as! String
+                if (zoomLink == "") {
+                    self.zoomLinkField.stringValue = "None"
+                } else {
+                    self.zoomLinkField.stringValue = zoomLink
+                }
+            }
         }
     }
     
-    override var representedObject: Any? {
-        didSet {
-        }
+    override func viewDidAppear() {
+        self.view.window!.styleMask.remove(.resizable)
+        self.view.window!.center()
     }
     
-    /*
-     Opens Zoom link in browser
-     */
     @IBAction func zoomLinkClicked(_ sender: Any) {
-        LinkerService.link(to: zoomLinkField.title)
+        if (zoomLinkField.stringValue != "None") {
+            LinkerService.link(to: zoomLinkField.title)
+        }
     }
     
     @IBAction func signOutUser(_ sender: Any) {
+        self.view.window!.performClose(nil)
         removeUserDefaults()
-        
-        self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "accountViewController")
-    }
-    
-    func transitionControllers(window: NSWindowController?, segueIdentifier: String) {
-        guard window != nil else {
-            fatalError(Constants.windowControllerDoesNotExist)
-        }
-        window!.close()
-        performSegue(withIdentifier: segueIdentifier, sender: self)
+        performSegue(withIdentifier: "accountToAuthentication", sender: self)
     }
 }
 

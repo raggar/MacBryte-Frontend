@@ -47,23 +47,18 @@ class SignupViewController: NSViewController, NSTextFieldDelegate {
         if inputsEmpty() {
             setErrorMessage(message: Constants.fieldIsEmpty)
         } else {
-            fetchData(url: Constants.signUpURL, parameters: signupParams) { (result) in
+            postData(url: Constants.signUpURL, parameters: signupParams) { (result) in
                 if (result["error"] as! Bool) {
                     self.setErrorMessage(message: result["requestMessage"] as! String)
                 } else {
-                    print(result)
-                    
                     UserDefaults.standard.setValue(result["isAdmin"], forKey: Constants.userIsAdminStorageKey)
-                    UserDefaults.standard.setValue(result["userId"], forKey: Constants.userIdStorageKey)
-                    UserDefaults.standard.setValue(result["firstname"], forKey: Constants.userFirstNameStorageKey)
-                    UserDefaults.standard.setValue(result["lastname"], forKey: Constants.userLastNameStorageKey)
-                    UserDefaults.standard.setValue(result["email"], forKey: Constants.userEmailStorageKey)
                     UserDefaults.standard.setValue(result["zoomLink"], forKey: Constants.userZoomLinkStorageKey)
-                    UserDefaults.standard.setValue(result["packagePurchased"], forKey: Constants.userPackagePurchasedStorageKey)
-                    UserDefaults.standard.setValue(result["hoursRemaining"], forKey: Constants.userHoursRemainingStorageKey)
-                    UserDefaults.standard.setValue(result["grandTotalHours"], forKey: Constants.userGrandTotalHoursStorageKey)
-                    
-                    self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "signupToDataController")
+                    UserDefaults.standard.setValue(result["userId"], forKey: Constants.userIdStorageKey)
+                    if (result["isAdmin"] as! Bool) {
+                        self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "signupToAdmin")
+                    } else {
+                        self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "signupToAccount")
+                    }
                 }
             }
         }
