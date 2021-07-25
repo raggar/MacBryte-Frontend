@@ -38,6 +38,8 @@ class DropdownViewController : NSViewController, NSTextFieldDelegate {
             self.zoomLinkField.title = "Log in to view your zoom link"
             self.zoomLinkField.isEnabled = false
         }
+        
+        
     }
 
     @IBAction func emailClicked(_ sender: Any) {
