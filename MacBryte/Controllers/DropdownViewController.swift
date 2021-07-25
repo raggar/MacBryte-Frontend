@@ -24,16 +24,30 @@ class DropdownViewController : NSViewController, NSTextFieldDelegate {
     override func viewWillAppear() {
         super.viewWillAppear()
         
-        let zoomLink = UserDefaults.standard.string(forKey: Constants.userZoomLinkStorageKey)
-        if zoomLink != nil {
-            if (zoomLink == "") {
-                zoomLinkField.isHidden = true
-            } else {
-                zoomLinkField.title = zoomLink!
+        if let userId = UserDefaults.standard.string(forKey: Constants.userIdStorageKey) {
+            getData(url: Constants.getUserUrl, parameters: ["userId": userId]) { result in
+                if (!(result["error"] as! Bool)) {
+                    let zoomLink = ("" == (result["zoomLink"] as! String)) ? Constants.noZoomLink : (result["zoomLink"] as! String)
+                    if zoomLink == "" {
+                         self.zoomLinkField.title = "None"
+                         self.zoomLinkField.isEnabled = false
+                     } else {
+                         if zoomLink == Constants.noZoomLink {
+                            self.zoomLinkField.title = Constants.noZoomLink
+                            self.zoomLinkField.isEnabled = false
+                         } else {
+                            self.zoomLinkField.title = zoomLink
+                            self.zoomLinkField.isEnabled = true
+                         }
+                     }
+                }
             }
         } else {
-            zoomLinkField.title = "Log in to view your Zoom Link"
+            self.zoomLinkField.title = "Log in to view your zoom link"
+            self.zoomLinkField.isEnabled = false
         }
+        
+        
     }
 
     @IBAction func emailClicked(_ sender: Any) {
