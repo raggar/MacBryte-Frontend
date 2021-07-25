@@ -56,7 +56,7 @@ class Constants {
     static let getUserUrl : String = "http://localhost:8000/apiV1/userInfo"
     
     // Enviornment
-    static let enviornment : String = "develop"
+    static let enviornment : String = "production"
     
     // Sizes
     static let accountViewControllerSize : NSSize = NSSize(width: 500, height: 400)
