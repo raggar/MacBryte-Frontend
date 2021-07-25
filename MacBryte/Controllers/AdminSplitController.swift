@@ -8,14 +8,15 @@
 import Foundation
 import Cocoa
 
-class AdminViewController : NSViewController {
+class AdminSplitController : NSSplitViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewDidAppear() {
         super.viewDidAppear()
-        self.view.window!.title = Constants.appWindowTitle
+        self.view.window!.titlebarAppearsTransparent = true
+        self.view.window!.titleVisibility = .hidden
         self.view.window!.setContentSize(Constants.adminViewControllerSize)
         self.view.window!.styleMask.remove(.resizable)
         self.view.window!.center()

@@ -12,7 +12,8 @@
 		E6247766266C350700554734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6247765266C350700554734 /* AppDelegate.swift */; };
 		E624776A266C350800554734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6247769266C350800554734 /* Assets.xcassets */; };
 		E65B024826A391C8000D2B3E /* serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B024726A391C8000D2B3E /* serialization.swift */; };
-		E694EBDF26ACC1E3007265C3 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694EBDE26ACC1E3007265C3 /* AdminViewController.swift */; };
+		E676888626ACEDA80055F0B2 /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676888526ACEDA80055F0B2 /* UsersListViewController.swift */; };
+		E694EBDF26ACC1E3007265C3 /* AdminSplitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694EBDE26ACC1E3007265C3 /* AdminSplitController.swift */; };
 		E6CE19B026A7A42B002AB5A0 /* removeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19AF26A7A42B002AB5A0 /* removeUserDefaults.swift */; };
 		E6CE19B226A7A44E002AB5A0 /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19B126A7A44E002AB5A0 /* api.swift */; };
 		E6CE19B526A7AC26002AB5A0 /* stringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19B426A7AC26002AB5A0 /* stringExtensions.swift */; };
@@ -46,7 +47,8 @@
 		E624776E266C350800554734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E624776F266C350800554734 /* MacBryte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacBryte.entitlements; sourceTree = "<group>"; };
 		E65B024726A391C8000D2B3E /* serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serialization.swift; sourceTree = "<group>"; };
-		E694EBDE26ACC1E3007265C3 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		E676888526ACEDA80055F0B2 /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
+		E694EBDE26ACC1E3007265C3 /* AdminSplitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminSplitController.swift; sourceTree = "<group>"; };
 		E6CE19AF26A7A42B002AB5A0 /* removeUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = removeUserDefaults.swift; sourceTree = "<group>"; };
 		E6CE19B126A7A44E002AB5A0 /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
 		E6CE19B426A7AC26002AB5A0 /* stringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stringExtensions.swift; sourceTree = "<group>"; };
@@ -173,7 +175,8 @@
 				E6CE19B826A7B461002AB5A0 /* SignupViewController.swift */,
 				E603D47026A8FF5B00CBA509 /* InitialWindowController.swift */,
 				FCB3B5FA26AA8C520049F0AA /* AccountViewController.swift */,
-				E694EBDE26ACC1E3007265C3 /* AdminViewController.swift */,
+				E694EBDE26ACC1E3007265C3 /* AdminSplitController.swift */,
+				E676888526ACEDA80055F0B2 /* UsersListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -311,9 +314,10 @@
 			files = (
 				E6D1F5E726A3775C000F38AA /* LoginViewController.swift in Sources */,
 				FC07492A2673189E006D269D /* Constants.swift in Sources */,
-				E694EBDF26ACC1E3007265C3 /* AdminViewController.swift in Sources */,
+				E694EBDF26ACC1E3007265C3 /* AdminSplitController.swift in Sources */,
 				E6CE19B526A7AC26002AB5A0 /* stringExtensions.swift in Sources */,
 				E6CE19B226A7A44E002AB5A0 /* api.swift in Sources */,
+				E676888626ACEDA80055F0B2 /* UsersListViewController.swift in Sources */,
 				FC4800A1269A0C7100C4382C /* NotificationHandler.swift in Sources */,
 				FCB64F8F2677DC6200501437 /* InternetStatusHandler.swift in Sources */,
 				FC07492826731851006D269D /* LinkerService.swift in Sources */,

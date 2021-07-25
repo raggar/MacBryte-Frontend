@@ -54,11 +54,7 @@ class SignupViewController: NSViewController, NSTextFieldDelegate {
                     UserDefaults.standard.setValue(result["isAdmin"], forKey: Constants.userIsAdminStorageKey)
                     UserDefaults.standard.setValue(result["zoomLink"], forKey: Constants.userZoomLinkStorageKey)
                     UserDefaults.standard.setValue(result["userId"], forKey: Constants.userIdStorageKey)
-                    if (result["isAdmin"] as! Bool) {
-                        self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "signupToAdmin")
-                    } else {
-                        self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "signupToAccount")
-                    }
+                    self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "signupToAccount")
                 }
             }
         }
