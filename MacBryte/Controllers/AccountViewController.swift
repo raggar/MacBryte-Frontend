@@ -8,11 +8,10 @@
 import Cocoa
 import Network
 import Combine
-import SwiftUI
 
 class AccountViewController : NSViewController, NSTextFieldDelegate {
     
-    @ObservedObject var userEntity: UserEntity = UserEntity.shared
+    var userEntity: UserEntity = UserEntity.shared
  
     @IBOutlet weak var controllerTitle: NSTextField!
     @IBOutlet weak var emailField: NSTextField!

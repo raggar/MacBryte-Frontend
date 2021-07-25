@@ -21,11 +21,11 @@ struct UserData {
     var grandTotalHours: String
 }
 
-class UserEntity: ObservableObject {
+class UserEntity {
     
     static let shared: UserEntity = UserEntity()
     
-    @Published var userData: UserData = UserData(firstName: "", lastName: "", email: "", zoomLink: "", packagePurchased: "", hoursRemaining: "", grandTotalHours: "")
+    var userData: UserData = UserData(firstName: "", lastName: "", email: "", zoomLink: "", packagePurchased: "", hoursRemaining: "", grandTotalHours: "")
     
     private init() {}
     

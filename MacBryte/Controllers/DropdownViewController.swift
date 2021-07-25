@@ -8,7 +8,6 @@
 import Cocoa
 import Network
 import Combine
-import SwiftUI
 
 class DropdownViewController : NSViewController, NSTextFieldDelegate {
     
@@ -17,7 +16,7 @@ class DropdownViewController : NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var internetStatusText: NSTextField!
     @IBOutlet weak var zoomLinkField: NSButton!
     
-    @ObservedObject var userEntity: UserEntity = UserEntity.shared
+    var userEntity: UserEntity = UserEntity.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
