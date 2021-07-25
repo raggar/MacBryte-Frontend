@@ -24,7 +24,7 @@ class DropdownViewController : NSViewController, NSTextFieldDelegate {
     override func viewWillAppear() {
         super.viewWillAppear()
         
-        if UserDefaults.standard.string(forKey: Constants.userIdStorageKey) != nil {
+        if let _ = UserDefaults.standard.string(forKey: Constants.userIdStorageKey) {
             if let zoomLink = UserDefaults.standard.string(forKey: Constants.userZoomLinkStorageKey) {
                 if zoomLink == "" {
                      self.zoomLinkField.title = Constants.noZoomLink
@@ -38,13 +38,15 @@ class DropdownViewController : NSViewController, NSTextFieldDelegate {
             self.zoomLinkField.title = "Log in to view your zoom link"
             self.zoomLinkField.isEnabled = false
         }
-        
-        
     }
 
     @IBAction func emailClicked(_ sender: Any) {
         NSPasteboard.general.clearContents();
         NSPasteboard.general.setString(macbryteEmailText.title, forType: .string)
+        
+        if let _ = UserDefaults.standard.string(forKey: Constants.userIdStorageKey) {
+            self.openAndComposeEmail()
+        }
     }
     
 
@@ -55,4 +57,15 @@ class DropdownViewController : NSViewController, NSTextFieldDelegate {
     @IBAction func zoomLinkClicked(_ sender: Any) {
         LinkerService.link(to: zoomLinkField.title)
     }
+    
+    func openAndComposeEmail() {
+         guard let service = NSSharingService(named: NSSharingService.Name.composeEmail) else {
+             print("Composing email failed")
+             return
+         }
+
+         service.recipients = ["info@macbryte.com"]
+         service.subject = "MacBryte App: Help Request"
+         service.perform(withItems: ["Please delete this placeholder and write your message here"])
+     }
 }
