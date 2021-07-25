@@ -21,6 +21,8 @@ class SignupViewController: NSViewController, NSTextFieldDelegate {
     
     @IBOutlet weak var label: NSTextField!
     
+    private var userEntity: UserEntity = UserEntity.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         firstnameInput.placeholderString = "Firstname"
@@ -54,6 +56,32 @@ class SignupViewController: NSViewController, NSTextFieldDelegate {
                     UserDefaults.standard.setValue(result["isAdmin"], forKey: Constants.userIsAdminStorageKey)
                     UserDefaults.standard.setValue(result["zoomLink"], forKey: Constants.userZoomLinkStorageKey)
                     UserDefaults.standard.setValue(result["userId"], forKey: Constants.userIdStorageKey)
+                    
+                    self.getUserInformation()
+                }
+            }
+        }
+    }
+    
+    func getUserInformation() -> Void {
+        if let userId = UserDefaults.standard.string(forKey: Constants.userIdStorageKey) {
+            let getParams: Dictionary<String, String> = ["_id": userId]
+                        
+            getData(url: Constants.getUserUrl, parameters: getParams) { (result) in
+                if result["error"] as! Bool {
+                    self.setErrorMessage(message: result["requestMessage"] as! String)
+                } else {
+                    print(result)
+                    self.userEntity.setUser(user: UserData(
+                                        firstName: result["firstname"] as! String,
+                                        lastName: result["lastname"] as! String,
+                                        email: result["email"] as! String,
+                                        zoomLink: ("" == (result["zoomLink"] as! String)) ? Constants.noZoomLink : (result["zoomLink"] as! String),
+                                        packagePurchased: result["packagePurchased"] as! String,
+                                        hoursRemaining: String(result["hoursRemaining"] as! Int),
+                                        grandTotalHours: String(result["grandTotalHours"] as! Int))
+                    )
+                        
                     if (result["isAdmin"] as! Bool) {
                         self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "signupToAdmin")
                     } else {
@@ -61,6 +89,8 @@ class SignupViewController: NSViewController, NSTextFieldDelegate {
                     }
                 }
             }
+        } else {
+            print("Could not find id")
         }
     }
 

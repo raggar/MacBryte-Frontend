@@ -8,8 +8,11 @@
 import Cocoa
 import Network
 import Combine
+import SwiftUI
 
 class AccountViewController : NSViewController, NSTextFieldDelegate {
+    
+    @ObservedObject var userEntity: UserEntity = UserEntity.shared
  
     @IBOutlet weak var controllerTitle: NSTextField!
     @IBOutlet weak var emailField: NSTextField!
@@ -21,22 +24,29 @@ class AccountViewController : NSViewController, NSTextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         guard let userId = UserDefaults.standard.string(forKey: Constants.userIdStorageKey) else {
             fatalError("Cannot find user id")
         }
-        getData(url: Constants.getUserUrl, parameters: ["userId": userId]) { result in
-            if (!(result["error"] as! Bool)) {
-                self.controllerTitle.stringValue = "\(result["firstname"]!) \(result["lastname"]!)'s Account"
-                self.emailField.stringValue = result["email"] as! String
-                self.hoursRemainingField.stringValue = String(result["hoursRemaining"] as! Int)
-                self.grandTotalHoursField.stringValue = String(result["grandTotalHours"] as! Int)
-                self.packagePurchasedField.stringValue = String(result["packagePurchased"] as! String)
-                let zoomLink = result["zoomLink"] as! String
-                if (zoomLink == "") {
-                    self.zoomLinkField.stringValue = "None"
-                } else {
-                    self.zoomLinkField.stringValue = zoomLink
-                }
+        
+        self.controllerTitle.stringValue = "\(userEntity.userData.firstName) \(userEntity.userData.lastName)'s Account"
+        
+        self.emailField.stringValue = userEntity.userData.email
+        self.hoursRemainingField.stringValue = userEntity.userData.hoursRemaining
+        self.grandTotalHoursField.stringValue = userEntity.userData.grandTotalHours
+        self.packagePurchasedField.stringValue = userEntity.userData.packagePurchased
+        
+        let zoomLink = userEntity.userData.zoomLink
+        if zoomLink == "" {
+            self.zoomLinkField.title = "None"
+            self.zoomLinkField.isEnabled = false
+        } else {
+            if zoomLink == Constants.noZoomLink {
+                zoomLinkField.title = Constants.noZoomLink
+                zoomLinkField.isEnabled = false
+            } else {
+                zoomLinkField.title = zoomLink
+                zoomLinkField.isEnabled = true
             }
         }
     }
@@ -58,6 +68,9 @@ class AccountViewController : NSViewController, NSTextFieldDelegate {
     @IBAction func signOutUser(_ sender: Any) {
         self.view.window!.performClose(nil)
         removeUserDefaults()
+        
+        userEntity.setUser(user: UserData(firstName: "", lastName: "", email: "", zoomLink: "", packagePurchased: "", hoursRemaining: "", grandTotalHours: ""))
+        
         performSegue(withIdentifier: "accountToAuthentication", sender: self)
     }
 }

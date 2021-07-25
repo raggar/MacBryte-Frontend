@@ -48,6 +48,7 @@ class Constants {
     static let windowControllerDoesNotExist = "Window controller does not exist"
     static let userIdNull = "User id is null"
     static let backendMessageNotCompleted = "Unable to complete request"
+    static let noZoomLink = "Contact MacBryte to receive a Zoom Link"
     
     // Request Urls
     static let signUpURL : String = "http://localhost:8000/apiV1/signup"

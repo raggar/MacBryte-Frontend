@@ -8,6 +8,7 @@
 import Cocoa
 import Network
 import Combine
+import SwiftUI
 
 class DropdownViewController : NSViewController, NSTextFieldDelegate {
     
@@ -15,6 +16,8 @@ class DropdownViewController : NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var macbryteWebsiteLink: NSButton!
     @IBOutlet weak var internetStatusText: NSTextField!
     @IBOutlet weak var zoomLinkField: NSButton!
+    
+    @ObservedObject var userEntity: UserEntity = UserEntity.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +27,19 @@ class DropdownViewController : NSViewController, NSTextFieldDelegate {
     override func viewWillAppear() {
         super.viewWillAppear()
         
-        let zoomLink = UserDefaults.standard.string(forKey: Constants.userZoomLinkStorageKey)
-        if zoomLink != nil {
-            if (zoomLink == "") {
-                zoomLinkField.isHidden = true
+        var zoomLink: String? = userEntity.userData.zoomLink
+        
+        if zoomLink != "" {
+            if zoomLink == Constants.noZoomLink {
+                zoomLinkField.title = Constants.noZoomLink
+                zoomLinkField.isEnabled = false
             } else {
                 zoomLinkField.title = zoomLink!
+                zoomLinkField.isEnabled = true
             }
         } else {
             zoomLinkField.title = "Log in to view your Zoom Link"
+            zoomLinkField.isEnabled = false
         }
     }
 
