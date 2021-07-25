@@ -21,9 +21,11 @@ class AccountViewController : NSViewController, NSTextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         guard let userId = UserDefaults.standard.string(forKey: Constants.userIdStorageKey) else {
             fatalError("Cannot find user id")
         }
+        
         getData(url: Constants.getUserUrl, parameters: ["userId": userId]) { result in
             if (!(result["error"] as! Bool)) {
                 self.controllerTitle.stringValue = "\(result["firstname"]!) \(result["lastname"]!)'s Account"
@@ -31,12 +33,20 @@ class AccountViewController : NSViewController, NSTextFieldDelegate {
                 self.hoursRemainingField.stringValue = String(result["hoursRemaining"] as! Int)
                 self.grandTotalHoursField.stringValue = String(result["grandTotalHours"] as! Int)
                 self.packagePurchasedField.stringValue = String(result["packagePurchased"] as! String)
-                let zoomLink = result["zoomLink"] as! String
-                if (zoomLink == "") {
-                    self.zoomLinkField.stringValue = "None"
-                } else {
-                    self.zoomLinkField.stringValue = zoomLink
-                }
+                
+                let zoomLink = ("" == (result["zoomLink"] as! String)) ? Constants.noZoomLink : (result["zoomLink"] as! String)
+                if zoomLink == "" {
+                     self.zoomLinkField.title = "None"
+                     self.zoomLinkField.isEnabled = false
+                 } else {
+                     if zoomLink == Constants.noZoomLink {
+                        self.zoomLinkField.title = Constants.noZoomLink
+                        self.zoomLinkField.isEnabled = false
+                     } else {
+                        self.zoomLinkField.title = zoomLink
+                        self.zoomLinkField.isEnabled = true
+                     }
+                 }
             }
         }
     }
