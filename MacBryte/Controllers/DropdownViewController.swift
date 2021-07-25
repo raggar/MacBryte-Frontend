@@ -24,7 +24,7 @@ class DropdownViewController : NSViewController, NSTextFieldDelegate {
     override func viewWillAppear() {
         super.viewWillAppear()
         
-        if let userId = UserDefaults.standard.string(forKey: Constants.userIdStorageKey) {
+        if UserDefaults.standard.string(forKey: Constants.userIdStorageKey) != nil {
             if let zoomLink = UserDefaults.standard.string(forKey: Constants.userZoomLinkStorageKey) {
                 if zoomLink == "" {
                      self.zoomLinkField.title = Constants.noZoomLink
