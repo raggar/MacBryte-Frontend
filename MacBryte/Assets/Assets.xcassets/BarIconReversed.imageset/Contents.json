@@ -23,7 +23,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "status-bar-icon-reversed.png",
+      "filename" : "status-bar-icon-reversed-dark.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -64,7 +64,7 @@
           "value" : "high"
         }
       ],
-      "filename" : "status-bar-icon-reversed-3.png",
+      "filename" : "status-bar-icon-reversed-dark-3.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -91,7 +91,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "status-bar-icon-reversed-1.png",
+      "filename" : "status-bar-icon-reversed-dark-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -132,7 +132,7 @@
           "value" : "high"
         }
       ],
-      "filename" : "status-bar-icon-reversed-4.png",
+      "filename" : "status-bar-icon-reversed-dark-4.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -159,7 +159,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "status-bar-icon-reversed-2.png",
+      "filename" : "status-bar-icon-reversed-dark-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -200,7 +200,7 @@
           "value" : "high"
         }
       ],
-      "filename" : "status-bar-icon-reversed-5.png",
+      "filename" : "status-bar-icon-reversed-dark-5.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

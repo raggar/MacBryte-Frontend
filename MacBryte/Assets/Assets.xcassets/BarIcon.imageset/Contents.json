@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "status-bar-icon-light-1.png",
+      "filename" : "status-bar-icon-light.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -69,7 +69,7 @@
       "scale" : "1x"
     },
     {
-      "filename" : "status-bar-icon-light-2.png",
+      "filename" : "status-bar-icon-light-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -137,7 +137,7 @@
       "scale" : "2x"
     },
     {
-      "filename" : "status-bar-icon-light.png",
+      "filename" : "status-bar-icon-light-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -208,5 +208,9 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "compression-type" : "automatic",
+    "preserves-vector-representation" : true
   }
 }
