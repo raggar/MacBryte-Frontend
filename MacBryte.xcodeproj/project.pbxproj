@@ -12,13 +12,14 @@
 		E6247766266C350700554734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6247765266C350700554734 /* AppDelegate.swift */; };
 		E624776A266C350800554734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6247769266C350800554734 /* Assets.xcassets */; };
 		E65B024826A391C8000D2B3E /* serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B024726A391C8000D2B3E /* serialization.swift */; };
-		E676888626ACEDA80055F0B2 /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E676888526ACEDA80055F0B2 /* UsersListViewController.swift */; };
+		E6721F4C26B0F5F200CAFBF0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6721F4B26B0F5F200CAFBF0 /* User.swift */; };
 		E694EBDF26ACC1E3007265C3 /* AdminSplitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694EBDE26ACC1E3007265C3 /* AdminSplitController.swift */; };
 		E6CE19B026A7A42B002AB5A0 /* removeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19AF26A7A42B002AB5A0 /* removeUserDefaults.swift */; };
 		E6CE19B226A7A44E002AB5A0 /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19B126A7A44E002AB5A0 /* api.swift */; };
 		E6CE19B526A7AC26002AB5A0 /* stringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19B426A7AC26002AB5A0 /* stringExtensions.swift */; };
 		E6CE19B926A7B461002AB5A0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE19B826A7B461002AB5A0 /* SignupViewController.swift */; };
 		E6D1F5E726A3775C000F38AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D1F5E626A3775C000F38AA /* LoginViewController.swift */; };
+		E6E89EA026B0DF1A00B62CD6 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E89E9F26B0DF1A00B62CD6 /* AdminViewController.swift */; };
 		E6FF5352267304FE00D9AC61 /* RouterConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */; };
 		FC07492826731851006D269D /* LinkerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07492726731851006D269D /* LinkerService.swift */; };
 		FC07492A2673189E006D269D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0749292673189E006D269D /* Constants.swift */; };
@@ -47,13 +48,14 @@
 		E624776E266C350800554734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E624776F266C350800554734 /* MacBryte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacBryte.entitlements; sourceTree = "<group>"; };
 		E65B024726A391C8000D2B3E /* serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serialization.swift; sourceTree = "<group>"; };
-		E676888526ACEDA80055F0B2 /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
+		E6721F4B26B0F5F200CAFBF0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E694EBDE26ACC1E3007265C3 /* AdminSplitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminSplitController.swift; sourceTree = "<group>"; };
 		E6CE19AF26A7A42B002AB5A0 /* removeUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = removeUserDefaults.swift; sourceTree = "<group>"; };
 		E6CE19B126A7A44E002AB5A0 /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
 		E6CE19B426A7AC26002AB5A0 /* stringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stringExtensions.swift; sourceTree = "<group>"; };
 		E6CE19B826A7B461002AB5A0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		E6D1F5E626A3775C000F38AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E6E89E9F26B0DF1A00B62CD6 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterConnectionService.swift; sourceTree = "<group>"; };
 		FC07492726731851006D269D /* LinkerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerService.swift; sourceTree = "<group>"; };
 		FC0749292673189E006D269D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		E6247764266C350700554734 /* MacBryte */ = {
 			isa = PBXGroup;
 			children = (
+				E6721F4A26B0F5DE00CAFBF0 /* Models */,
 				E6CE19B326A7ABD7002AB5A0 /* Extensions */,
 				E65B024626A391B3000D2B3E /* Utils */,
 				FC3BD892269B68B20001705B /* Services */,
@@ -143,6 +146,14 @@
 				E6CE19B126A7A44E002AB5A0 /* api.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E6721F4A26B0F5DE00CAFBF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E6721F4B26B0F5F200CAFBF0 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E6CE19B326A7ABD7002AB5A0 /* Extensions */ = {
@@ -176,7 +187,7 @@
 				E603D47026A8FF5B00CBA509 /* InitialWindowController.swift */,
 				FCB3B5FA26AA8C520049F0AA /* AccountViewController.swift */,
 				E694EBDE26ACC1E3007265C3 /* AdminSplitController.swift */,
-				E676888526ACEDA80055F0B2 /* UsersListViewController.swift */,
+				E6E89E9F26B0DF1A00B62CD6 /* AdminViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -317,10 +328,11 @@
 				E694EBDF26ACC1E3007265C3 /* AdminSplitController.swift in Sources */,
 				E6CE19B526A7AC26002AB5A0 /* stringExtensions.swift in Sources */,
 				E6CE19B226A7A44E002AB5A0 /* api.swift in Sources */,
-				E676888626ACEDA80055F0B2 /* UsersListViewController.swift in Sources */,
 				FC4800A1269A0C7100C4382C /* NotificationHandler.swift in Sources */,
 				FCB64F8F2677DC6200501437 /* InternetStatusHandler.swift in Sources */,
+				E6721F4C26B0F5F200CAFBF0 /* User.swift in Sources */,
 				FC07492826731851006D269D /* LinkerService.swift in Sources */,
+				E6E89EA026B0DF1A00B62CD6 /* AdminViewController.swift in Sources */,
 				FC58D3DE266D2EE7002C4C1A /* DropdownViewController.swift in Sources */,
 				E6FF5352267304FE00D9AC61 /* RouterConnectionService.swift in Sources */,
 				FCB3B5FB26AA8C520049F0AA /* AccountViewController.swift in Sources */,
