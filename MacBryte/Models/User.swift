@@ -18,7 +18,6 @@ class User: NSObject {
     @objc dynamic var hoursRemaining: Int
     @objc dynamic var grandTotalHours: Int
     @objc dynamic var dateOfEntry: String
-    // @objc dynamic var isAdmin: Bool
     
     init(userId: String, firstname: String, lastname: String, email: String, password: String, zoomLink: String, packagePurchased: String, hoursRemaining: Int, grandTotalHours: Int, dateOfEntry: String ) {
         self.userId = userId
@@ -31,6 +30,14 @@ class User: NSObject {
         self.hoursRemaining = hoursRemaining
         self.grandTotalHours = grandTotalHours
         self.dateOfEntry = dateOfEntry
-      //  self.isAdmin = isAdmin
+    }
+    
+    var asDictionary : [String:Any] {
+      let mirror = Mirror(reflecting: self)
+      let dict = Dictionary(uniqueKeysWithValues: mirror.children.lazy.map({ (label:String?, value:Any) -> (String, Any)? in
+        guard let label = label else { return nil }
+        return (label, value)
+      }).compactMap { $0 })
+      return dict
     }
 }

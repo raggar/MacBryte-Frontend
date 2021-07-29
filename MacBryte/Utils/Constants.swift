@@ -55,7 +55,7 @@ class Constants {
     static let loginURL : String = "http://localhost:8000/apiV1/login"
     static let getUserUrl : String = "http://localhost:8000/apiV1/userInfo"
     static let getUsersUrl : String = "http://localhost:8000/apiV1/getAll"
-    
+    static let updateUsersUrl : String = "http://localhost:8000/apiV1/updateUsers"
     // Enviornment
     static let enviornment : String = "production"
     

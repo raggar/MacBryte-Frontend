@@ -1190,6 +1190,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="savePressed:" target="sE8-xO-cTN" id="EcW-to-kbc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>

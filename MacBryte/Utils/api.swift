@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-func postData(url: String, parameters: [String: String], completionHandler: @escaping ((Dictionary<String, Any>) -> Void)) {
+func postData(url: String, parameters: [String: Any], completionHandler: @escaping ((Dictionary<String, Any>) -> Void)) {
     Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
         let result: Dictionary<String, Any>
         if (response.result.isSuccess) {
@@ -21,7 +21,7 @@ func postData(url: String, parameters: [String: String], completionHandler: @esc
     }
 }
 
-func getData(url: String, parameters: [String: String], completionHandler: @escaping ((Dictionary<String, Any>) -> Void)) {
+func getData(url: String, parameters: [String: Any], completionHandler: @escaping ((Dictionary<String, Any>) -> Void)) {
     Alamofire.request(url, method: .get, parameters: parameters).responseJSON { response in
         let result: Dictionary<String, Any>
         if response.result.isSuccess {

@@ -24,10 +24,18 @@ class AdminViewController: NSViewController {
         super.viewDidLoad()
 
         getData(url: Constants.getUsersUrl, parameters: [:]) { result in
-                   if (!(result["error"] as! Bool)) {
-                       self.users = result["users"] as! [User]
-                   }
-               }
+           if (!(result["error"] as! Bool)) {
+               self.users = result["users"] as! [User]
+           }
+       }
     }
     
+    @IBAction func savePressed(_ sender: NSButton) {
+        let usersData = users.map { (user) -> Dictionary<String, Any> in
+            return user.asDictionary
+        }
+        postData(url: Constants.updateUsersUrl, parameters: ["updatedUsers": usersData]) { result in
+            print(result)
+        }
+    }
 }

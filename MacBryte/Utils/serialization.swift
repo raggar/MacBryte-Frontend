@@ -31,7 +31,6 @@ func serializeToDict(data: JSON) -> Dictionary<String, Any> {
                 let grandTotalHours : Int = user["grandTotalHours"].rawValue as! Int
                 let hoursRemaining: Int = user["hoursRemaining"].rawValue as! Int
                 let dateOfEntry: String = user["dateOfEntry"].rawValue as! String
-                //let isAdmin: Bool = user["isAdmin"].rawValue as! Bool
                 return User(userId: userId, firstname: firstname, lastname: lastname, email: email, password: password, zoomLink: zoomLink, packagePurchased: packagePurchased, hoursRemaining: hoursRemaining, grandTotalHours: grandTotalHours, dateOfEntry: dateOfEntry)
                 }
             serializedDic[key] = usersArray
