@@ -15,8 +15,8 @@ class InitialWindowController: NSWindowController {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
         var size: NSSize
         if (UserDefaults.standard.string(forKey: Constants.userIdStorageKey) != nil && UserDefaults.standard.bool(forKey: Constants.userIsAdminStorageKey)) {
-            let contentController: NSSplitViewController
-                = storyboard.instantiateController(withIdentifier: "adminSplitController") as! NSSplitViewController
+            let contentController: NSViewController
+                = storyboard.instantiateController(withIdentifier: "adminViewController") as! NSViewController
             size = Constants.adminViewControllerSize
             self.window?.contentViewController = contentController
         } else if (UserDefaults.standard.string(forKey: Constants.userIdStorageKey) != nil) {

@@ -13,6 +13,8 @@ class AdminViewController: NSViewController {
     @objc dynamic var users: [User] = []
     
     @IBOutlet weak var savedButton: NSButton!
+    @IBOutlet weak var signOutButton: NSButton!
+    @IBOutlet weak var confirmationMessage: NSTextField!
     
     override func viewDidAppear() {
         super.viewDidAppear()
@@ -32,6 +34,12 @@ class AdminViewController: NSViewController {
        }
     }
     
+    @IBAction func signOutPressed(_ sender: Any) {
+        self.view.window!.performClose(nil)
+        removeUserDefaults()
+        performSegue(withIdentifier: "adminToAuthentication", sender: self)
+    }
+    
     @IBAction func savePressed(_ sender: NSButton) {
         savedButton.isEnabled = false
         savedButton.title = "Saving..."
@@ -42,11 +50,16 @@ class AdminViewController: NSViewController {
         
         postData(url: Constants.updateUsersUrl, parameters: ["updatedUsers": usersData]) { result in
             if (!(result["error"] as! Bool)) {
-                self.savedButton.title = "Saved"
+                self.confirmationMessage.stringValue = Constants.savingDataOk
             } else {
-                self.savedButton.title = "Error"
+                self.confirmationMessage.stringValue = Constants.savingDataFailed
             }
             self.savedButton.isEnabled = true
+            self.savedButton.title = "Save"
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+                self.confirmationMessage.stringValue = Constants.defaultStatusText
+            }
         }
     }
 }
