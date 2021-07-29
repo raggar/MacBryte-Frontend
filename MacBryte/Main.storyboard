@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="sE8-xO-cTN">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="dCx-t9-oKL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -824,17 +824,17 @@
             <objects>
                 <viewController id="sE8-xO-cTN" customClass="AdminViewController" customModule="MacBryte" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="nwA-BP-x9x">
-                        <rect key="frame" x="0.0" y="0.0" width="1764" height="805"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1958" height="805"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="17" horizontalPageScroll="10" verticalLineScroll="17" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEm-UL-zTW">
-                                <rect key="frame" x="0.0" y="60" width="1764" height="745"/>
+                                <rect key="frame" x="0.0" y="60" width="2012" height="745"/>
                                 <clipView key="contentView" id="NLC-w3-d3s">
-                                    <rect key="frame" x="1" y="1" width="1762" height="743"/>
+                                    <rect key="frame" x="1" y="1" width="2010" height="743"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Beh-XW-gJu" viewBased="YES" id="bdz-1e-yZ7">
-                                            <rect key="frame" x="0.0" y="0.0" width="1901" height="715"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="2010" height="715"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -853,7 +853,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="hfj-IR-I88">
-                                                            <rect key="frame" x="8" y="0.0" width="198" height="17"/>
+                                                            <rect key="frame" x="18" y="0.0" width="198" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8d7-D1-nzq">
@@ -865,12 +865,12 @@
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="hfj-IR-I88" name="editable" keyPath="objectValue.password" id="pgo-Kc-tPL"/>
                                                                         <binding destination="hfj-IR-I88" name="value" keyPath="objectValue.firstname" id="qWi-JO-PK4">
                                                                             <dictionary key="options">
                                                                                 <bool key="NSConditionallySetsEditable" value="NO"/>
                                                                             </dictionary>
                                                                         </binding>
+                                                                        <binding destination="hfj-IR-I88" name="editable" keyPath="objectValue.password" id="pgo-Kc-tPL"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -896,7 +896,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="4Uw-hI-GJw">
-                                                            <rect key="frame" x="223" y="0.0" width="200" height="17"/>
+                                                            <rect key="frame" x="233" y="0.0" width="200" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9oF-Dd-IyT">
@@ -908,12 +908,12 @@
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="4Uw-hI-GJw" name="editable" keyPath="objectValue.password" id="aFA-4J-3Um"/>
                                                                         <binding destination="4Uw-hI-GJw" name="value" keyPath="objectValue.lastname" id="bx8-wn-I2Q">
                                                                             <dictionary key="options">
                                                                                 <bool key="NSConditionallySetsEditable" value="NO"/>
                                                                             </dictionary>
                                                                         </binding>
+                                                                        <binding destination="4Uw-hI-GJw" name="editable" keyPath="objectValue.password" id="aFA-4J-3Um"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -936,7 +936,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="4W2-hW-pXj">
-                                                            <rect key="frame" x="440" y="0.0" width="200" height="17"/>
+                                                            <rect key="frame" x="450" y="0.0" width="200" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9n2-EZ-0o9">
@@ -948,12 +948,12 @@
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="4W2-hW-pXj" name="editable" keyPath="objectValue.password" id="dLK-Du-F63"/>
                                                                         <binding destination="4W2-hW-pXj" name="value" keyPath="objectValue.email" id="kwS-y2-7p7">
                                                                             <dictionary key="options">
                                                                                 <bool key="NSConditionallySetsEditable" value="NO"/>
                                                                             </dictionary>
                                                                         </binding>
+                                                                        <binding destination="4W2-hW-pXj" name="editable" keyPath="objectValue.password" id="dLK-Du-F63"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -976,7 +976,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="cQs-8Z-8LB">
-                                                            <rect key="frame" x="657" y="0.0" width="200" height="17"/>
+                                                            <rect key="frame" x="667" y="0.0" width="200" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tea-Au-wrN">
@@ -1016,7 +1016,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="lNO-iP-2Gu">
-                                                            <rect key="frame" x="874" y="0.0" width="200" height="17"/>
+                                                            <rect key="frame" x="884" y="0.0" width="200" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nad-HP-nWc">
@@ -1056,7 +1056,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="Sr0-br-gl8">
-                                                            <rect key="frame" x="1091" y="0.0" width="200" height="17"/>
+                                                            <rect key="frame" x="1101" y="0.0" width="200" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s8a-6A-0LX">
@@ -1068,12 +1068,12 @@
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="Sr0-br-gl8" name="editable" keyPath="objectValue.password" id="PVr-nr-K2b"/>
                                                                         <binding destination="Sr0-br-gl8" name="value" keyPath="objectValue.packagePurchased" id="ear-0C-LT6">
                                                                             <dictionary key="options">
                                                                                 <bool key="NSConditionallySetsEditable" value="NO"/>
                                                                             </dictionary>
                                                                         </binding>
+                                                                        <binding destination="Sr0-br-gl8" name="editable" keyPath="objectValue.password" id="PVr-nr-K2b"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -1096,7 +1096,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="t91-6U-wqk">
-                                                            <rect key="frame" x="1308" y="0.0" width="200" height="17"/>
+                                                            <rect key="frame" x="1318" y="0.0" width="200" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F1w-JB-dHH">
@@ -1108,12 +1108,12 @@
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="t91-6U-wqk" name="editable" keyPath="objectValue.password" id="OwP-LT-tqO"/>
                                                                         <binding destination="t91-6U-wqk" name="value" keyPath="objectValue.hoursRemaining" id="t8c-Ge-JD8">
                                                                             <dictionary key="options">
                                                                                 <bool key="NSConditionallySetsEditable" value="NO"/>
                                                                             </dictionary>
                                                                         </binding>
+                                                                        <binding destination="t91-6U-wqk" name="editable" keyPath="objectValue.password" id="OwP-LT-tqO"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -1136,7 +1136,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="Dgm-h1-Vwm">
-                                                            <rect key="frame" x="1525" y="0.0" width="200" height="17"/>
+                                                            <rect key="frame" x="1535" y="0.0" width="200" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rYi-p2-zJy">
@@ -1148,12 +1148,12 @@
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="Dgm-h1-Vwm" name="editable" keyPath="objectValue.password" id="yXO-wx-3bH"/>
                                                                         <binding destination="Dgm-h1-Vwm" name="value" keyPath="objectValue.grandTotalHours" id="vhC-Ly-1G9">
                                                                             <dictionary key="options">
                                                                                 <bool key="NSConditionallySetsEditable" value="NO"/>
                                                                             </dictionary>
                                                                         </binding>
+                                                                        <binding destination="Dgm-h1-Vwm" name="editable" keyPath="objectValue.password" id="yXO-wx-3bH"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -1163,7 +1163,7 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn width="153" minWidth="10" maxWidth="3.4028234663852886e+38" id="bUx-AG-fZr">
+                                                <tableColumn width="262" minWidth="10" maxWidth="3.4028234663852886e+38" id="bUx-AG-fZr">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Account Created Date">
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1176,11 +1176,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="Ag2-JB-c4v">
-                                                            <rect key="frame" x="1742" y="0.0" width="150" height="17"/>
+                                                            <rect key="frame" x="1752" y="0.0" width="259" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HD8-lp-DIg">
-                                                                    <rect key="frame" x="0.0" y="1" width="150" height="16"/>
+                                                                    <rect key="frame" x="0.0" y="1" width="259" height="16"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="EFV-bt-XRP">
                                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -1210,8 +1210,8 @@
                                         </tableView>
                                     </subviews>
                                 </clipView>
-                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="SWd-Y2-ujO">
-                                    <rect key="frame" x="1" y="728" width="1762" height="16"/>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="SWd-Y2-ujO">
+                                    <rect key="frame" x="1" y="728" width="2010" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="UtD-nL-m2Z">
@@ -1219,12 +1219,12 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" wantsLayer="YES" id="Beh-XW-gJu">
-                                    <rect key="frame" x="0.0" y="0.0" width="1901" height="28"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="2010" height="28"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iLk-tv-kgD">
-                                <rect key="frame" x="850" y="13" width="64" height="32"/>
+                                <rect key="frame" x="947" y="13" width="64" height="32"/>
                                 <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PHy-Hr-V8J">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1238,13 +1238,14 @@
                             <constraint firstItem="iLk-tv-kgD" firstAttribute="centerX" secondItem="nwA-BP-x9x" secondAttribute="centerX" id="3cX-mE-Y7S"/>
                             <constraint firstItem="iLk-tv-kgD" firstAttribute="top" secondItem="PEm-UL-zTW" secondAttribute="bottom" constant="20" id="Bp0-UT-7fb"/>
                             <constraint firstAttribute="bottom" secondItem="iLk-tv-kgD" secondAttribute="bottom" constant="20" id="Ib3-PV-Wze"/>
-                            <constraint firstAttribute="trailing" secondItem="PEm-UL-zTW" secondAttribute="trailing" id="MAh-Or-KPB"/>
+                            <constraint firstAttribute="trailing" secondItem="PEm-UL-zTW" secondAttribute="trailing" constant="-54" id="MAh-Or-KPB"/>
                             <constraint firstItem="PEm-UL-zTW" firstAttribute="leading" secondItem="nwA-BP-x9x" secondAttribute="leading" id="VBa-Pw-QCA"/>
                             <constraint firstItem="iLk-tv-kgD" firstAttribute="top" secondItem="PEm-UL-zTW" secondAttribute="bottom" constant="20" id="dK0-Qg-pTj"/>
                             <constraint firstItem="PEm-UL-zTW" firstAttribute="top" secondItem="nwA-BP-x9x" secondAttribute="top" id="svd-zV-IXM"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="savedButton" destination="iLk-tv-kgD" id="CzN-ip-MdW"/>
                         <outlet property="table" destination="bdz-1e-yZ7" id="jk7-cP-ycF"/>
                     </connections>
                 </viewController>
@@ -1255,7 +1256,7 @@
                     </connections>
                 </arrayController>
             </objects>
-            <point key="canvasLocation" x="-3270" y="2457.5"/>
+            <point key="canvasLocation" x="-3173" y="2457.5"/>
         </scene>
         <!--Dropdown-->
         <scene sceneID="hIz-AP-VOD">
@@ -1281,10 +1282,10 @@
                                         </textFieldCell>
                                     </textField>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OcW-oT-9sJ">
-                                        <rect key="frame" x="47" y="133" width="206" height="19"/>
+                                        <rect key="frame" x="47" y="133" width="206" height="20"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qq5-2W-n2I">
-                                                <rect key="frame" x="-2" y="0.0" width="52" height="19"/>
+                                                <rect key="frame" x="-2" y="1" width="52" height="19"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Email:" id="lRU-xE-XWb">
                                                     <font key="font" metaFont="systemBold" size="16"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1292,7 +1293,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e6e-Qf-uFT">
-                                                <rect key="frame" x="56" y="0.0" width="150" height="19"/>
+                                                <rect key="frame" x="56" y="0.0" width="150" height="20"/>
                                                 <buttonCell key="cell" type="bevel" title="info@macbryte.com" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="KgU-29-4dZ">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system" size="16"/>
@@ -1313,7 +1314,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xnh-S6-vm4">
-                                        <rect key="frame" x="68" y="88" width="164" height="19"/>
+                                        <rect key="frame" x="68" y="89" width="164" height="19"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dDE-ub-DLg">
                                                 <rect key="frame" x="-2" y="0.0" width="59" height="19"/>
@@ -1345,10 +1346,10 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g7m-R1-EAj">
-                                        <rect key="frame" x="37" y="44" width="225" height="19"/>
+                                        <rect key="frame" x="37" y="45" width="225" height="20"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j1s-fY-adc">
-                                                <rect key="frame" x="-2" y="0.0" width="73" height="19"/>
+                                                <rect key="frame" x="-2" y="1" width="73" height="19"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Website:" id="hpd-xq-t7q">
                                                     <font key="font" metaFont="systemBold" size="16"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1356,7 +1357,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-di-P0q">
-                                                <rect key="frame" x="77" y="0.0" width="148" height="19"/>
+                                                <rect key="frame" x="77" y="0.0" width="148" height="20"/>
                                                 <buttonCell key="cell" type="bevel" title="www.macbryte.com" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="KUz-cC-5nV">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system" size="16"/>
@@ -1377,7 +1378,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IwF-Ny-pxi">
-                                        <rect key="frame" x="40" y="0.0" width="220" height="19"/>
+                                        <rect key="frame" x="40" y="0.0" width="220" height="20"/>
                                         <buttonCell key="cell" type="bevel" title="Log in to view your Zoom Link" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="jSS-vZ-N1J">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system" size="16"/>
@@ -1473,7 +1474,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CqA-4b-L9F">
-                                        <rect key="frame" x="90" y="33" width="77" height="32"/>
+                                        <rect key="frame" x="89" y="33" width="78" height="32"/>
                                         <buttonCell key="cell" type="push" title="Signup" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8ei-yS-f2D">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -1542,10 +1543,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="29" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJO-AS-q4L">
-                                <rect key="frame" x="30" y="85" width="450" height="317"/>
+                                <rect key="frame" x="30" y="84" width="450" height="318"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bn3-4G-c3s">
-                                        <rect key="frame" x="100" y="289" width="251" height="28"/>
+                                        <rect key="frame" x="100" y="290" width="251" height="28"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Your MacBryte Account" id="RfY-Uj-7tp">
                                             <font key="font" metaFont="system" size="24"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1553,7 +1554,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jQ5-jL-RXW">
-                                        <rect key="frame" x="170" y="241" width="110" height="19"/>
+                                        <rect key="frame" x="170" y="242" width="110" height="19"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uiH-J9-LCT">
                                                 <rect key="frame" x="-2" y="0.0" width="56" height="19"/>
@@ -1585,7 +1586,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TlG-Oy-IyQ">
-                                        <rect key="frame" x="119" y="193" width="212" height="19"/>
+                                        <rect key="frame" x="119" y="194" width="212" height="19"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7S6-wI-gj0">
                                                 <rect key="frame" x="-2" y="0.0" width="158" height="19"/>
@@ -1617,7 +1618,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YLx-T3-RKa">
-                                        <rect key="frame" x="127" y="145" width="196" height="19"/>
+                                        <rect key="frame" x="127" y="146" width="196" height="19"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XM4-iw-C9t">
                                                 <rect key="frame" x="-2" y="0.0" width="142" height="19"/>
@@ -1649,7 +1650,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mzc-8Y-i7u">
-                                        <rect key="frame" x="97" y="97" width="257" height="19"/>
+                                        <rect key="frame" x="97" y="98" width="257" height="19"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0u8-H7-6An">
                                                 <rect key="frame" x="-2" y="0.0" width="203" height="19"/>
@@ -1681,10 +1682,10 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w7A-Mp-EqX">
-                                        <rect key="frame" x="157" y="49" width="137" height="19"/>
+                                        <rect key="frame" x="156" y="49" width="138" height="20"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xn7-R4-4b7">
-                                                <rect key="frame" x="-2" y="0.0" width="90" height="19"/>
+                                                <rect key="frame" x="-2" y="1" width="90" height="19"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Zoom Link:" id="Jac-as-l0M">
                                                     <font key="font" metaFont="systemBold" size="16"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1692,7 +1693,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4Hq-oF-mjH">
-                                                <rect key="frame" x="94" y="0.0" width="43" height="19"/>
+                                                <rect key="frame" x="94" y="0.0" width="44" height="20"/>
                                                 <buttonCell key="cell" type="bevel" title="None" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="r3c-Gz-0Ur">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system" size="16"/>
@@ -1713,7 +1714,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="epa-Yc-aO7">
-                                        <rect key="frame" x="177" y="-7" width="97" height="32"/>
+                                        <rect key="frame" x="176" y="-7" width="98" height="32"/>
                                         <buttonCell key="cell" type="push" title="Sign Out" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oWE-Ng-UZj">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system" size="16"/>
@@ -1787,7 +1788,7 @@
                 </splitViewController>
                 <customObject id="dne-wN-CRx" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1788" y="1739"/>
+            <point key="canvasLocation" x="-1705" y="1780"/>
         </scene>
         <!--Users List View Controller-->
         <scene sceneID="DZH-2B-clI">
@@ -1905,7 +1906,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="luv-dL-W1J"/>
+        <segue reference="22r-3o-izH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="logo" width="137" height="71"/>
