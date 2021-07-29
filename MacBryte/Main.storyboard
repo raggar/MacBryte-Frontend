@@ -866,7 +866,11 @@
                                                                     </textFieldCell>
                                                                     <connections>
                                                                         <binding destination="hfj-IR-I88" name="editable" keyPath="objectValue.password" id="pgo-Kc-tPL"/>
-                                                                        <binding destination="hfj-IR-I88" name="value" keyPath="objectValue.firstname" id="rtC-AQ-jtL"/>
+                                                                        <binding destination="hfj-IR-I88" name="value" keyPath="objectValue.firstname" id="qWi-JO-PK4">
+                                                                            <dictionary key="options">
+                                                                                <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                                            </dictionary>
+                                                                        </binding>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -905,7 +909,11 @@
                                                                     </textFieldCell>
                                                                     <connections>
                                                                         <binding destination="4Uw-hI-GJw" name="editable" keyPath="objectValue.password" id="aFA-4J-3Um"/>
-                                                                        <binding destination="4Uw-hI-GJw" name="value" keyPath="objectValue.lastname" id="Rve-M9-Otz"/>
+                                                                        <binding destination="4Uw-hI-GJw" name="value" keyPath="objectValue.lastname" id="bx8-wn-I2Q">
+                                                                            <dictionary key="options">
+                                                                                <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                                            </dictionary>
+                                                                        </binding>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -941,7 +949,11 @@
                                                                     </textFieldCell>
                                                                     <connections>
                                                                         <binding destination="4W2-hW-pXj" name="editable" keyPath="objectValue.password" id="dLK-Du-F63"/>
-                                                                        <binding destination="4W2-hW-pXj" name="value" keyPath="objectValue.email" id="pXI-VD-wPo"/>
+                                                                        <binding destination="4W2-hW-pXj" name="value" keyPath="objectValue.email" id="kwS-y2-7p7">
+                                                                            <dictionary key="options">
+                                                                                <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                                            </dictionary>
+                                                                        </binding>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -977,7 +989,11 @@
                                                                     </textFieldCell>
                                                                     <connections>
                                                                         <binding destination="cQs-8Z-8LB" name="editable" keyPath="objectValue.password" id="ILy-hu-xQd"/>
-                                                                        <binding destination="cQs-8Z-8LB" name="value" keyPath="objectValue.password" id="sIF-vo-l9n"/>
+                                                                        <binding destination="cQs-8Z-8LB" name="value" keyPath="objectValue.password" id="UEl-NS-lCC">
+                                                                            <dictionary key="options">
+                                                                                <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                                            </dictionary>
+                                                                        </binding>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -1006,14 +1022,18 @@
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nad-HP-nWc">
                                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="16"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="NDg-bz-3UA">
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="NDg-bz-3UA">
                                                                         <font key="font" usesAppearanceFont="YES"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
                                                                         <binding destination="lNO-iP-2Gu" name="editable" keyPath="objectValue.password" id="WSr-PI-Bqb"/>
-                                                                        <binding destination="lNO-iP-2Gu" name="value" keyPath="objectValue.zoomLink" id="F4F-j6-1pS"/>
+                                                                        <binding destination="lNO-iP-2Gu" name="value" keyPath="objectValue.zoomLink" id="I0r-Ty-Aji">
+                                                                            <dictionary key="options">
+                                                                                <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                                            </dictionary>
+                                                                        </binding>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -1049,7 +1069,11 @@
                                                                     </textFieldCell>
                                                                     <connections>
                                                                         <binding destination="Sr0-br-gl8" name="editable" keyPath="objectValue.password" id="PVr-nr-K2b"/>
-                                                                        <binding destination="Sr0-br-gl8" name="value" keyPath="objectValue.packagePurchased" id="YCb-gA-hjj"/>
+                                                                        <binding destination="Sr0-br-gl8" name="value" keyPath="objectValue.packagePurchased" id="ear-0C-LT6">
+                                                                            <dictionary key="options">
+                                                                                <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                                            </dictionary>
+                                                                        </binding>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -1085,7 +1109,11 @@
                                                                     </textFieldCell>
                                                                     <connections>
                                                                         <binding destination="t91-6U-wqk" name="editable" keyPath="objectValue.password" id="OwP-LT-tqO"/>
-                                                                        <binding destination="t91-6U-wqk" name="value" keyPath="objectValue.hoursRemaining" id="iGu-j6-Wnq"/>
+                                                                        <binding destination="t91-6U-wqk" name="value" keyPath="objectValue.hoursRemaining" id="t8c-Ge-JD8">
+                                                                            <dictionary key="options">
+                                                                                <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                                            </dictionary>
+                                                                        </binding>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -1121,7 +1149,11 @@
                                                                     </textFieldCell>
                                                                     <connections>
                                                                         <binding destination="Dgm-h1-Vwm" name="editable" keyPath="objectValue.password" id="yXO-wx-3bH"/>
-                                                                        <binding destination="Dgm-h1-Vwm" name="value" keyPath="objectValue.grandTotalHours" id="V5L-sP-dFQ"/>
+                                                                        <binding destination="Dgm-h1-Vwm" name="value" keyPath="objectValue.grandTotalHours" id="vhC-Ly-1G9">
+                                                                            <dictionary key="options">
+                                                                                <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                                            </dictionary>
+                                                                        </binding>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -1157,7 +1189,11 @@
                                                                     </textFieldCell>
                                                                     <connections>
                                                                         <binding destination="Ag2-JB-c4v" name="editable" keyPath="objectValue.dateOfEntry" id="9JU-xv-LLd"/>
-                                                                        <binding destination="Ag2-JB-c4v" name="value" keyPath="objectValue.dateOfEntry" id="uai-dG-s46"/>
+                                                                        <binding destination="Ag2-JB-c4v" name="value" keyPath="objectValue.dateOfEntry" id="YGI-ll-eIj">
+                                                                            <dictionary key="options">
+                                                                                <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                                            </dictionary>
+                                                                        </binding>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
