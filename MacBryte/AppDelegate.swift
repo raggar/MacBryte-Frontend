@@ -13,7 +13,7 @@ import UserNotifications
 class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {        
         setStatusItemImage(to: Constants.menuBarIconInternetGood)
         
         if (Constants.enviornment == "develop") {
