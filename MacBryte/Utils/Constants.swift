@@ -49,18 +49,26 @@ class Constants {
     static let userIdNull = "User id is null"
     static let backendMessageNotCompleted = "Unable to complete request"
     static let noZoomLink = "Contact MacBryte to receive a Zoom Link"
+    static let savingDataFailed = "There was an error when saving the user data"
+    
+    // Editing Interface
+    static let savingDataOk = "Successfully saved changes"
+    static let defaultStatusText = "Select the values in the table to modify them. You can navigate between cells by using Tab and Shift+Tab. When editing a cell, hit Enter to save changes and Esc to cancel."
+    
     
     // Request Urls
     static let signUpURL : String = "http://localhost:8000/apiV1/signup"
     static let loginURL : String = "http://localhost:8000/apiV1/login"
     static let getUserUrl : String = "http://localhost:8000/apiV1/userInfo"
+    static let getUsersUrl : String = "http://localhost:8000/apiV1/getAll"
+    static let updateUsersUrl : String = "http://localhost:8000/apiV1/updateUsers"
     
     // Enviornment
     static let enviornment : String = "production"
     
     // Sizes
     static let accountViewControllerSize : NSSize = NSSize(width: 500, height: 400)
-    static let adminViewControllerSize : NSSize =  NSSize(width: 400, height: 400)
+    static let adminViewControllerSize : NSSize =  NSSize(width: 2000, height: 700)
     static let authenticationTabControllerSize : NSSize = NSSize(width: 500, height: 500)
     
     static let appWindowTitle : String = "MacBryte"

@@ -20,6 +20,7 @@ class SignupViewController: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var passwordInput: NSTextField!
     
     @IBOutlet weak var label: NSTextField!
+    @IBOutlet weak var signupButton: NSButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,24 @@ class SignupViewController: NSViewController, NSTextFieldDelegate {
         lastnameInput.placeholderString = "Lastname"
         emailInput.placeholderString = "Email"
         passwordInput.placeholderString = "Password"
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        firstnameInput.becomeFirstResponder()
+    }
+
+    @IBAction func textFieldAction(sender: NSTextField) {
+        let identifier = sender.identifier!.rawValue
+        if (identifier == "signupFirstnameInput") {
+            lastnameInput.becomeFirstResponder()
+        } else if (identifier == "signupLastnameInput"){
+            emailInput.becomeFirstResponder()
+        } else if (identifier == "signupEmailInput") {
+            passwordInput.becomeFirstResponder()
+        } else {
+            signup(firstname: firstnameInput.stringValue, lastname: lastnameInput.stringValue, email: emailInput.stringValue, password: passwordInput.stringValue)
+        }
     }
     
     func inputsEmpty() -> Bool {
@@ -43,13 +62,16 @@ class SignupViewController: NSViewController, NSTextFieldDelegate {
     }
     
     func signup(firstname: String, lastname: String, email: String, password: String) {
+        signupButton.isEnabled = false
         let signupParams: Dictionary<String, String> = ["firstname": firstname, "lastname": lastname, "email": email, "password": password]
         if inputsEmpty() {
             setErrorMessage(message: Constants.fieldIsEmpty)
+            signupButton.isEnabled = true
         } else {
             postData(url: Constants.signUpURL, parameters: signupParams) { (result) in
                 if (result["error"] as! Bool) {
                     self.setErrorMessage(message: result["requestMessage"] as! String)
+                    self.signupButton.isEnabled = true
                 } else {
                     UserDefaults.standard.setValue(result["isAdmin"], forKey: Constants.userIsAdminStorageKey)
                     UserDefaults.standard.setValue(result["zoomLink"], forKey: Constants.userZoomLinkStorageKey)
