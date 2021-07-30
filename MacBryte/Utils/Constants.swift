@@ -53,7 +53,7 @@ class Constants {
     
     // Editing Interface
     static let savingDataOk = "Successfully saved changes"
-    static let defaultStatusText = "Select the values in the table to modify them. You can navigate between cells by using Tab and Shift+Tab"
+    static let defaultStatusText = "Select the values in the table to modify them. You can navigate between cells by using Tab and Shift+Tab. When editing a cell, hit Enter to save changes and Esc to cancel."
     
     
     // Request Urls

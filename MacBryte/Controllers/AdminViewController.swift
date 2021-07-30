@@ -27,6 +27,8 @@ class AdminViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         savedButton.title = "Save"
+        confirmationMessage.stringValue = Constants.defaultStatusText
+        
         getData(url: Constants.getUsersUrl, parameters: [:]) { result in
            if (!(result["error"] as! Bool)) {
                self.users = result["users"] as! [User]
