@@ -56,11 +56,11 @@ class Constants {
     
     
     // Request Urls
-    static let signUpURL : String = "http://localhost:8000/apiV1/signup"
-    static let loginURL : String = "http://localhost:8000/apiV1/login"
-    static let getUserUrl : String = "http://localhost:8000/apiV1/userInfo"
-    static let getUsersUrl : String = "http://localhost:8000/apiV1/getAll"
-    static let updateUsersUrl : String = "http://localhost:8000/apiV1/updateUsers"
+    static let signUpURL : String = "https://macbryte-typescript-server.herokuapp.com/apiV1/signup"
+    static let loginURL : String = "https://macbryte-typescript-server.herokuapp.com/apiV1/login"
+    static let getUserUrl : String = "https://macbryte-typescript-server.herokuapp.com/apiV1/userInfo"
+    static let getUsersUrl : String = "https://macbryte-typescript-server.herokuapp.com/apiV1/getAll"
+    static let updateUsersUrl : String = "https://macbryte-typescript-server.herokuapp.com/apiV1/updateUsers"
     
     // Enviornment
     static let enviornment : String = "production"
