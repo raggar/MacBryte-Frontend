@@ -32,10 +32,26 @@
 		FC58D3DA266D2483002C4C1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC58D3D9266D2483002C4C1A /* Main.storyboard */; };
 		FC58D3DE266D2EE7002C4C1A /* DropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58D3DD266D2EE7002C4C1A /* DropdownViewController.swift */; };
 		FCAD636626B5F5C40085C8FC /* status-bar-icon-reversed-red.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAD636526B5F5C40085C8FC /* status-bar-icon-reversed-red.png */; };
+		FCAD636E26B5F7E60085C8FC /* AppDelegateLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAD636D26B5F7E60085C8FC /* AppDelegateLauncher.swift */; };
+		FCAD637C26B5F8830085C8FC /* LauncherApplication.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = FCAD636B26B5F7E60085C8FC /* LauncherApplication.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FCAD637E26B5F8B60085C8FC /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAD637D26B5F8B60085C8FC /* ServiceManagement.framework */; };
 		FCB3B5FB26AA8C520049F0AA /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3B5FA26AA8C520049F0AA /* AccountViewController.swift */; };
 		FCB64F8D2677C88400501437 /* InternetConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB64F8C2677C88400501437 /* InternetConnectionService.swift */; };
 		FCB64F8F2677DC6200501437 /* InternetStatusHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB64F8E2677DC6200501437 /* InternetStatusHandler.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FCAD637B26B5F8720085C8FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				FCAD637C26B5F8830085C8FC /* LauncherApplication.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		89CE9BE20B233C8D24537C87 /* Pods_MacBryte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacBryte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +84,11 @@
 		FC58D3D9266D2483002C4C1A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FC58D3DD266D2EE7002C4C1A /* DropdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewController.swift; sourceTree = "<group>"; };
 		FCAD636526B5F5C40085C8FC /* status-bar-icon-reversed-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-reversed-red.png"; sourceTree = "<group>"; };
+		FCAD636B26B5F7E60085C8FC /* LauncherApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LauncherApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCAD636D26B5F7E60085C8FC /* AppDelegateLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateLauncher.swift; sourceTree = "<group>"; };
+		FCAD637626B5F7E70085C8FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCAD637726B5F7E70085C8FC /* LauncherApplication.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LauncherApplication.entitlements; sourceTree = "<group>"; };
+		FCAD637D26B5F8B60085C8FC /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		FCB3B5FA26AA8C520049F0AA /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		FCB64F8C2677C88400501437 /* InternetConnectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetConnectionService.swift; sourceTree = "<group>"; };
 		FCB64F8E2677DC6200501437 /* InternetStatusHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetStatusHandler.swift; sourceTree = "<group>"; };
@@ -79,6 +100,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A6ED6B8E86132D6E70BA4E7 /* Pods_MacBryte.framework in Frameworks */,
+				FCAD637E26B5F8B60085C8FC /* ServiceManagement.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCAD636826B5F7E60085C8FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +126,7 @@
 		BF60C6DA988C64C99165FCCB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCAD637D26B5F8B60085C8FC /* ServiceManagement.framework */,
 				89CE9BE20B233C8D24537C87 /* Pods_MacBryte.framework */,
 			);
 			name = Frameworks;
@@ -106,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				E6247764266C350700554734 /* MacBryte */,
+				FCAD636C26B5F7E60085C8FC /* LauncherApplication */,
 				E6247763266C350700554734 /* Products */,
 				4AC4B07CCA3F82DFAAA08D50 /* Pods */,
 				BF60C6DA988C64C99165FCCB /* Frameworks */,
@@ -116,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				E6247762266C350700554734 /* MacBryte.app */,
+				FCAD636B26B5F7E60085C8FC /* LauncherApplication.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,6 +236,16 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		FCAD636C26B5F7E60085C8FC /* LauncherApplication */ = {
+			isa = PBXGroup;
+			children = (
+				FCAD636D26B5F7E60085C8FC /* AppDelegateLauncher.swift */,
+				FCAD637626B5F7E70085C8FC /* Info.plist */,
+				FCAD637726B5F7E70085C8FC /* LauncherApplication.entitlements */,
+			);
+			path = LauncherApplication;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,6 +258,7 @@
 				E624775F266C350700554734 /* Frameworks */,
 				E6247760266C350700554734 /* Resources */,
 				7F16A7B98E28A4D4D70AE113 /* [CP] Embed Pods Frameworks */,
+				FCAD637B26B5F8720085C8FC /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -224,6 +267,23 @@
 			name = MacBryte;
 			productName = MacBryte;
 			productReference = E6247762266C350700554734 /* MacBryte.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FCAD636A26B5F7E60085C8FC /* LauncherApplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCAD637A26B5F7E70085C8FC /* Build configuration list for PBXNativeTarget "LauncherApplication" */;
+			buildPhases = (
+				FCAD636726B5F7E60085C8FC /* Sources */,
+				FCAD636826B5F7E60085C8FC /* Frameworks */,
+				FCAD636926B5F7E60085C8FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LauncherApplication;
+			productName = LauncherApplication;
+			productReference = FCAD636B26B5F7E60085C8FC /* LauncherApplication.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -237,6 +297,9 @@
 				TargetAttributes = {
 					E6247761266C350700554734 = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					FCAD636A26B5F7E60085C8FC = {
+						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
 			};
@@ -254,6 +317,7 @@
 			projectRoot = "";
 			targets = (
 				E6247761266C350700554734 /* MacBryte */,
+				FCAD636A26B5F7E60085C8FC /* LauncherApplication */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +336,13 @@
 				E624776A266C350800554734 /* Assets.xcassets in Resources */,
 				FC4800B8269A1FD600C4382C /* status-bar-icon-dark.png in Resources */,
 				FCAD636626B5F5C40085C8FC /* status-bar-icon-reversed-red.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCAD636926B5F7E60085C8FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +413,14 @@
 				E65B024826A391C8000D2B3E /* serialization.swift in Sources */,
 				E603D47126A8FF5B00CBA509 /* InitialWindowController.swift in Sources */,
 				E6247766266C350700554734 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCAD636726B5F7E60085C8FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCAD636E26B5F7E60085C8FC /* AppDelegateLauncher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,7 +558,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rahulaggarwal.MacBryte;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macbryte.MacBryte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -501,8 +580,56 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rahulaggarwal.MacBryte;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macbryte.MacBryte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FCAD637826B5F7E70085C8FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LauncherApplication/LauncherApplication.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BAMVK6LBVP;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = LauncherApplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macbryte.LauncherApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FCAD637926B5F7E70085C8FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LauncherApplication/LauncherApplication.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = BAMVK6LBVP;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = LauncherApplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macbryte.LauncherApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -524,6 +651,15 @@
 			buildConfigurations = (
 				E6247773266C350800554734 /* Debug */,
 				E6247774266C350800554734 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCAD637A26B5F7E70085C8FC /* Build configuration list for PBXNativeTarget "LauncherApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCAD637826B5F7E70085C8FC /* Debug */,
+				FCAD637926B5F7E70085C8FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
