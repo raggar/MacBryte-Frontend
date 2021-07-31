@@ -49,8 +49,7 @@ class Constants {
     static let userIdNull = "User id is null"
     static let backendMessageNotCompleted = "Unable to complete request"
     static let noZoomLink = "Contact MacBryte to receive a Zoom Link"
-    static let savingDataFailed = "There was an error when saving the user data"
-    
+
     // Editing Interface
     static let savingDataOk = "Successfully saved changes"
     static let defaultStatusText = "Select the values in the table to modify them. You can navigate between cells by using Tab and Shift+Tab. When editing a cell, hit Enter to save changes and Esc to cancel."

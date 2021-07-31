@@ -54,7 +54,7 @@ class AdminViewController: NSViewController {
             if (!(result["error"] as! Bool)) {
                 self.confirmationMessage.stringValue = Constants.savingDataOk
             } else {
-                self.confirmationMessage.stringValue = Constants.savingDataFailed
+                self.confirmationMessage.stringValue = result["requestMessage"] as! String
             }
             self.savedButton.isEnabled = true
             self.savedButton.title = "Save"
