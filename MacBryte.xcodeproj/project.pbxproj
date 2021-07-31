@@ -31,6 +31,7 @@
 		FC4800B9269A1FD600C4382C /* status-bar-icon-reversed-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4800B3269A1FD600C4382C /* status-bar-icon-reversed-dark.png */; };
 		FC58D3DA266D2483002C4C1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC58D3D9266D2483002C4C1A /* Main.storyboard */; };
 		FC58D3DE266D2EE7002C4C1A /* DropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58D3DD266D2EE7002C4C1A /* DropdownViewController.swift */; };
+		FCAD636626B5F5C40085C8FC /* status-bar-icon-reversed-red.png in Resources */ = {isa = PBXBuildFile; fileRef = FCAD636526B5F5C40085C8FC /* status-bar-icon-reversed-red.png */; };
 		FCB3B5FB26AA8C520049F0AA /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3B5FA26AA8C520049F0AA /* AccountViewController.swift */; };
 		FCB64F8D2677C88400501437 /* InternetConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB64F8C2677C88400501437 /* InternetConnectionService.swift */; };
 		FCB64F8F2677DC6200501437 /* InternetStatusHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB64F8E2677DC6200501437 /* InternetStatusHandler.swift */; };
@@ -66,6 +67,7 @@
 		FC4800B3269A1FD600C4382C /* status-bar-icon-reversed-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-reversed-dark.png"; sourceTree = "<group>"; };
 		FC58D3D9266D2483002C4C1A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FC58D3DD266D2EE7002C4C1A /* DropdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewController.swift; sourceTree = "<group>"; };
+		FCAD636526B5F5C40085C8FC /* status-bar-icon-reversed-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-reversed-red.png"; sourceTree = "<group>"; };
 		FCB3B5FA26AA8C520049F0AA /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		FCB64F8C2677C88400501437 /* InternetConnectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetConnectionService.swift; sourceTree = "<group>"; };
 		FCB64F8E2677DC6200501437 /* InternetStatusHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetStatusHandler.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				FC4800AF269A1FD600C4382C /* status-bar-icon-light.png */,
 				FC4800B3269A1FD600C4382C /* status-bar-icon-reversed-dark.png */,
 				FC4800AE269A1FD600C4382C /* status-bar-icon-reversed-light.png */,
+				FCAD636526B5F5C40085C8FC /* status-bar-icon-reversed-red.png */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				FC4800B4269A1FD600C4382C /* status-bar-icon-reversed-light.png in Resources */,
 				E624776A266C350800554734 /* Assets.xcassets in Resources */,
 				FC4800B8269A1FD600C4382C /* status-bar-icon-dark.png in Resources */,
+				FCAD636626B5F5C40085C8FC /* status-bar-icon-reversed-red.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
