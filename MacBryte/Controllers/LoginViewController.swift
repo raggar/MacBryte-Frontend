@@ -56,6 +56,7 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
         let loginParams: Dictionary<String, String> = ["email": emailInput.stringValue, "password": passwordInput.stringValue]
         if inputsEmpty() {
             setErrorMessage(message: Constants.fieldIsEmpty)
+            loginButton.isEnabled = true
         } else {
             postData(url: Constants.loginURL, parameters: loginParams) { (result) in
                 if (result["error"] as! Bool) {
