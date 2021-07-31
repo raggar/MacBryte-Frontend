@@ -33,6 +33,9 @@ class SignupViewController: NSViewController, NSTextFieldDelegate {
     override func viewDidAppear() {
         super.viewDidAppear()
         firstnameInput.becomeFirstResponder()
+        
+        self.view.window!.styleMask.remove(.resizable)
+        self.view.window!.center()
     }
 
     @IBAction func textFieldAction(sender: NSTextField) {

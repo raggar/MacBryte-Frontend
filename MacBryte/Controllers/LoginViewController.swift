@@ -27,6 +27,9 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
     override func viewDidAppear() {
         super.viewDidAppear()
         emailInput.becomeFirstResponder()
+        
+        self.view.window!.styleMask.remove(.resizable)
+        self.view.window!.center()
     }
     
     @IBAction func loginPressed(_ sender: NSButton) {
