@@ -39,13 +39,9 @@ extension AppDelegateLauncher: NSApplicationDelegate {
             components.append("MacBryte") //main app name
             
             let applicationPathString = path as String
-            
-            print("AAAAAAA", applicationPathString)
-            
+                        
             guard let newPath = URL(string: applicationPathString) else { return }
-            
-            print(newPath)
-            
+                        
             NSWorkspace.shared.openApplication(at: newPath, configuration: NSWorkspace.OpenConfiguration(), completionHandler: nil)
         }
         else {

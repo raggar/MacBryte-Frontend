@@ -43,7 +43,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         SMLoginItemSetEnabled(launcherAppId as CFString, true)
 
         if isRunning {
-            print("here")
             DistributedNotificationCenter.default().post(name: .killLauncher, object: Bundle.main.bundleIdentifier!)
         }
     }
