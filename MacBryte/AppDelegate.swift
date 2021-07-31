@@ -8,8 +8,13 @@
 import Cocoa
 import Network
 import UserNotifications
+import ServiceManagement
 
-@main
+extension Notification.Name {
+    static let killLauncher = Notification.Name("killLauncher")
+}
+
+@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
@@ -29,6 +34,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         RouterConnectionService.shared.startMeasuring()
         InternetConnectionService.shared.startMeasuring()
+        
+        // Auto-reopen
+        let launcherAppId = "com.macbryte.LauncherApplication"
+        let runningApps = NSWorkspace.shared.runningApplications
+        let isRunning = !runningApps.filter { $0.bundleIdentifier == launcherAppId }.isEmpty
+
+        SMLoginItemSetEnabled(launcherAppId as CFString, true)
+
+        if isRunning {
+            print("here")
+            DistributedNotificationCenter.default().post(name: .killLauncher, object: Bundle.main.bundleIdentifier!)
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
