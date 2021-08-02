@@ -54,8 +54,14 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
         }
     }
     
+    func changeFormStatus() {
+        loginButton.isEnabled = !loginButton.isEnabled
+        emailInput.isEditable = !emailInput.isEditable
+        passwordInput.isEditable = !passwordInput.isEditable
+    }
+    
     func login(email: String, password: String) {
-        loginButton.isEnabled = false
+        changeFormStatus()
         let loginParams: Dictionary<String, String> = ["email": emailInput.stringValue, "password": passwordInput.stringValue]
         if inputsEmpty() {
             setErrorMessage(message: Constants.fieldIsEmpty)
@@ -65,6 +71,7 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
                 if (result["error"] as! Bool) {
                     self.setErrorMessage(message: result["requestMessage"] as! String)
                     self.loginButton.isEnabled = true
+                    self.changeFormStatus()
                 } else {
                     UserDefaults.standard.setValue(result["isAdmin"], forKey: Constants.userIsAdminStorageKey)
                     UserDefaults.standard.setValue(result["userId"], forKey: Constants.userIdStorageKey)

@@ -64,8 +64,16 @@ class SignupViewController: NSViewController, NSTextFieldDelegate {
         label.textColor = .red
     }
     
+    func changeFormStatus() {
+        signupButton.isEnabled = !signupButton.isEnabled
+        firstnameInput.isEditable = !firstnameInput.isEditable
+        lastnameInput.isEditable = !lastnameInput.isEditable
+        emailInput.isEditable = !emailInput.isEditable
+        passwordInput.isEditable = !passwordInput.isEditable
+    }
+    
     func signup(firstname: String, lastname: String, email: String, password: String) {
-        signupButton.isEnabled = false
+        changeFormStatus()
         let signupParams: Dictionary<String, String> = ["firstname": firstname, "lastname": lastname, "email": email, "password": password]
         if inputsEmpty() {
             setErrorMessage(message: Constants.fieldIsEmpty)
@@ -74,7 +82,7 @@ class SignupViewController: NSViewController, NSTextFieldDelegate {
             postData(url: Constants.signUpURL, parameters: signupParams) { (result) in
                 if (result["error"] as! Bool) {
                     self.setErrorMessage(message: result["requestMessage"] as! String)
-                    self.signupButton.isEnabled = true
+                    self.changeFormStatus()
                 } else {
                     UserDefaults.standard.setValue(result["isAdmin"], forKey: Constants.userIsAdminStorageKey)
                     UserDefaults.standard.setValue(result["zoomLink"], forKey: Constants.userZoomLinkStorageKey)
