@@ -9,11 +9,12 @@ import Foundation
 import Cocoa
 
 class InitialWindowController: NSWindowController {
-    override func windowDidLoad() {
+    override func windowDidLoad() {      
         super.windowDidLoad()
         
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
         var size: NSSize
+        
         if (UserDefaults.standard.string(forKey: Constants.userIdStorageKey) != nil && UserDefaults.standard.bool(forKey: Constants.userIsAdminStorageKey)) {
             let contentController: NSViewController
                 = storyboard.instantiateController(withIdentifier: "adminViewController") as! NSViewController
@@ -28,6 +29,7 @@ class InitialWindowController: NSWindowController {
             size = Constants.authenticationTabControllerSize
             self.window?.contentViewController = contentController
         }
+        
         self.window?.title = Constants.appWindowTitle
         self.window?.setContentSize(size)
         self.window?.styleMask.remove(.resizable)

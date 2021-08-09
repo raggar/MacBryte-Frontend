@@ -62,21 +62,22 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
     
     func login(email: String, password: String) {
         changeFormStatus()
+        
         let loginParams: Dictionary<String, String> = ["email": emailInput.stringValue, "password": passwordInput.stringValue]
         if inputsEmpty() {
             setErrorMessage(message: Constants.fieldIsEmpty)
-            loginButton.isEnabled = true
+            changeFormStatus()
         } else {
             postData(url: Constants.loginURL, parameters: loginParams) { (result) in
                 if (result["error"] as! Bool) {
                     self.setErrorMessage(message: result["requestMessage"] as! String)
-                    self.loginButton.isEnabled = true
                     self.changeFormStatus()
                 } else {
                     UserDefaults.standard.setValue(result["isAdmin"], forKey: Constants.userIsAdminStorageKey)
                     UserDefaults.standard.setValue(result["userId"], forKey: Constants.userIdStorageKey)
                     UserDefaults.standard.setValue(result["zoomLink"], forKey: Constants.userZoomLinkStorageKey)
-                    if (UserDefaults.standard.bool(forKey: Constants.userIsAdminStorageKey)) {
+                    
+                    if (UserDefaults.standard.bool(forKey: Constants.userIsAdminStorageKey)) {                      
                         self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "loginToAdmin")
                     } else {
                         self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "loginToAccount")
