@@ -9,9 +9,7 @@ import Foundation
 import Cocoa
 
 class InitialWindowController: NSWindowController {
-    override func windowDidLoad() {
-        super.close()
-        
+    override func windowDidLoad() {      
         super.windowDidLoad()
         
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
