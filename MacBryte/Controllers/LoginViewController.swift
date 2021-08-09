@@ -77,7 +77,7 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
                     UserDefaults.standard.setValue(result["userId"], forKey: Constants.userIdStorageKey)
                     UserDefaults.standard.setValue(result["zoomLink"], forKey: Constants.userZoomLinkStorageKey)
                     
-                    if (UserDefaults.standard.bool(forKey: Constants.userIsAdminStorageKey)) {
+                    if (UserDefaults.standard.bool(forKey: Constants.userIsAdminStorageKey)) {                      
                         self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "loginToAdmin")
                     } else {
                         self.transitionControllers(window: self.view.window?.windowController, segueIdentifier: "loginToAccount")
