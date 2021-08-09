@@ -74,10 +74,12 @@ class SignupViewController: NSViewController, NSTextFieldDelegate {
     
     func signup(firstname: String, lastname: String, email: String, password: String) {
         changeFormStatus()
+        
         let signupParams: Dictionary<String, String> = ["firstname": firstname, "lastname": lastname, "email": email, "password": password]
+        
         if inputsEmpty() {
             setErrorMessage(message: Constants.fieldIsEmpty)
-            signupButton.isEnabled = true
+            changeFormStatus()
         } else {
             postData(url: Constants.signUpURL, parameters: signupParams) { (result) in
                 if (result["error"] as! Bool) {
