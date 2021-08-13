@@ -17,6 +17,7 @@ extension Notification.Name {
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    @IBOutlet weak var openMainWindowButton: NSMenuItem!
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {        
         setStatusItemImage(to: Constants.menuBarIconInternetGood)
@@ -52,28 +53,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
-        for window in sender.windows {
-            // Ensures we have a windowController
-            if(window.windowController != nil && window.windowController?.contentViewController != nil && window.className != "NSStatusBarWindow") {
-                    
-                let storyboard = NSStoryboard(name: "Main", bundle: nil) // Get storyboard
-                
-                // Set defualt value for our view
-                var contentController: NSViewController = storyboard.instantiateController(withIdentifier: "authenticationTabViewController") as! NSTabViewController
-                
-                // Get actual view we need to display
-                if (UserDefaults.standard.string(forKey: Constants.userIdStorageKey) != nil && UserDefaults.standard.bool(forKey: Constants.userIsAdminStorageKey)) {
-                    contentController
-                        = storyboard.instantiateController(withIdentifier: "adminViewController") as! NSViewController
-                } else if (UserDefaults.standard.string(forKey: Constants.userIdStorageKey) != nil) {
-                    contentController = storyboard.instantiateController(withIdentifier: "accountViewController") as! NSViewController
-                }
-                
-                window.windowController?.contentViewController = contentController // Set view value
-                
-                window.makeKeyAndOrderFront(self) // Display view
-            }
-        }
+        self.reopenWindow()
         
         return true
     }
@@ -103,6 +83,36 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let itemImage = NSImage(named: image)
         statusItem.button?.image = itemImage
     }
+    
+    @IBAction func openMainMenuButtonClicked(_ sender: Any) {
+        self.reopenWindow()
+    }
+    
+    func reopenWindow() {
+        for window in NSApplication.shared.windows {
+            // Ensures we have a windowController
+            if(window.windowController != nil && window.windowController?.contentViewController != nil && window.className != "NSStatusBarWindow") {
+                    
+                let storyboard = NSStoryboard(name: "Main", bundle: nil) // Get storyboard
+                
+                // Set defualt value for our view
+                var contentController: NSViewController = storyboard.instantiateController(withIdentifier: "authenticationTabViewController") as! NSTabViewController
+                
+                // Get actual view we need to display
+                if (UserDefaults.standard.string(forKey: Constants.userIdStorageKey) != nil && UserDefaults.standard.bool(forKey: Constants.userIsAdminStorageKey)) {
+                    contentController
+                        = storyboard.instantiateController(withIdentifier: "adminViewController") as! NSViewController
+                } else if (UserDefaults.standard.string(forKey: Constants.userIdStorageKey) != nil) {
+                    contentController = storyboard.instantiateController(withIdentifier: "accountViewController") as! NSViewController
+                }
+                
+                window.windowController?.contentViewController = contentController // Set view value
+                
+                window.makeKeyAndOrderFront(self) // Display view
+            }
+        }
+    }
+    
 }
 
 extension AppDelegate : UNUserNotificationCenterDelegate {
