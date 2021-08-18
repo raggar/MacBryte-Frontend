@@ -22,11 +22,11 @@
 		E6FF5352267304FE00D9AC61 /* RouterConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */; };
 		FC07492826731851006D269D /* LinkerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07492726731851006D269D /* LinkerService.swift */; };
 		FC07492A2673189E006D269D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0749292673189E006D269D /* Constants.swift */; };
+		FC0BCEF026CB2072002B6665 /* logo-light.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0BCEEE26CB2072002B6665 /* logo-light.png */; };
+		FC0BCEF126CB2072002B6665 /* logo-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0BCEEF26CB2072002B6665 /* logo-dark.png */; };
 		FC4800A1269A0C7100C4382C /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4800A0269A0C7100C4382C /* NotificationHandler.swift */; };
 		FC4800B4269A1FD600C4382C /* status-bar-icon-reversed-light.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4800AE269A1FD600C4382C /* status-bar-icon-reversed-light.png */; };
 		FC4800B5269A1FD600C4382C /* status-bar-icon-light.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4800AF269A1FD600C4382C /* status-bar-icon-light.png */; };
-		FC4800B6269A1FD600C4382C /* logo-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4800B0269A1FD600C4382C /* logo-dark.png */; };
-		FC4800B7269A1FD600C4382C /* logo-light.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4800B1269A1FD600C4382C /* logo-light.png */; };
 		FC4800B8269A1FD600C4382C /* status-bar-icon-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4800B2269A1FD600C4382C /* status-bar-icon-dark.png */; };
 		FC4800B9269A1FD600C4382C /* status-bar-icon-reversed-dark.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4800B3269A1FD600C4382C /* status-bar-icon-reversed-dark.png */; };
 		FC58D3DA266D2483002C4C1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC58D3D9266D2483002C4C1A /* Main.storyboard */; };
@@ -58,7 +58,7 @@
 		B0FE1C517EF3EA39428044A4 /* Pods-MacBryte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacBryte.release.xcconfig"; path = "Target Support Files/Pods-MacBryte/Pods-MacBryte.release.xcconfig"; sourceTree = "<group>"; };
 		CCA5179E7853153B2D6945E6 /* Pods-MacBryte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacBryte.debug.xcconfig"; path = "Target Support Files/Pods-MacBryte/Pods-MacBryte.debug.xcconfig"; sourceTree = "<group>"; };
 		E603D47026A8FF5B00CBA509 /* InitialWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialWindowController.swift; sourceTree = "<group>"; };
-		E6247762266C350700554734 /* MacBryte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacBryte.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6247762266C350700554734 /* macbryte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macbryte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6247765266C350700554734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6247769266C350800554734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MacBryte/Assets/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		E624776E266C350800554734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,11 +74,11 @@
 		E6FF5351267304FE00D9AC61 /* RouterConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterConnectionService.swift; sourceTree = "<group>"; };
 		FC07492726731851006D269D /* LinkerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerService.swift; sourceTree = "<group>"; };
 		FC0749292673189E006D269D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FC0BCEEE26CB2072002B6665 /* logo-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-light.png"; sourceTree = "<group>"; };
+		FC0BCEEF26CB2072002B6665 /* logo-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-dark.png"; sourceTree = "<group>"; };
 		FC4800A0269A0C7100C4382C /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		FC4800AE269A1FD600C4382C /* status-bar-icon-reversed-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-reversed-light.png"; sourceTree = "<group>"; };
 		FC4800AF269A1FD600C4382C /* status-bar-icon-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-light.png"; sourceTree = "<group>"; };
-		FC4800B0269A1FD600C4382C /* logo-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-dark.png"; sourceTree = "<group>"; };
-		FC4800B1269A1FD600C4382C /* logo-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-light.png"; sourceTree = "<group>"; };
 		FC4800B2269A1FD600C4382C /* status-bar-icon-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-dark.png"; sourceTree = "<group>"; };
 		FC4800B3269A1FD600C4382C /* status-bar-icon-reversed-dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-bar-icon-reversed-dark.png"; sourceTree = "<group>"; };
 		FC58D3D9266D2483002C4C1A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 		E6247763266C350700554734 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E6247762266C350700554734 /* MacBryte.app */,
+				E6247762266C350700554734 /* macbryte.app */,
 				FCAD636B26B5F7E60085C8FC /* LauncherApplication.app */,
 			);
 			name = Products;
@@ -199,9 +199,9 @@
 		FC3BD890269B689C0001705B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				FC0BCEEF26CB2072002B6665 /* logo-dark.png */,
+				FC0BCEEE26CB2072002B6665 /* logo-light.png */,
 				E6247769266C350800554734 /* Assets.xcassets */,
-				FC4800B0269A1FD600C4382C /* logo-dark.png */,
-				FC4800B1269A1FD600C4382C /* logo-light.png */,
 				FC4800B2269A1FD600C4382C /* status-bar-icon-dark.png */,
 				FC4800AF269A1FD600C4382C /* status-bar-icon-light.png */,
 				FC4800B3269A1FD600C4382C /* status-bar-icon-reversed-dark.png */,
@@ -249,9 +249,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E6247761266C350700554734 /* MacBryte */ = {
+		E6247761266C350700554734 /* macbryte */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E6247772266C350800554734 /* Build configuration list for PBXNativeTarget "MacBryte" */;
+			buildConfigurationList = E6247772266C350800554734 /* Build configuration list for PBXNativeTarget "macbryte" */;
 			buildPhases = (
 				080733D8D542C5CC554D2290 /* [CP] Check Pods Manifest.lock */,
 				E624775E266C350700554734 /* Sources */,
@@ -264,9 +264,9 @@
 			);
 			dependencies = (
 			);
-			name = MacBryte;
+			name = macbryte;
 			productName = MacBryte;
-			productReference = E6247762266C350700554734 /* MacBryte.app */;
+			productReference = E6247762266C350700554734 /* macbryte.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FCAD636A26B5F7E60085C8FC /* LauncherApplication */ = {
@@ -316,7 +316,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E6247761266C350700554734 /* MacBryte */,
+				E6247761266C350700554734 /* macbryte */,
 				FCAD636A26B5F7E60085C8FC /* LauncherApplication */,
 			);
 		};
@@ -328,14 +328,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC58D3DA266D2483002C4C1A /* Main.storyboard in Resources */,
-				FC4800B6269A1FD600C4382C /* logo-dark.png in Resources */,
 				FC4800B5269A1FD600C4382C /* status-bar-icon-light.png in Resources */,
-				FC4800B7269A1FD600C4382C /* logo-light.png in Resources */,
 				FC4800B9269A1FD600C4382C /* status-bar-icon-reversed-dark.png in Resources */,
 				FC4800B4269A1FD600C4382C /* status-bar-icon-reversed-light.png in Resources */,
 				E624776A266C350800554734 /* Assets.xcassets in Resources */,
 				FC4800B8269A1FD600C4382C /* status-bar-icon-dark.png in Resources */,
 				FCAD636626B5F5C40085C8FC /* status-bar-icon-reversed-red.png in Resources */,
+				FC0BCEF126CB2072002B6665 /* logo-dark.png in Resources */,
+				FC0BCEF026CB2072002B6665 /* logo-light.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,14 +552,14 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.2.2;
+				CURRENT_PROJECT_VERSION = 1.2.4;
 				DEVELOPMENT_TEAM = BAMVK6LBVP;
 				INFOPLIST_FILE = MacBryte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.macbryte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -576,14 +576,14 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.2.2;
+				CURRENT_PROJECT_VERSION = 1.2.4;
 				DEVELOPMENT_TEAM = BAMVK6LBVP;
 				INFOPLIST_FILE = MacBryte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.macbryte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -650,7 +650,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E6247772266C350800554734 /* Build configuration list for PBXNativeTarget "MacBryte" */ = {
+		E6247772266C350800554734 /* Build configuration list for PBXNativeTarget "macbryte" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E6247773266C350800554734 /* Debug */,

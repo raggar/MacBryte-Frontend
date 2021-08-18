@@ -221,13 +221,16 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="23" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZg-HQ-cpF">
-                                <rect key="frame" x="118" y="90" width="257" height="247"/>
+                                <rect key="frame" x="118" y="74" width="257" height="279"/>
                                 <subviews>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMC-UB-91G">
-                                        <rect key="frame" x="60" y="179" width="137" height="68"/>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WMC-UB-91G">
+                                        <rect key="frame" x="0.0" y="179" width="257" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="MZ5-09-BEI"/>
+                                        </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="MeB-f2-L7c"/>
                                     </imageView>
-                                    <textField identifier="loginEmailInput" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hTZ-Kf-K7e">
+                                    <textField identifier="loginEmailInput" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hTZ-Kf-K7e">
                                         <rect key="frame" x="0.0" y="132" width="257" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="ecG-Bw-6Zl"/>
@@ -242,7 +245,7 @@
                                             <action selector="textFieldActionWithSender:" target="yl9-s7-YbO" id="nCo-qh-DVV"/>
                                         </connections>
                                     </textField>
-                                    <textField identifier="loginPasswordInput" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rgt-29-xUf" customClass="NSSecureTextField">
+                                    <textField identifier="loginPasswordInput" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rgt-29-xUf" customClass="NSSecureTextField">
                                         <rect key="frame" x="0.0" y="85" width="257" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="PO6-h2-pf8"/>
@@ -257,7 +260,7 @@
                                             <action selector="textFieldActionWithSender:" target="yl9-s7-YbO" id="ZRj-9g-GP6"/>
                                         </connections>
                                     </textField>
-                                    <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ap2-Lx-iPh">
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ap2-Lx-iPh">
                                         <rect key="frame" x="94" y="35" width="68" height="32"/>
                                         <buttonCell key="cell" type="push" title="Login" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8DX-ZE-wCW">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -267,7 +270,7 @@
                                             <action selector="loginPressed:" target="yl9-s7-YbO" id="Erk-r8-S42"/>
                                         </connections>
                                     </button>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q0M-h0-tC1">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q0M-h0-tC1">
                                         <rect key="frame" x="124" y="0.0" width="8" height="19"/>
                                         <textFieldCell key="cell" alignment="center" id="vyy-Fh-6NN">
                                             <font key="font" metaFont="system" size="16"/>
@@ -277,7 +280,7 @@
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="247" id="9GG-3U-qD2"/>
+                                    <constraint firstAttribute="height" constant="279" id="AB9-AU-aTS"/>
                                     <constraint firstAttribute="width" constant="257" id="Wwk-K5-qUF"/>
                                 </constraints>
                                 <visibilityPriorities>
@@ -820,18 +823,22 @@
             <objects>
                 <viewController title="Dropdown" storyboardIdentifier="dropdownViewController" id="XfG-lQ-9wD" customClass="DropdownViewController" customModule="MacBryte" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="349" height="337"/>
+                        <rect key="frame" x="0.0" y="0.0" width="370" height="383"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="equalSpacing" orientation="vertical" alignment="centerX" spacing="19" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paw-pm-APW">
-                                <rect key="frame" x="25" y="25" width="299" height="292"/>
+                                <rect key="frame" x="25" y="25" width="320" height="338"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mr8-Pt-KgJ">
-                                        <rect key="frame" x="81" y="221" width="137" height="71"/>
+                                        <rect key="frame" x="10" y="238" width="300" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="BkX-8b-lPd"/>
+                                            <constraint firstAttribute="height" constant="100" id="rXI-SZ-vKp"/>
+                                        </constraints>
                                         <imageCell key="cell" selectable="YES" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="logo" id="6f6-YR-TIm"/>
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PTz-pi-hBm">
-                                        <rect key="frame" x="128" y="177" width="44" height="19"/>
+                                        <rect key="frame" x="138" y="190" width="44" height="19"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" refusesFirstResponder="YES" title="Label" id="T6v-VC-Fhh">
                                             <font key="font" metaFont="system" size="16"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -839,7 +846,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OcW-oT-9sJ">
-                                        <rect key="frame" x="47" y="133" width="206" height="19"/>
+                                        <rect key="frame" x="57" y="143" width="206" height="19"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qq5-2W-n2I">
                                                 <rect key="frame" x="-2" y="0.0" width="52" height="19"/>
@@ -871,7 +878,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xnh-S6-vm4">
-                                        <rect key="frame" x="62" y="88" width="175" height="19"/>
+                                        <rect key="frame" x="73" y="95" width="175" height="19"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dDE-ub-DLg">
                                                 <rect key="frame" x="-2" y="0.0" width="59" height="19"/>
@@ -903,7 +910,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g7m-R1-EAj">
-                                        <rect key="frame" x="37" y="44" width="225" height="19"/>
+                                        <rect key="frame" x="48" y="48" width="225" height="19"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j1s-fY-adc">
                                                 <rect key="frame" x="-2" y="0.0" width="73" height="19"/>
@@ -935,7 +942,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IwF-Ny-pxi">
-                                        <rect key="frame" x="40" y="0.0" width="220" height="19"/>
+                                        <rect key="frame" x="50" y="0.0" width="220" height="19"/>
                                         <buttonCell key="cell" type="bevel" title="Log in to view your Zoom Link" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="jSS-vZ-N1J">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system" size="16"/>
@@ -981,7 +988,7 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="ORD-dz-CSk"/>
             </objects>
-            <point key="canvasLocation" x="-1853.5" y="710.5"/>
+            <point key="canvasLocation" x="-2010" y="586.5"/>
         </scene>
         <!--Signup-->
         <scene sceneID="NHP-p1-QnA">
@@ -992,13 +999,16 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView autoresizesSubviews="NO" distribution="fill" orientation="vertical" alignment="centerX" spacing="24" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g1S-TL-riZ">
-                                <rect key="frame" x="109" y="32" width="257" height="347"/>
+                                <rect key="frame" x="109" y="16" width="257" height="379"/>
                                 <subviews>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cyZ-Go-N3o">
-                                        <rect key="frame" x="60" y="279" width="137" height="68"/>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cyZ-Go-N3o">
+                                        <rect key="frame" x="0.0" y="279" width="257" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="emq-Pv-uo1"/>
+                                        </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="logo" id="1Se-JP-2LD"/>
                                     </imageView>
-                                    <textField identifier="signupFirstnameInput" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tz9-UV-35n">
+                                    <textField identifier="signupFirstnameInput" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tz9-UV-35n">
                                         <rect key="frame" x="0.0" y="231" width="257" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="257" id="ZYT-pD-omD"/>
@@ -1013,7 +1023,7 @@
                                             <action selector="textFieldActionWithSender:" target="Yxk-lS-ZGO" id="qlT-MQ-LFz"/>
                                         </connections>
                                     </textField>
-                                    <textField identifier="signupLastnameInput" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4TC-99-njr">
+                                    <textField identifier="signupLastnameInput" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4TC-99-njr">
                                         <rect key="frame" x="0.0" y="183" width="257" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="3ZN-5s-npc"/>
@@ -1028,7 +1038,7 @@
                                             <action selector="textFieldActionWithSender:" target="Yxk-lS-ZGO" id="Qps-Ha-rSP"/>
                                         </connections>
                                     </textField>
-                                    <textField identifier="signupEmailInput" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PCZ-Dk-TlN">
+                                    <textField identifier="signupEmailInput" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PCZ-Dk-TlN">
                                         <rect key="frame" x="0.0" y="135" width="257" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="257" id="9Vk-9O-nh8"/>
@@ -1043,7 +1053,7 @@
                                             <action selector="textFieldActionWithSender:" target="Yxk-lS-ZGO" id="1aU-fI-dx6"/>
                                         </connections>
                                     </textField>
-                                    <textField identifier="signupPasswordInput" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aDx-cu-G3R" customClass="NSSecureTextField">
+                                    <textField identifier="signupPasswordInput" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aDx-cu-G3R" customClass="NSSecureTextField">
                                         <rect key="frame" x="0.0" y="87" width="257" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="257" id="TXh-ix-Iot"/>
@@ -1058,7 +1068,7 @@
                                             <action selector="textFieldActionWithSender:" target="Yxk-lS-ZGO" id="ejo-9F-veg"/>
                                         </connections>
                                     </textField>
-                                    <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CqA-4b-L9F">
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CqA-4b-L9F">
                                         <rect key="frame" x="90" y="36" width="77" height="32"/>
                                         <buttonCell key="cell" type="push" title="Signup" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8ei-yS-f2D">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1068,7 +1078,7 @@
                                             <action selector="signupPressed:" target="Yxk-lS-ZGO" id="H14-eu-7P7"/>
                                         </connections>
                                     </button>
-                                    <textField autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zy8-l0-Mmj">
+                                    <textField autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zy8-l0-Mmj">
                                         <rect key="frame" x="124" y="0.0" width="8" height="19"/>
                                         <textFieldCell key="cell" alignment="center" id="U2c-KK-fjC">
                                             <font key="font" metaFont="system" size="16"/>
@@ -1078,7 +1088,7 @@
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="347" id="YuH-EL-bUg"/>
+                                    <constraint firstAttribute="height" constant="379" id="jR5-5E-7rl"/>
                                     <constraint firstAttribute="width" constant="257" id="yyW-3h-dMt"/>
                                 </constraints>
                                 <visibilityPriorities>
@@ -1366,10 +1376,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="7b7-U9-4Dk"/>
         <segue reference="22r-3o-izH"/>
         <segue reference="QVG-jK-N2w"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="logo" width="137" height="71"/>
+        <image name="logo" width="632" height="395"/>
     </resources>
 </document>
